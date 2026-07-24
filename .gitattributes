@@ -1,0 +1,8 @@
+*.bin filter=lfs diff=lfs merge=lfs -text
+analysis/exe/* filter=lfs diff=lfs merge=lfs -text
+analysis/dlls/* filter=lfs diff=lfs merge=lfs -text
+analysis/drivers/*.dll filter=lfs diff=lfs merge=lfs -text
+analysis/drivers/*.sys filter=lfs diff=lfs merge=lfs -text
+analysis/drivers/*.cat filter=lfs diff=lfs merge=lfs -text
+analysis/drivers/*.exe filter=lfs diff=lfs merge=lfs -text
+analysis/drivers/*.msi filter=lfs diff=lfs merge=lfs -text
