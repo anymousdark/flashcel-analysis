@@ -1,0 +1,37 @@
+﻿# DARK PRO PREMIUM v6.5.8 - ANALISE FORENSE
+
+## Estrutura do Workspace
+
+analysis/
+├── exe/           Dark Pro Premium.exe (228MB)
+├── dlls/          WebView2Loader.dll 
+├── drivers/       Drivers USB (DFU, PongoOS, Recovery, libusbK)
+├── src/           Codigo extraido das secoes (.text, .rdata, ...)
+├── report/        Evidencias e documentacao
+└── tools/         Ferramentas de analise criadas
+
+## Evidencias Encontradas
+
+### 1. checkm8 Bootrom Exploit (29MB)
+Exploit de hardware que afeta chips A5-A11 (iPhone 4S ate iPhone X)
+
+### 2. FakeFS (31MB) - CORACAO DO BYPASS
+Cria um sistema de arquivos FALSO para enganar o iOS:
+- ean_fakefs - Cria ambiente falso de ativacao
+- and_patch_dyld - Patch no Dynamic Linker da Apple
+- platform_check - Desativa verificacao de seguranca
+- xnu_untag_va - Manipula kernel XNU
+- construct_patch/patchset_emit - Infra de patches
+
+### 3. Manipulacao de Sistema
+- mount_rdisk, epare_rootfs - Monta/modifica particoes
+- /dev/disk0s1s1, /dev/disk1s1 - Particoes do iOS
+- payload.dylib, /jbin/jbloader - Codigo injetado
+
+### 4. Contradicoes de Marketing
+- "Suporta A12/A13" -> FALSO (checkm8 so vai ate A11)
+- "iOS 26.1" -> NAO EXISTE (iOS atual = 18/19)
+
+### 5. DLLs Utilizadas
+kernel32, user32, gdi32, shell32, setupapi, ws2_32, 
+bcrypt, crypt32, WebView2Loader, advapi32, ntdll

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Pro Premium (flashcel) — Análise Forense</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0c10;
+    --bg2: #111318;
+    --bg3: #181b22;
+    --border: #23272e;
+    --text: #c9d1d9;
+    --text2: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #3fb950;
+    --accent3: #f85149;
+    --accent4: #d29922;
+    --accent5: #bc8cff;
+    --radius: 8px;
+    --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg2); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #333; }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 260px;
+    background: var(--bg2); border-right: 1px solid var(--border);
+    padding: 24px 0; overflow-y: auto; z-index: 100;
+  }
+  .sidebar-logo {
+    padding: 0 20px 20px; border-bottom: 1px solid var(--border); margin-bottom: 12px;
+  }
+  .sidebar-logo h2 {
+    font-size: 14px; color: var(--accent); font-weight: 600;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .sidebar-logo p { font-size: 11px; color: var(--text2); margin-top: 2px; }
+  .sidebar nav a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 20px; color: var(--text2); text-decoration: none;
+    font-size: 13px; transition: all 0.2s; border-left: 3px solid transparent;
+  }
+  .sidebar nav a:hover, .sidebar nav a.active {
+    color: var(--text); background: rgba(88,166,255,0.06);
+    border-left-color: var(--accent);
+  }
+  .sidebar nav a .icon { font-size: 15px; width: 18px; text-align: center; }
+
+  /* Main */
+  .main {
+    margin-left: 260px; padding: 0; max-width: 960px;
+  }
+  .hero {
+    padding: 60px 48px 40px; border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0c10 0%, #11161f 100%);
+  }
+  .hero h1 {
+    font-size: 32px; font-weight: 700; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent), var(--accent5));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero .subtitle { color: var(--text2); font-size: 15px; margin-top: 8px; }
+  .hero .meta {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 10px; border-radius: 20px; font-size: 11px;
+    font-weight: 600; letter-spacing: 0.3px;
+    border: 1px solid transparent;
+  }
+  .badge-blue { background: rgba(88,166,255,0.12); color: var(--accent); border-color: rgba(88,166,255,0.2); }
+  .badge-red { background: rgba(248,81,73,0.12); color: var(--accent3); border-color: rgba(248,81,73,0.2); }
+  .badge-green { background: rgba(63,185,80,0.12); color: var(--accent2); border-color: rgba(63,185,80,0.2); }
+  .badge-yellow { background: rgba(210,153,34,0.12); color: var(--accent4); border-color: rgba(210,153,34,0.2); }
+  .badge-purple { background: rgba(188,140,255,0.12); color: var(--accent5); border-color: rgba(188,140,255,0.2); }
+
+  .section {
+    padding: 40px 48px; border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+  .section h2 {
+    font-size: 20px; font-weight: 700; margin-bottom: 4px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section h2 .icon { font-size: 22px; }
+  .section > p { color: var(--text2); margin-bottom: 24px; font-size: 14px; }
+  .section h3 {
+    font-size: 15px; font-weight: 600; margin: 20px 0 10px;
+    color: var(--text);
+  }
+
+  /* Cards */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+  .card {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .card:hover { border-color: #333; transform: translateY(-1px); }
+  .card .label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text2); font-weight: 600;
+  }
+  .card .value {
+    font-size: 14px; color: var(--text); margin-top: 4px;
+    font-family: var(--mono); word-break: break-all;
+  }
+
+  /* Table */
+  .table-wrap {
+    overflow-x: auto; border: 1px solid var(--border);
+    border-radius: var(--radius); background: var(--bg3);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    text-align: left; padding: 10px 14px; font-weight: 600;
+    background: var(--bg2); color: var(--text2); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+  }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  td.mono { font-family: var(--mono); font-size: 12px; }
+
+  /* Code */
+  pre {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 14px 16px;
+    font-family: var(--mono); font-size: 12px; line-height: 1.6;
+    overflow-x: auto; color: var(--text); margin: 12px 0;
+  }
+  code { font-family: var(--mono); font-size: 12px; }
+  pre .k { color: #ff7b72; } /* keyword */
+  pre .s { color: #a5d6ff; } /* string */
+  pre .c { color: #8b949e; font-style: italic; } /* comment */
+  pre .n { color: #79c0ff; } /* number */
+  pre .p { color: #d2a8ff; } /* property */
+
+  /* Exploit Flow */
+  .flow {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    padding: 20px; background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius); margin: 16px 0;
+  }
+  .flow-step {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 10px 14px;
+    font-size: 12px; text-align: center; min-width: 100px;
+    flex: 1; position: relative;
+  }
+  .flow-step .num {
+    display: inline-block; width: 20px; height: 20px; line-height: 20px;
+    border-radius: 50%; background: var(--accent); color: var(--bg);
+    font-size: 10px; font-weight: 700; margin-bottom: 4px;
+  }
+  .flow-step .desc { color: var(--text); font-size: 11px; line-height: 1.4; }
+  .flow-arrow { color: var(--text2); font-size: 18px; flex-shrink: 0; }
+
+  /* Claim cards */
+  .claim-list { display: flex; flex-direction: column; gap: 8px; }
+  .claim {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 16px; background: var(--bg3);
+    border: 1px solid var(--border); border-radius: var(--radius);
+    border-left: 3px solid var(--accent3);
+  }
+  .claim.false { border-left-color: var(--accent3); }
+  .claim.true { border-left-color: var(--accent2); }
+  .claim .icon { font-size: 18px; margin-top: 1px; }
+  .claim .what { font-size: 13px; color: var(--text); }
+  .claim .reality { font-size: 12px; color: var(--text2); margin-top: 2px; }
+
+  /* Server card */
+  .server-card {
+    background: linear-gradient(135deg, var(--bg3), #141a24);
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 20px; margin: 16px 0;
+  }
+  .server-card .url {
+    font-family: var(--mono); font-size: 16px; color: var(--accent);
+    margin-bottom: 12px; word-break: break-all;
+  }
+  .server-card .status {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; background: rgba(63,185,80,0.12);
+    border: 1px solid rgba(63,185,80,0.2); border-radius: 20px;
+    font-size: 11px; color: var(--accent2); font-weight: 600;
+  }
+  .server-card .status .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent2); animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* Tree */
+  .tree { font-family: var(--mono); font-size: 12px; line-height: 2; }
+  .tree .dir { color: var(--accent); }
+  .tree .file { color: var(--text); }
+  .tree .indent { padding-left: 24px; }
+  .tree .branch { color: var(--text2); }
+
+  /* Collapse */
+  .collapse { margin: 8px 0; }
+  .collapse-toggle {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; background: var(--bg3); border: 1px solid var(--border);
+    border-radius: var(--radius); cursor: pointer; font-size: 13px;
+    color: var(--text); transition: border-color 0.2s; user-select: none;
+  }
+  .collapse-toggle:hover { border-color: #333; }
+  .collapse-toggle .arrow {
+    transition: transform 0.2s; font-size: 12px; color: var(--text2);
+  }
+  .collapse-toggle.open .arrow { transform: rotate(90deg); }
+  .collapse-body {
+    display: none; padding: 12px 14px; background: var(--bg2);
+    border: 1px solid var(--border); border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+  .collapse-body.open { display: block; }
+
+  /* Tags */
+  .tag {
+    display: inline-block; padding: 2px 8px; border-radius: 3px;
+    font-size: 10px; font-weight: 600; font-family: var(--mono);
+  }
+  .tag-rs { background: rgba(188,140,255,0.15); color: var(--accent5); }
+  .tag-c { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag-arm { background: rgba(210,153,34,0.15); color: var(--accent4); }
+  .tag-rust { background: rgba(239,142,53,0.15); color: #ef8e35; }
+  .tag-marketing { background: rgba(248,81,73,0.15); color: var(--accent3); }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    .hero, .section { padding: 24px 20px; }
+    .hero h1 { font-size: 24px; }
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Misc */
+  .highlight-box {
+    background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.2);
+    border-radius: var(--radius); padding: 14px 16px; margin: 12px 0;
+    font-size: 13px; color: var(--text);
+  }
+  .highlight-box strong { color: var(--accent4); }
+  .gap { margin-top: 24px; }
+  .inline-icon { margin-right: 6px; }
+
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px;
+    width: 2px; background: var(--border);
+  }
+  .timeline-item {
+    position: relative; padding: 8px 0 8px 16px;
+    border-left: 2px solid transparent;
+  }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -24px; top: 13px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--bg3); border: 2px solid var(--accent);
+  }
+  .timeline-item .t-time { font-size: 11px; color: var(--text2); font-family: var(--mono); }
+  .timeline-item .t-text { font-size: 13px; color: var(--text); }
+
+  .json-view {
+    background: var(--bg2); border-radius: var(--radius);
+    padding: 14px 16px; font-family: var(--mono); font-size: 12px;
+    line-height: 1.6; overflow-x: auto; border: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <h2>&#x1F50D; Análise Forense</h2>
+    <p>Dark Pro Premium / flashcel</p>
+  </div>
+  <nav>
+    <a href="#visao-geral" class="active"><span class="icon">&#x1F4CA;</span> Visão Geral</a>
+    <a href="#servidor"><span class="icon">&#x1F310;</span> Servidor &amp; Rede</a>
+    <a href="#marketing"><span class="icon">&#x26A0;</span> Falso Marketing</a>
+    <a href="#exploit"><span class="icon">&#x2699;</span> Cadeia do Exploit</a>
+    <a href="#payload"><span class="icon">&#x1F4E6;</span> Payload checkm8</a>
+    <a href="#tecnico"><span class="icon">&#x1F4BB;</span> Detalhes Técnicos</a>
+    <a href="#drivers"><span class="icon">&#x1F4A1;</span> Drivers USB</a>
+    <a href="#arquivos"><span class="icon">&#x1F4C1;</span> Estrutura de Arquivos</a>
+    <a href="#assinatura"><span class="icon">&#x1F511;</span> Assinatura Digital</a>
+    <a href="#timeline"><span class="icon">&#x1F4C5;</span> Timeline da Análise</a>
+  </nav>
+</aside>
+
+<div class="main">
+
+<!-- HERO -->
+<header class="hero">
+  <h1>Dark Pro Premium (flashcel)</h1>
+  <p class="subtitle">Análise forense completa do executável — engenharia reversa, cadeia de exploit e falsas alegações de marketing</p>
+  <div class="meta">
+    <span class="badge badge-blue">&#x1F4C4; Relatório v2.0</span>
+    <span class="badge badge-purple">&#x2699; Tauri 1.8.3</span>
+    <span class="badge badge-yellow">&#x26A0; checkm8 (A5-A11)</span>
+    <span class="badge badge-red">&#x274C; Falso: iOS 17-26</span>
+    <span class="badge badge-green">&#x2705; Servidor ativo</span>
+  </div>
+</header>
+
+<!-- VISÃO GERAL -->
+<section class="section" id="visao-geral">
+  <h2><span class="icon">&#x1F4CA;</span> Visão Geral</h2>
+  <p>Identidade real do aplicativo descoberta através da engenharia reversa do binário de 228 MB.</p>
+
+  <div class="card-grid">
+    <div class="card"><div class="label">Nome Interno</div><div class="value">flashcel / FlashcelBypass</div></div>
+    <div class="card"><div class="label">Nome de Marketing</div><div class="value">Dark Pro Premium</div></div>
+    <div class="card"><div class="label">Bundle ID</div><div class="value">com.dm1ln3.tool.DarkProPremium</div></div>
+    <div class="card"><div class="label">Versão Instalada</div><div class="value">6.5.8</div></div>
+    <div class="card"><div class="label">Última Versão (Servidor)</div><div class="value">6.6.0</div></div>
+    <div class="card"><div class="label">Desenvolvedor</div><div class="value">DM1LN3</div></div>
+    <div class="card"><div class="label">Tecnologia</div><div class="value">Tauri 1.8.3 (Rust + WebView2)</div></div>
+    <div class="card"><div class="label">Plataforma</div><div class="value">x86_64-pc-windows-gnu (MinGW)</div></div>
+    <div class="card"><div class="label">Tamanho</div><div class="value">228 MB (.rdata = 177 MB)</div></div>
+  </div>
+
+  <h3 class="gap">&#x1F4D8; Dependências Rust Identificadas</h3>
+  <pre>tauri 1.8.3              tokio 1.52.1
+reqwest 0.11.27          serde 1.0.228
+hyper 0.14.32            mime 0.3.17
+state 0.5.3              minisign-verify 0.2.5
+Cargo path padrão: C:\Users\DM1LN3\.cargo\registry\src\...</pre>
+</section>
+
+<!-- SERVIDOR -->
+<section class="section" id="servidor">
+  <h2><span class="icon">&#x1F310;</span> Servidor &amp; Conexão de Rede</h2>
+  <p>O aplicativo conecta-se a um servidor ativo para verificação de licença, atualizações e consulta de firmwares assinados.</p>
+
+  <div class="server-card">
+    <div class="status"><span class="dot"></span> Servidor ativo — respondeu em 24/07/2026</div>
+    <div class="url">https://isalldone.com.br</div>
+    <pre><span class="k">Endpoint:</span> GET /app/versions/DarkProPremium
+<span class="k">Resposta:</span> Manifest JSON de atualização do Tauri
+  <span class="p">version</span>: <span class="s">"6.6.0"</span>
+  <span class="p">notes</span>: <span class="s">"New Update"</span>
+  <span class="p">platforms.windows-x86_64.url</span>: <span class="s">"https://isalldone.com.br/app/downloads/Dark_Pro_Premium.msi.zip"</span></pre>
+  </div>
+
+  <h3>&#x1F30D; Domínios Autorizados (Tauri Allowlist)</h3>
+  <pre>https://isalldone.com/*
+https://*.isalldone.com/*
+https://isalldone.com.br/*
+https://*.isalldone.com.br/*
+https://*.apple.com/*
+https://localhost:3000/../dist</pre>
+
+  <h3>&#x1F4E1; API Pública: api.ipsw.me</h3>
+  <p>O app consulta <code>api.ipsw.me/v4/device/%s</code> para verificar quais versões do iOS ainda estão sendo assinadas pela Apple para o dispositivo alvo.</p>
+
+  <div class="collapse">
+    <div class="collapse-toggle" onclick="toggleCollapse(this)">
+      <span class="arrow">&#x25B6;</span> Strings de servidor encontradas no binário
+    </div>
+    <div class="collapse-body">
+      <pre>server envelope
+Invalid JSON structure
+Invalid base64 input
+__FLASHCEL_REPLACE_ED25
+AMAuthInstallSetFDRRequestEntry
+server: %@
+flashcel_prepare_store.json
+flashcel-wireless-state
+flashcel-wireless-toggle</pre>
+    </div>
+  </div>
+</section>
+
+<!-- FALSO MARKETING -->
+<section class="section" id="marketing">
+  <h2><span class="icon">&#x26A0;</span> Evidências de Falso Marketing</h2>
+  <p>Buscamos <strong>exaustivamente</strong> por ocorrências de "iOS 17" até "iOS 26" nos 177 MB de .rdata — <strong>zero resultados</strong>.</p>
+
+  <div class="highlight-box">
+    <strong>&#x26A0; Conclusão:</strong> As alegações de suporte a iOS 17–26 <strong>não existem no código do binário</strong>. Estão apenas no HTML/JS do frontend WebView2 ou no site de vendas. O exploit real (checkm8 via palera1n) suporta no máximo <strong>iOS 12.0 – 16.5</strong> em dispositivos <strong>A5–A11</strong>.
+  </div>
+
+  <div class="claim-list">
+    <div class="claim false">
+      <span class="icon">&#x274C;</span>
+      <div><div class="what">"Suporte A12 / A13"</div><div class="reality">checkm8 funciona apenas até A11 (iPhone X, 2017). A12/A13 têm SecureROM patcheado.</div></div>
+    </div>
+    <div class="claim false">
+      <span class="icon">&#x274C;</span>
+      <div><div class="what">"iOS 26.1"</div><div class="reality">iOS 26 <strong>não existe</strong>. A versão atual do iOS em 2026 é a 18/19.</div></div>
+    </div>
+    <div class="claim false">
+      <span class="icon">&#x274C;</span>
+      <div><div class="what">"Remove iCloud 100%"</div><div class="reality">Bypass temporário via checkm8. Uma reinicialização do dispositivo desfaz todas as alterações.</div></div>
+    </div>
+    <div class="claim false">
+      <span class="icon">&#x274C;</span>
+      <div><div class="what">"Ferramenta premium/paga"</div><div class="reality">Código open-source (palera1n + checkra1n) empacotado com interface gráfica Tauri. Código-fonte do exploit disponível gratuitamente no GitHub.</div></div>
+    </div>
+  </div>
+
+  <h3 class="gap">&#x1F50D; Resultado da Busca no Binário</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Termo</th><th>Ocorrências no .rdata</th><th>Status</th></tr>
+      <tr><td>iOS 17</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 18</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 19</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 20</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 21</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 22</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 23</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 24</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 25</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>iOS 26</td><td class="mono">0</td><td><span class="tag tag-marketing">NÃO encontrado</span></td></tr>
+      <tr><td>checkm8</td><td class="mono">3</td><td><span class="tag tag-c">Exploit real</span></td></tr>
+      <tr><td>palera1n</td><td class="mono">18+</td><td><span class="tag tag-c">Framework usado</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- CADEIA DO EXPLOIT -->
+<section class="section" id="exploit">
+  <h2><span class="icon">&#x2699;</span> Cadeia do Exploit</h2>
+  <p>Fluxo completo de execução desde a interface gráfica até o bypass no dispositivo iOS.</p>
+
+  <div class="flow">
+    <div class="flow-step"><div class="num">1</div><div class="desc">Interface Tauri / WebView2</div></div>
+    <span class="flow-arrow">&#x27A1;</span>
+    <div class="flow-step"><div class="num">2</div><div class="desc">Instala drivers USB (SetupAPI)</div></div>
+    <span class="flow-arrow">&#x27A1;</span>
+    <div class="flow-step"><div class="num">3</div><div class="desc">Conecta iDevice DFU (libusb)</div></div>
+    <span class="flow-arrow">&#x27A1;</span>
+    <div class="flow-step"><div class="num">4</div><div class="desc">Envia checkm8 ARM64 (100KB)</div></div>
+    <span class="flow-arrow">&#x27A1;</span>
+    <div class="flow-step"><div class="num">5</div><div class="desc">PongoOS carrega no dispositivo</div></div>
+    <span class="flow-arrow">&#x27A1;</span>
+    <div class="flow-step"><div class="num">6</div><div class="desc">Kernel patches + dyld + FS</div></div>
+    <span class="flow-arrow">&#x27A1;</span>
+    <div class="flow-step"><div class="num">7</div><div class="desc">Restore modifications</div></div>
+    <span class="flow-arrow">&#x27A1;</span>
+    <div class="flow-step"><div class="num">8</div><div class="desc">Server check (isalldone.com.br)</div></div>
+  </div>
+
+  <h3>&#x1F4E6; Módulos flashceld (daemon no dispositivo)</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Módulo</th><th>Tipo</th><th>Função</th></tr>
+      <tr><td class="mono">flashcel_app_state</td><td><span class="tag tag-rust">Rust</span></td><td>Gerenciamento de estado global</td></tr>
+      <tr><td class="mono">flashcel_auth.rs</td><td><span class="tag tag-rust">Rust</span></td><td>Autenticação e autorização</td></tr>
+      <tr><td class="mono">flashceld/commands.rs</td><td><span class="tag tag-rust">Rust</span></td><td>Comandos principais do daemon</td></tr>
+      <tr><td class="mono">device_commands.rs</td><td><span class="tag tag-rust">Rust</span></td><td>Comandos específicos do dispositivo</td></tr>
+      <tr><td class="mono">prepare_device.rs</td><td><span class="tag tag-rust">Rust</span></td><td>Preparação inicial do dispositivo</td></tr>
+      <tr><td class="mono">flashcel_stage3_restore</td><td><span class="tag tag-c">C</span></td><td>Estágio 3 do processo de restore</td></tr>
+      <tr><td class="mono">flashcel_prepare_store.json</td><td><span class="tag tag-c">JSON</span></td><td>Configuração de preparação</td></tr>
+      <tr><td class="mono">flashcel-wireless-state</td><td><span class="tag tag-c">C</span></td><td>Controle de estado wireless</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- PAYLOAD -->
+<section class="section" id="payload">
+  <h2><span class="icon">&#x1F4E6;</span> Payload checkm8 (ARM64)</h2>
+  <p>Extraído do .rdata em offset ~14.8 MB. Código ARM64 válido com estrutura de funções, chamadas e dados.</p>
+
+  <div class="card-grid">
+    <div class="card"><div class="label">Arquivo</div><div class="value">arm64_exploit_payload.bin</div></div>
+    <div class="card"><div class="label">Tamanho</div><div class="value">100 KB</div></div>
+    <div class="card"><div class="label">Offset no .rdata</div><div class="value">~14.8 MB</div></div>
+    <div class="card"><div class="label">Arquitetura</div><div class="value">ARM64 (aarch64)</div></div>
+    <div class="card"><div class="label">Origem</div><div class="value">palera1n + checkra1n</div></div>
+    <div class="card"><div class="label">Exploit</div><div class="value">checkm8 (CVE-2019-8791)</div></div>
+  </div>
+
+  <h3 class="gap">&#x1F50D; Estrutura do Payload</h3>
+  <pre><span class="c"># Funções com prólogo ARM64 válido</span>
+stp    fp, lr, [sp, #-0x10]!   <span class="c">; prólogo de função</span>
+bl     &lt;endereço&gt;               <span class="c">; chamada de função</span>
+ret                             <span class="c">; retorno</span>
+adrp   x0, &lt;página&gt;             <span class="c">; cálculo de endereço</span>
+add    x0, x0, #&lt;offset&gt;       <span class="c">; acesso a dados</span>
+
+<span class="c"># USB control requests típicos do checkm8</span>
+0x40  (bmRequestType host-&gt;device)
+0x21  (bmRequestType class/vendor)
+0xA1  (bmRequestType device-&gt;host)
+0xA2  (bmRequestType class/vendor)</pre>
+
+  <h3>&#x1F4CB; Strings do Framework Identificadas</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>String</th><th>Função</th></tr>
+      <tr><td class="mono">palera1n/pongo_usb_send_sep</td><td>Envio de SEP para o dispositivo</td></tr>
+      <tr><td class="mono">palera1n/pongo_usb_send_kpf</td><td>Envio de KPF (kernel patch finder)</td></tr>
+      <tr><td class="mono">palera1n/pongo_usb_send_flags</td><td>Flags de configuração</td></tr>
+      <tr><td class="mono">palera1n/pongo_usb_send_ramdisk</td><td>Envio de ramdisk</td></tr>
+      <tr><td class="mono">palera1n/pongo_usb_send_overlay</td><td>Envio de overlay</td></tr>
+      <tr><td class="mono">checkra1n_init_dfu_mode</td><td>Inicialização do modo DFU</td></tr>
+      <tr><td class="mono">checkray_mode_get_i</td><td>Verificação do modo checkra1n</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- DETALHES TÉCNICOS -->
+<section class="section" id="tecnico">
+  <h2><span class="icon">&#x1F4BB;</span> Detalhes Técnicos</h2>
+  <p>Informações detalhadas sobre a engenharia reversa e componentes identificados.</p>
+
+  <div class="collapse">
+    <div class="collapse-toggle" onclick="toggleCollapse(this)">
+      <span class="arrow">&#x25B6;</span> Funções-chave do exploit (strings do .rdata)
+    </div>
+    <div class="collapse-body">
+      <div class="table-wrap">
+        <table>
+          <tr><th>String</th><th>Função</th></tr>
+          <tr><td class="mono">fakefs</td><td>Fake root filesystem (desvio de verificação)</td></tr>
+          <tr><td class="mono">pongo_usb_send_ramdisk</td><td>Envio de ramdisk via USB</td></tr>
+          <tr><td class="mono">pwndfu</td><td>Driver DFU pwnado (exploitado)</td></tr>
+          <tr><td class="mono">platform_check</td><td>Bypass de verificação de plataforma</td></tr>
+          <tr><td class="mono">xnu_untag_va</td><td>Untag de endereços virtuais do XNU</td></tr>
+          <tr><td class="mono">and_patch_dyld</td><td>Patch do dyld (dynamic linker)</td></tr>
+          <tr><td class="mono">mount_rdisk</td><td>Montagem de disco raw</td></tr>
+          <tr><td class="mono">construct_patch</td><td>Construção de patches de kernel</td></tr>
+          <tr><td class="mono">activation_bypass_from_device</td><td>Bypass de ativação</td></tr>
+          <tr><td class="mono">get_wireless_lockdown_state</td><td>Estado do lockdown wireless</td></tr>
+          <tr><td class="mono">token_from_device</td><td>Token de autenticação do dispositivo</td></tr>
+          <tr><td class="mono">enable_fake_reset_ramdisk</td><td>Habilita ramdisk de reset falso</td></tr>
+          <tr><td class="mono">enable_block_ota_ramdisk</td><td>Bloqueia OTA via ramdisk</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="collapse">
+    <div class="collapse-toggle" onclick="toggleCollapse(this)">
+      <span class="arrow">&#x25B6;</span> Serviços Apple consultados no dispositivo
+    </div>
+    <div class="collapse-body">
+      <pre>com.apple.mobile.ldwatch          — Watch companion
+com.apple.companion_proxy         — Proxy de companion
+com.apple.international           — Configuração regional
+com.apple.mobileactivationd      — Ativação do dispositivo
+com.apple.accountsd               — Contas Apple
+com.apple.os_trace_relay          — Trace do sistema
+com.apple.mobile.software_update  — Atualização de software</pre>
+    </div>
+  </div>
+
+  <div class="collapse">
+    <div class="collapse-toggle" onclick="toggleCollapse(this)">
+      <span class="arrow">&#x25B6;</span> Path Traversal usado para escapar sandbox
+    </div>
+    <div class="collapse-body">
+      <pre>SysContainerDomain-../../../../../../../../. ../Home.app
+
+Este path traversal permite que o flashceld escape do container
+de sandbox do iOS e acesse diretórios do sistema fora do
+ambiente restrito do aplicativo.</pre>
+    </div>
+  </div>
+</section>
+
+<!-- DRIVERS -->
+<section class="section" id="drivers">
+  <h2><span class="icon">&#x1F4A1;</span> Drivers USB</h2>
+  <p>Drivers instalados no Windows para comunicação com o iDevice em diferentes modos.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Arquivo</th><th>Modo</th><th>Função</th></tr>
+      <tr><td class="mono">HFZ_PongoOS_USB_Device.inf</td><td>PongoOS</td><td>Driver para o sistema PongoOS pós-exploit</td></tr>
+      <tr><td class="mono">HFZ_USB_Device_Driver_DFU_PWNDFU.inf</td><td>DFU Pwnado</td><td>Driver para modo DFU após exploit checkm8</td></tr>
+      <tr><td class="mono">HFZ_USB_Device_Driver_RECOVERY.inf</td><td>Recovery</td><td>Driver para modo Recovery da Apple</td></tr>
+      <tr><td class="mono">usbaapl64.inf</td><td>Apple legítimo</td><td>Driver oficial Apple (autenticação)</td></tr>
+      <tr><td class="mono">libusb0.dll</td><td>—</td><td>LibUSB para comunicação USB</td></tr>
+      <tr><td class="mono">libusbK.dll</td><td>—</td><td>LibUSB Kernel (alternativa)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ARQUIVOS -->
+<section class="section" id="arquivos">
+  <h2><span class="icon">&#x1F4C1;</span> Estrutura de Arquivos</h2>
+  <p>Arquivos gerados durante a análise e engenharia reversa.</p>
+
+  <div class="tree">
+    <span class="dir">analysis/</span><br>
+    <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="dir">src/</span><br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">.text.bin</span> (16 MB) — código x64<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">.rdata.bin</span> (177 MB) — dados+strings+payloads<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">arm64_exploit_payload.bin</span> (100 KB) — ARM64<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">arm64_exploit_disasm.txt</span> — disassembly ARM64<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">entry0.txt</span> — entry point<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">winmain.txt</span> — WinMain disasm<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x2514;&#x2500;&#x2500;</span> <span class="file">plist_from_bin.txt</span> — libplist disasm<br>
+    <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="dir">drivers/</span> — drivers USB<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x2514;&#x2500;&#x2500;</span> <span class="file">HFZ_*.inf</span>, <span class="file">libusb*.dll</span>, <span class="file">usbaapl64.inf</span><br>
+    <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="dir">tools/</span><br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="dir">cutter/</span> — Cutter 2.5.0 + rizin<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="dir">ghidra11/</span> — Ghidra 11.1.2 (JDK 17)<br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x2514;&#x2500;&#x2500;</span> <span class="dir">custom_scripts/</span><br>
+    <span class="branch">&#x2502;</span>     <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">ExportDecompiled.java</span><br>
+    <span class="branch">&#x2502;</span>     <span class="branch">&#x2514;&#x2500;&#x2500;</span> <span class="file">run_decompile.bat</span><br>
+    <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="dir">report/</span><br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x251C;&#x2500;&#x2500;</span> <span class="file">exploit_analysis.md</span><br>
+    <span class="branch">&#x2502;</span>  <span class="branch">&#x2514;&#x2500;&#x2500;</span> <span class="file">index.html</span> — este documento<br>
+    <span class="branch">&#x2514;&#x2500;&#x2500;</span> <span class="file">Dark Pro Premium.exe</span> — binário alvo<br>
+  </div>
+</section>
+
+<!-- ASSINATURA -->
+<section class="section" id="assinatura">
+  <h2><span class="icon">&#x1F511;</span> Assinatura Digital</h2>
+  <p>O aplicativo utiliza <strong>minisign</strong> para assinar os binários de atualização baixados do servidor.</p>
+
+  <h3>&#x1F4CB; Chave Pública (minisign)</h3>
+  <pre><span class="c">untrusted comment: minisign public key: 274AD4DDBD6CAC4D</span>
+RWRNrGy93dVKJ4XzbUNPpylwF9JNWkFOBjyxGz/vGlRp6q2nzo39aDQi</pre>
+
+  <h3>&#x1F4E6; Exemplo de Assinatura Tauri (v6.6.0)</h3>
+  <div class="json-view">"signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTnJHeTkzZFZLSis3SVhya21vL2xjL3hXam13dXk3ZGY2bUR4V1FTTDd5Mm5lTGtMQTF2OGF5RXcxQ3BGbnV2MVRBUkhjM1U5TFplRTcwMElRUVFSTzRxR1llUDZ5VFFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4OTk2MTE2CWZpbGU6RGFyayBQcm8gUHJlbWl1bV82LjYuMF94NjRfZW4tVVMubXNpLnppcAo4VHp1N0MvNjdOYlJ5S3I4RlNqTmdlWHI4SzI3SmMyc1dqTDFlYldjbHlkNjEwUFM2VEh4Vi9hdWM0NGVJWlF4bzh0VmhINzFtNUk0WUNRMzU2Q09CZz09Cg=="</div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" id="timeline">
+  <h2><span class="icon">&#x1F4C5;</span> Timeline da Análise</h2>
+  <p>Principais descobertas durante o processo de engenharia reversa.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="t-time">Passo 1</span>
+      <div class="t-text">Identificado como executável nativo x64 (não .NET) com 12 seções PE e libplist embutida</div>
+    </div>
+    <div class="timeline-item">
+      <span class="t-time">Passo 2</span>
+      <div class="t-text">Extraídas todas as 11 seções PE como .bin — código, dados, recursos, relocações, TLS</div>
+    </div>
+    <div class="timeline-item">
+      <span class="t-time">Passo 3</span>
+      <div class="t-text">Descoberto payload ARM64 de 100 KB no .rdata (~14,8 MB) — código checkm8 válido com funções</div>
+    </div>
+    <div class="timeline-item">
+      <span class="t-time">Passo 4</span>
+      <div class="t-text">Identificado servidor ativo no Brasil: isalldone.com.br — responde com manifest Tauri</div>
+    </div>
+    <div class="timeline-item">
+      <span class="t-time">Passo 5</span>
+      <div class="t-text">Confirmado que o app é Tauri 1.8.3 (Rust + WebView2) com deps Rust como reqwest, tokio, serde</div>
+    </div>
+    <div class="timeline-item">
+      <span class="t-time">Passo 6</span>
+      <div class="t-text">Verificado que iOS 17–26 NÃO existem nas strings do binário — falsas alegações de marketing</div>
+    </div>
+    <div class="timeline-item">
+      <span class="t-time">Passo 7</span>
+      <div class="t-text">Mapeados módulos flashceld: auth, commands, device_commands, prepare_device, app_state</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+function toggleCollapse(el) {
+  el.classList.toggle('open');
+  const body = el.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+// Active state for sidebar links
+document.querySelectorAll('.sidebar nav a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('.sidebar nav a').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// Update active on scroll
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.sidebar nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 120;
+    if (scrollY >= top) current = section.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>

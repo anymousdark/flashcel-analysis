@@ -1,0 +1,31 @@
+# Ferramentas (reinstalar manualmente)
+analysis/tools/
+
+# Binários grandes (adicionar via LFS depois)
+analysis/src/.text.bin
+analysis/src/.rdata.bin
+analysis/src/.data.bin
+analysis/src/.edata.bin
+analysis/src/.idata.bin
+analysis/src/.pdata.bin
+analysis/src/.reloc.bin
+analysis/src/.rodata.bin
+analysis/src/.rsrc.bin
+analysis/src/.tls.bin
+analysis/src/.xdata.bin
+analysis/src/arm64_exploit_payload.bin
+analysis/src/arm64_payload.bin
+analysis/exe/
+analysis/dlls/
+analysis/drivers/*.dll
+analysis/drivers/*.sys
+analysis/drivers/*.cat
+analysis/drivers/*.exe
+analysis/drivers/*.msi
+
+# Temp
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+Desktop.ini

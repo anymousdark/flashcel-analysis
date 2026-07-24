@@ -1,0 +1,20 @@
+rizin.exe : WARNING: bin_file_strings: search interval size (0x1030a00) exceeds max region size (0xa00000), skipping 
+it.
+At line:10 char:1
++ & $rizin -q -c "Lc; s 0x140001020; af; pdr 100" $target 2>&1 | Out-Fi ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: bin_fi...), skipping it.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: bin_file_strings: search interval size (0x172ba00) exceeds max region size (0xa00000), skipping it.
+WARNING: bin_file_strings: search interval size (0xb11d600) exceeds max region size (0xa00000), skipping it.
+WARNING: bin_file_strings: search interval size (0x1030a00) exceeds max region size (0xa00000), skipping it.
+WARNING: bin_file_strings: search interval size (0x172ba00) exceeds max region size (0xa00000), skipping it.
+WARNING: bin_file_strings: search interval size (0xb11d600) exceeds max region size (0xa00000), skipping it.
+dex: Suite of dex commands, type `dex` for more info (Made by deroad, v1.0, LGPL-3.0-only)
+java: Suite of java commands, type `java` for more info (Made by deroad, v1.0, LGPL-3.0-only)
+ERROR: Wrong number of arguments passed to `pdr`, see its help with `pdr?`
+
+ERROR: [36mUsage: [0m[37mpdr[0m[j.][33m[0m   [32m# Disassemble recursively across the function graph[0m
+??? [37mpdr[0m[j][33m  [32m# Disassemble recursively across the function graph[0m
+??? [37mpdr.[0m[j][33m [32m# Disassemble recursively across the function graph (from current basic block)[0m
