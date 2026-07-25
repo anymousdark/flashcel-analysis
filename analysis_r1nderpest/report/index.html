@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R1nderPest v2.4 - Análise Forense</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #0a0a0f; color: #e0e0e0; display: flex; min-height: 100vh; }
+.sidebar { width: 260px; background: #12121a; padding: 20px; border-right: 1px solid #2a2a3a; position: fixed; height: 100vh; overflow-y: auto; }
+.sidebar h2 { color: #ff4444; font-size: 16px; margin-bottom: 15px; }
+.sidebar a { display: block; color: #888; padding: 8px 12px; text-decoration: none; border-radius: 6px; margin: 2px 0; font-size: 13px; }
+.sidebar a:hover { background: #1e1e2a; color: #fff; }
+.content { margin-left: 260px; padding: 30px 40px; max-width: 1000px; }
+h1 { color: #ff4444; font-size: 28px; margin-bottom: 5px; }
+.subtitle { color: #666; font-size: 14px; margin-bottom: 30px; }
+h2 { color: #ff6666; font-size: 20px; margin: 30px 0 15px; border-bottom: 1px solid #2a2a3a; padding-bottom: 8px; }
+h3 { color: #ff8888; font-size: 16px; margin: 20px 0 10px; }
+.card { background: #14141e; border: 1px solid #2a2a3a; border-radius: 10px; padding: 20px; margin: 15px 0; }
+.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #2a2a3a; font-size: 13px; }
+th { color: #ff8888; font-weight: 600; background: #1a1a24; }
+td { color: #bbb; }
+code { background: #1e1e2a; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: #ffaa66; }
+pre { background: #0d0d14; border: 1px solid #2a2a3a; border-radius: 8px; padding: 15px; overflow-x: auto; font-size: 12px; color: #aabbcc; margin: 10px 0; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin: 2px; }
+.tag-red { background: #441111; color: #ff4444; }
+.tag-green { background: #114411; color: #44ff44; }
+.tag-yellow { background: #444411; color: #ffff44; }
+.tag-blue { background: #111144; color: #4488ff; }
+</style>
+</head>
+<body>
+<div class="sidebar">
+<h2>R1nderPest Analysis</h2>
+<a href="#resumo">Resumo</a>
+<a href="#identificacao">Identificação</a>
+<a href="#estrutura">Estrutura do PE</a>
+<a href="#pyinstaller">PyInstaller</a>
+<a href="#c2">Servidor C2</a>
+<a href="#config">Configurações</a>
+<a href="#python">Código Python</a>
+<a href="#ui">Interface</a>
+<a href="#exploit">Exploit Real</a>
+<a href="#comparacao">Comparação DPP</a>
+</div>
+<div class="content">
+<h1>R1nderPest v2.4</h1>
+<div class="subtitle">Análise Forense Completa — Ferramenta falsa de bypass iCloud<br>
+Desenvolvedor: <strong>ZeroxDev</strong> | C2: <code>194.99.21.156:8001</code></div>
+
+<div class="card" id="resumo">
+<h2>Resumo</h2>
+<p>R1nderPest é uma ferramenta falsa de bypass iCloud para iOS, desenvolvida por ZeroxDev. Assim como o <strong>Dark Pro Premium</strong>, ela alega suporte a iOS 26+ (que não existe) enquanto na verdade usa exploits antigos baseados em <strong>checkm8</strong> (A5-A11).</p>
+<p>A aplicação é empacotada com <strong>PyInstaller 6.x</strong> (Python 3.13 + PyQt5) e se comunica com um servidor C2 na Rússia para baixar stages do exploit.</p>
+</div>
+
+<div class="card" id="identificacao">
+<h2>Identificação</h2>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<tr><td>Nome do arquivo</td><td><code>r1nderpest.exe</code></td></tr>
+<tr><td>Versão declarada</td><td><span class="tag tag-yellow">v2.4 Release</span></td></tr>
+<tr><td>Desenvolvedor</td><td><span class="tag tag-red">ZeroxDev</span></td></tr>
+<tr><td>Tamanho</td><td>59.8 MB (59.796.197 bytes)</td></tr>
+<tr><td>Linguagem</td><td><span class="tag tag-blue">Python 3.13</span> + <span class="tag tag-blue">PyQt5</span></td></tr>
+<tr><td>Empacotamento</td><td><span class="tag tag-blue">PyInstaller 6.x</span></td></tr>
+<tr><td>Bootloader</td><td>MSVC C/C++ (Linker 14.43 / VS 2022 17.13)</td></tr>
+<tr><td>Arquitetura</td><td>AMD64 (x64), PIE, NX, Canary</td></tr>
+<tr><td>Compilado em</td><td>2026-04-11</td></tr>
+</table>
+</div>
+
+<div class="card" id="estrutura">
+<h2>Estrutura do PE</h2>
+<p>O executável PE tem 7 seções normais totalizando apenas ~280 KB:</p>
+<table>
+<tr><th>Seção</th><th>Offset</th><th>Tamanho</th><th>Perm</th></tr>
+<tr><td><code>.text</code></td><td>0x400</td><td>179.712</td><td>-r-x</td></tr>
+<tr><td><code>.rdata</code></td><td>0x2C200</td><td>78.336</td><td>-r--</td></tr>
+<tr><td><code>.data</code></td><td>0x3F400</td><td>3.584</td><td>-rw-</td></tr>
+<tr><td><code>.pdata</code></td><td>0x40200</td><td>9.216</td><td>-r--</td></tr>
+<tr><td><code>.fptable</code></td><td>0x42600</td><td>512</td><td>-rw-</td></tr>
+<tr><td><code>.rsrc</code></td><td>0x42800</td><td>6.144</td><td>-r--</td></tr>
+<tr><td><code>.reloc</code></td><td>0x44000</td><td>2.048</td><td>-r--</td></tr>
+</table>
+<p><strong>Overlay: 56.76 MB</strong> (99.5% do arquivo) — contém 8.301 streams zlib com o archive Python</p>
+</div>
+
+<div class="card" id="pyinstaller">
+<h2>Estrutura PyInstaller</h2>
+<p>O archive PyInstaller (CArchive) contém:</p>
+<table>
+<tr><th>Tipo</th><th>Nome</th><th>Descrição</th></tr>
+<tr><td><span class="tag tag-green">m</span></td><td><code>pyimod01_archive</code></td><td>Leitor de archive (CArchive/ZlibArchive)</td></tr>
+<tr><td><span class="tag tag-green">m</span></td><td><code>pyimod02_importers</code></td><td>Import hooks do PyInstaller</td></tr>
+<tr><td><span class="tag tag-green">m</span></td><td><code>pyimod03_ctypes</code></td><td>Suporte a ctypes</td></tr>
+<tr><td><span class="tag tag-green">m</span></td><td><code>pyimod04_pywin32</code></td><td>Suporte a pywin32</td></tr>
+<tr><td><span class="tag tag-yellow">s</span></td><td><code>pyiboot01_bootstrap</code></td><td>Bootloader Python</td></tr>
+<tr><td><span class="tag tag-yellow">s</span></td><td><code>new_r1nderpest</code></td><td><strong>Script principal da aplicação</strong></td></tr>
+<tr><td><span class="tag tag-blue">z</span></td><td><code>PYZ.pyz</code></td><td>Archive PYZ (módulos Python compactados)</td></tr>
+</table>
+<p>Runtime hooks: inspect, traitlets, pkgutil, multiprocessing, pkgres, setuptools, cryptography_openssl, pyqt5</p>
+</div>
+
+<div class="card" id="c2">
+<h2>Servidor C2</h2>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<tr><td>IP</td><td><code>194.99.21.156</code></td></tr>
+<tr><td>Porta</td><td><code>8001</code></td></tr>
+<tr><td>Endpoint</td><td><code>http://194.99.21.156:8001//get2.php</code></td></tr>
+<tr><td>Localização</td><td><span class="tag tag-red">Rússia</span></td></tr>
+<tr><td>Parâmetros</td><td><code>prd={model}&sn={serial}&guid={uuid}&ver={ios}</code></td></tr>
+<tr><td>Exemplo</td><td><code>prd=iPhone13,4&sn=SN&guid=GUID&ver=26.1</code></td></tr>
+</table>
+</div>
+
+<div class="card" id="config">
+<h2>Configurações</h2>
+<table>
+<tr><th>Chave</th><th>Descrição</th></tr>
+<tr><td><code>api_url</code></td><td>URL do servidor C2</td></tr>
+<tr><td><code>asset_wait</code></td><td>Tempo de espera entre assets</td></tr>
+<tr><td><code>asset_delete_delay</code></td><td>Delay para deletar assets</td></tr>
+<tr><td><code>reboot_wait</code></td><td>Tempo de espera após reboot</td></tr>
+<tr><td><code>syslog_collect</code></td><td>Tempo de coleta de syslog</td></tr>
+<tr><td><code>ifuse_mount_z</code></td><td>Versão fake do iOS (26.1)</td></tr>
+<tr><td><code>max_attempts</code></td><td>Máximo de tentativas</td></tr>
+<tr><td><code>MIN_ARCHIVE_SIZE</code></td><td>Tamanho mínimo do archive</td></tr>
+<tr><td><code>POST_CONNECT_DELAY</code></td><td>Delay pós-conexão</td></tr>
+<tr><td><code>CREATE_NO_WINDOW</code></td><td>Flag de processo (0x08000000)</td></tr>
+<tr><td><code>global_GUID</code></td><td>UUID global do dispositivo</td></tr>
+<tr><td><code>BLDATABASEMANAGER</code></td><td>Gerenciador de banco SQLite local</td></tr>
+<tr><td><code>GUID_REGEX</code></td><td>Regex para UUID</td></tr>
+</table>
+</div>
+
+<div class="card" id="python">
+<h2>Código Python Extraído</h2>
+<p><strong>14 code objects</strong> extraídos via marshal da CArchive (módulos bootloader). O script principal <code>new_r1nderpest</code> está dentro do PYZ archive (não extraído diretamente).</p>
+<h3>Módulos Python embarcados</h3>
+<p>Através do PYZ, a aplicação embarca dezenas de pacotes Python:</p>
+<pre>
+pymobiledevice3 (lockdown, ca, bonjour)
+IPython / Jupyter (kernel interativo)
+PyQt5 (QtCore, QtGui, QtWidgets)
+cryptography (hazmat, serialization)
+jedi (autocomplete Python)
+prompt_toolkit (terminal UI)
+pygments (syntax highlight)
+tornado (servidor web)
+requests, urllib3
+setuptools, pkg_resources
+</pre>
+<p>Além de DLLs nativas: <code>python313.dll</code>, <code>libcrypto-3.dll</code>, <code>libssl-3.dll</code>, <code>sqlite3.dll</code>, <code>pywin32</code></p>
+</div>
+
+<div class="card" id="ui">
+<h2>Interface (PyQt5)</h2>
+<table>
+<tr><th>Componente</th><th>Função</th></tr>
+<tr><td><code>Ui_MainWindow</code></td><td>Janela principal</td></tr>
+<tr><td><code>QPushButton</code></td><td>Botões de ação (3x)</td></tr>
+<tr><td><code>QLabel</code></td><td>Rótulos</td></tr>
+<tr><td><code>QListWidget</code></td><td>Lista de dispositivos/logs</td></tr>
+<tr><td><code>QFrame</code></td><td>Separadores visuais</td></tr>
+</table>
+<h3>Imagens</h3>
+<table>
+<tr><th>Arquivo</th><th>Descrição</th></tr>
+<tr><td><code>ios26hello.png</code></td><td>Tela "Hello" falsa do iOS 26</td></tr>
+<tr><td><code>unlock_key.png</code></td><td>Ícone de desbloqueio</td></tr>
+<tr><td><code>cable.png</code></td><td>Cabo USB (conexão)</td></tr>
+<tr><td><code>download.png</code></td><td>Download de stages</td></tr>
+<tr><td><code>home.png / home_selected.png</code></td><td>Navegação Home</td></tr>
+<tr><td><code>settings.png / settings_selected.png</code></td><td>Navegação Config</td></tr>
+<tr><td><code>glow_phone.png</code></td><td>Telefone com brilho</td></tr>
+</table>
+</div>
+
+<div class="card" id="exploit">
+<h2>Exploit Real</h2>
+<p>Assim como Dark Pro Premium, o R1nderPest usa exploits baseados em <strong>checkm8</strong> (bootrom exploit para A5-A11):</p>
+<ul>
+<li>Usa <strong>pymobiledevice3</strong> para comunicação com o dispositivo iOS</li>
+<li>Inclui <strong>libimobiledevice</strong> completo (ideviceinfo, ideviceenterrecovery, idevicepair, etc.)</li>
+<li>Faz download de stages do exploit do servidor C2</li>
+<li>O parâmetro <code>ver=26.1</code> na URL é <strong>falso</strong> — o exploit checkm8 só funciona até iOS 16.5</li>
+<li>Não há suporte real para A12/A13 (SecureROM patched)</li>
+</ul>
+</div>
+
+<div class="card" id="comparacao">
+<h2>Comparação: R1nderPest vs Dark Pro Premium</h2>
+<table>
+<tr><th>Característica</th><th>Dark Pro Premium</th><th>R1nderPest</th></tr>
+<tr><td>Tecnologia</td><td>Tauri 1.8.3 (Rust)</td><td>PyInstaller (Python/PyQt5)</td></tr>
+<tr><td>Desenvolvedor</td><td>DM1LN3 / flashcel</td><td>ZeroxDev</td></tr>
+<tr><td>Versão</td><td>6.5.8</td><td>2.4 Release</td></tr>
+<tr><td>Tamanho</td><td>228 MB</td><td>60 MB</td></tr>
+<tr><td>C2 Server</td><td>isalldone.com.br (Brasil)</td><td>194.99.21.156:8001 (Rússia)</td></tr>
+<tr><td>iOS falso</td><td>17-26</td><td>26.1</td></tr>
+<tr><td>Exploit real</td><td>checkm8 (A5-A11)</td><td>checkm8 (A5-A11)</td></tr>
+<tr><td>Dependências</td><td>WebView2, drivers PongoOS</td><td>Python 3.13, pymobiledevice3, libimobiledevice</td></tr>
+<tr><td>Instalador</td><td>Inno Setup (?)</td><td>Scripts install1.bat / install2.bat</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Conclusão</h2>
+<p>R1nderPest é mais uma ferramenta falsa de bypass iCloud. Ela:</p>
+<ul>
+<li>✅ Mente sobre suporte a iOS 26+ (não existe)</li>
+<li>✅ Usa checkm8 (A5-A11), que só funciona até iOS 16.5</li>
+<li>✅ Se comunica com servidor C2 na Rússia</li>
+<li>✅ Não tem capacidade real de bypass em dispositivos modernos</li>
+<li>✅ É um golpe igual ao Dark Pro Premium, só que em Python</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,837 @@
+Total strings found: 987
+============================================================
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
+ !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ @8~8t
+ A_A^A\
+ A_A^A\_^
+ A_A^A]
+ A_A^A]A\]
+ A_A^A]A\_
+ A_A^A]A\_^]
+ A_A^A]][
+ A_A^_
+ Base Class Array'
+ Base Class Descriptor at (
+ Class Hierarchy Descriptor'
+ Complete Object Locator'
+ Type Descriptor'
+ delete
+ delete[]
+ inflate 1.3.1 Copyright 1995-2024 Mark Adler 
+ new[]
+%U?%llu
+%s [ANSI fallback]
+%s%c%s
+%s%c%s%c%s
+%s%c%s%c%s%c%s
+%s%c%s.exe
+%s%c%s.pkg
+%s%c%s.py
+%s: %s
+(null)
+)>6{1n
+*StO9>T
++f)>0'
+.00cfg
+.CRT$XCA
+.CRT$XCAA
+.CRT$XCZ
+.CRT$XIA
+.CRT$XIAA
+.CRT$XIAC
+.CRT$XIC
+.CRT$XIZ
+.CRT$XPA
+.CRT$XPX
+.CRT$XPXA
+.CRT$XPZ
+.CRT$XTA
+.CRT$XTZ
+.data$r
+.data$rs
+.fptable
+.gfids
+.idata$2
+.idata$3
+.idata$4
+.idata$5
+.idata$6
+.pdata
+.rdata
+.rdata$00
+.rdata$r
+.rdata$voltmd
+.rdata$zzzdbg
+.rtc$IAA
+.rtc$IZZ
+.rtc$TAA
+.rtc$TZZ
+.text$mn
+.text$mn$00
+.text$mn$21
+.text$x
+.xJ>Hf
+.xdata
+.xdata$x
+/>58d%
+0A^A]A\_^
+0A_A^A\
+0A_A^A\_^[]
+0A_A^A]
+0A_A^A]A\^
+0A_A^A]A\_
+0A_A^A]A\_^[
+0A_A^A]A\_^]
+0A_A^]
+0A_A^^
+0A_A^_
+0A_A^_^]
+1#QNAN
+1#SNAN
+3>N;kU
+8A_A^A]A\_^][
+8|{A8t
+:u'f9Q
+;1#INF
+;D$hsL
+;H9>&X
+;I9}(tiH
+<htl<jt\<lt4<tt$<wt
+=imb;D
+=t=A84
+=}9i~]
+>jtm}S
+>p.NB;
+?7zQ6$
+?UUUUUU
+@8t$HtzL
+@8~0tH
+@A_A^A\
+@A_A^A\_^][
+@A_A^_
+@SATAUAV
+@SUAUAVAWH
+@SUVWATAVAWH
+@SUVWAV
+@SVWATAUAVAWH
+@UATAUAVAWH
+@USVAVH
+@USVWATAUAVAWH
+@USVWATAVAWH
+@USVWAVH
+@USWAUAVAWH
+@UVWAT
+@b;zO]
+A8^8}WD
+A;Exsf
+ADVAPI32.dll
+ATAUAVAWH
+ATAVAWH
+AUAVAWH
+A^A]A\[
+A^_^][
+A_A^A\_]
+A_A^A\_^
+A_A^A\_^[]
+A_A^A\_^][
+A_A^A]A\
+A_A^A]A\]
+A_A^A]A\_
+A_A^A]A\_^[]
+A_A^A]A\_^]
+A_A^A]A\_^][
+A_A^A]_[]
+A_A^_^]
+A_A^_^][
+Absolute path to script exceeds PYI_PATH_MAX
+AppPolicyGetProcessTerminationMethod
+AreFileApisANSI
+Arg list too long
+August
+B(I9A(u
+BC?>6t9^
+Bad address
+Bad file descriptor
+Broken pipe
+CloseHandle
+CompareStringEx
+CompareStringW
+ConvertSidToStringSidW
+ConvertStringSecurityDescriptorToSecurityDescriptorW
+CorExitProcess
+Could not allocate buffer for TOC!
+Could not allocate memory for DYLIB_PYTHON structure.
+Could not allocate memory for DYLIB_TCLTK structure.
+Could not allocate memory for SPLASH_CONTEXT.
+Could not allocate memory for archive structure!
+Could not allocate memory for splash screen resources.
+Could not create temporary directory!
+Could not get __main__ module's dict.
+Could not get __main__ module.
+Could not load PyInstaller's embedded PKG archive from the executable (%s)
+Could not read full TOC!
+Could not side-load PyInstaller's PKG archive from external file (%s)
+CreateDirectoryW
+CreateFileW
+CreateProcessW
+CreateSymbolicLinkW
+CreateWindowExW
+D!|$xA
+D$ D88t
+D$(H!L$ E3
+D$0@8{
+D$0H9D$8
+D$0HcH
+D$18F(u
+D$@H;F
+D$hH+D$pHi
+D81u`L9r
+D8|$`t
+D9k |j
+D9k |o
+December
+DefWindowProcW
+DeleteCriticalSection
+DeleteFileW
+Dependency %s not found in the referenced dependency archive.
+DestroyWindow
+Directory not empty
+DispatchMessageW
+Domain error
+E81t"A
+E;E8v#A
+EncodePointer
+EnterCriticalSection
+Error on file.
+Exec format error
+ExitProcess
+ExpandEnvironmentStringsW
+Extraction path length exceeds maximum path length!
+Failed to allocate PyConfig structure! Unsupported python version?
+Failed to convert DLL search path!
+Failed to copy file %s from %s!
+Failed to create parent directory structure.
+Failed to create symbolic link %s!
+Failed to execute script '%s' due to unhandled exception!
+Failed to extract %s from referenced dependency archive %s.
+Failed to extract %s: decompression resulted in return code %d!
+Failed to extract %s: failed to allocate data buffer (%u bytes)!
+Failed to extract %s: failed to allocate temporary buffer!
+Failed to extract %s: failed to allocate temporary input buffer!
+Failed to extract %s: failed to allocate temporary output buffer!
+Failed to extract %s: failed to open archive file!
+Failed to extract %s: failed to open target file!
+Failed to extract %s: failed to read data chunk!
+Failed to extract %s: failed to seek to the entry's data!
+Failed to extract %s: failed to write data chunk!
+Failed to extract %s: inflateInit() failed with return code %d!
+Failed to extract entry: %s.
+Failed to extract script from archive!
+Failed to format PYZ archive path and offset
+Failed to get _MEIPASS as PyObject.
+Failed to initialize security descriptor for temporary directory!
+Failed to load Tcl/Tk shared libraries for splash screen!
+Failed to load splash screen resources!
+Failed to open archive %s!
+Failed to open referenced dependency archive %s.
+Failed to parse run-time options!
+Failed to pre-initialize embedded python interpreter!
+Failed to read cookie!
+Failed to remove temporary directory: %s
+Failed to seek to cookie position!
+Failed to set _PYI_PARENT_PROCESS_LEVEL environment variable!
+Failed to set application home directory via environment variable!
+Failed to set module search paths!
+Failed to set program name!
+Failed to set python home path!
+Failed to set run-time options!
+Failed to set sys.argv!
+Failed to start embedded python interpreter!
+Failed to start splash screen!
+Failed to store path to PYZ archive into sys.%s!
+Failed to unmarshal code object for %s
+Failed to unmarshal code object for module %s!
+Failed to unpack splash screen dependencies from PKG archive!
+February
+File already exists but should not: %s
+File exists
+File too large
+FileTimeToSystemTime
+Filename too long
+FindClose
+FindFirstFileExW
+FindFirstFileW
+FindNextFileW
+FlsAlloc
+FlsFree
+FlsGetValue
+FlsGetValue2
+FlsSetValue
+FlushFileBuffers
+FormatMessageW
+FreeEnvironmentStringsW
+FreeLibrary
+Friday
+Function not implemented
+GetACP
+GetCPInfo
+GetCommandLineA
+GetCommandLineW
+GetConsoleMode
+GetConsoleOutputCP
+GetConsoleWindow
+GetCurrentDirectoryW
+GetCurrentProcess
+GetCurrentProcessId
+GetCurrentThreadId
+GetDriveTypeW
+GetEnvironmentStringsW
+GetEnvironmentVariableW
+GetExitCodeProcess
+GetFileAttributesExW
+GetFileInformationByHandle
+GetFileSizeEx
+GetFileType
+GetFinalPathNameByHandleW
+GetFullPathNameW
+GetLastError
+GetMessageW
+GetModuleFileNameW
+GetModuleHandleExW
+GetModuleHandleW
+GetOEMCP
+GetProcAddress
+GetProcessHeap
+GetStartupInfoW
+GetStdHandle
+GetStringTypeW
+GetSystemTimeAsFileTime
+GetTempPathW
+GetTimeZoneInformation
+GetTokenInformation
+GetWindowLongPtrW
+GetWindowThreadProcessId
+H!D$ E
+H9>u+A
+H;\$8u
+H;xXu5
+HH:mm:ss
+HeapAlloc
+HeapFree
+HeapReAlloc
+HeapSize
+I@L9{8u
+IiGM>nw
+Illegal byte sequence
+Improper link
+Inappropriate I/O control operation
+InitializeCriticalSectionAndSpinCount
+InitializeCriticalSectionEx
+InitializeSListHead
+Input/output error
+Interrupted function call
+Invalid argument
+Invalid parent process level: %d
+Invalid seek
+Invalid value in _PYI_PARENT_PROCESS_LEVEL: %s
+Is a directory
+IsDebuggerPresent
+IsProcessorFeaturePresent
+IsValidCodePage
+January
+K&>.yC
+K32EnumProcessModules
+K32GetModuleFileNameExW
+K49K<u
+KERNEL32.dll
+K~Je#>!
+L!|$(L!
+L$ SUVWATAUAVAW
+L$ SUVWAV
+L$ SUVWH
+L$ SVWH
+L$ UVWATAUAVAWH
+L$ VWAVH
+L$ |+L;
+L$&8\$&t,8Y
+L$@A9MP
+L$@E)}P
+L$pD)s
+L9t$0t!H
+LCMapStringEx
+LCMapStringW
+LcA<E3
+LeaveCriticalSection
+LoadLibraryExW
+LocalFree
+LocaleNameToLCID
+MM/dd/yy
+MP;H(s
+MP;H8s
+Maximum archive pool size reached!
+Module object for %s is NULL!
+Monday
+MsgWaitForMultipleObjects
+MultiByteToWideChar
+NAN(IND)
+NAN(SNAN)
+No child processes
+No error
+No locks available
+No space left on device
+No such device
+No such device or address
+No such file or directory
+No such process
+Not a directory
+Not enough space
+November
+October
+OpenProcessToken
+Operation not permitted
+PA_A^_^]
+PYINSTALLER_RESET_ENVIRONMENT
+PYINSTALLER_STRICT_UNPACK_MODE
+PYINSTALLER_SUPPRESS_SPLASH_SCREEN
+PYZ archive entry not found in the TOC!
+Path exceeds PYI_PATH_MAX limit.
+PeekMessageW
+PeekNamedPipe
+Permission denied
+PyConfig_Clear
+PyConfig_InitIsolatedConfig
+PyConfig_Read
+PyConfig_SetBytesString
+PyConfig_SetString
+PyConfig_SetWideStringList
+PyErr_Clear
+PyErr_Fetch
+PyErr_NormalizeException
+PyErr_Occurred
+PyErr_Print
+PyErr_Restore
+PyEval_EvalCode
+PyImport_AddModule
+PyImport_ExecCodeModule
+PyImport_ImportModule
+PyList_Append
+PyMarshal_ReadObjectFromString
+PyMem_RawFree
+PyModule_GetDict
+PyObject_CallFunction
+PyObject_CallFunctionObjArgs
+PyObject_GetAttrString
+PyObject_SetAttrString
+PyObject_Str
+PyPreConfig_InitIsolatedConfig
+PyRun_SimpleStringFlags
+PyStatus_Exception
+PySys_GetObject
+PySys_SetObject
+PyUnicode_AsUTF8
+PyUnicode_Decode
+PyUnicode_DecodeFSDefault
+PyUnicode_FromFormat
+PyUnicode_FromString
+PyUnicode_Join
+PyUnicode_Replace
+Py_DecRef
+Py_DecodeLocale
+Py_ExitStatusException
+Py_Finalize
+Py_GIL_DISABLED
+Py_InitializeFromConfig
+Py_IsInitialized
+Py_PreInitialize
+Qkkbal
+QueryPerformanceCounter
+QueryPerformanceFrequency
+RaiseException
+Read-only file system
+ReadConsoleW
+ReadFile
+Referenced dependency archive %s not found.
+RegisterClassW
+RemoveDirectoryW
+Resource deadlock avoided
+Resource device
+Resource temporarily unavailable
+Result too large
+RtlCaptureContext
+RtlLookupFunctionEntry
+RtlPcToFileHeader
+RtlUnwindEx
+RtlVirtualUnwind
+S(HcS0
+SPLASH: Tcl is not threaded. Only threaded Tcl is supported.
+SPLASH: could not extract requirement %s.
+SPLASH: could not find requirement %s in archive.
+SPLASH: extraction path length exceeds maximum path length!
+SPLASH: failed to create parent directory structure.
+SPLASH: failed to load Tcl/Tk shared libraries!
+SPLASH: file already exists but should not: %s
+SPLASH: length of Tcl shared library path exceeds maximum path length!
+SPLASH: length of Tk shared library path exceeds maximum path length!
+SUVWATAUAVAWH
+SUVWATAVAWH
+SUVWAVAWH
+SVWATAUAVAWH
+Saturday
+September
+SetConsoleCtrlHandler
+SetDllDirectoryW
+SetEndOfFile
+SetEnvironmentVariableW
+SetFilePointerEx
+SetLastError
+SetStdHandle
+SetUnhandledExceptionFilter
+SetWindowLongPtrW
+ShowWindow
+ShutdownBlockReasonCreate
+Sunday
+SystemTimeToTzSpecificLocalTime
+T$8E+T$
+T$xD;D$x
+Tcl_Alloc
+Tcl_ConditionFinalize
+Tcl_ConditionNotify
+Tcl_ConditionWait
+Tcl_CreateInterp
+Tcl_CreateObjCommand
+Tcl_CreateThread
+Tcl_DeleteInterp
+Tcl_DoOneEvent
+Tcl_EvalEx
+Tcl_EvalFile
+Tcl_EvalObjv
+Tcl_Finalize
+Tcl_FinalizeThread
+Tcl_FindExecutable
+Tcl_Free
+Tcl_GetCurrentThread
+Tcl_GetObjResult
+Tcl_GetString
+Tcl_GetVar2
+Tcl_Init
+Tcl_JoinThread
+Tcl_MutexFinalize
+Tcl_MutexLock
+Tcl_MutexUnlock
+Tcl_NewByteArrayObj
+Tcl_NewStringObj
+Tcl_SetVar2
+Tcl_SetVar2Ex
+Tcl_ThreadAlert
+Tcl_ThreadQueueEvent
+TerminateProcess
+Thursday
+Tk_GetNumMainWindows
+Tk_Init
+TlsAlloc
+TlsFree
+TlsGetValue
+TlsSetValue
+Too many links
+Too many open files
+Too many open files in system
+TranslateMessage
+Tuesday
+UATAUAVAWH
+USER32.dll
+USVWATAVAWH
+UUUUUU
+UVWATAUAVAW
+UVWATAUAVAWH
+UVWAVAWH
+UWATAVAWH
+UnhandledExceptionFilter
+Unknown error
+Unknown exception
+V6E>`"(5
+VATAUAVAWH
+VAVAWH
+VWATAVAW
+VWATAVAWH
+VirtualProtect
+Visual C++ CRT: Not enough memory to complete call to strerror.
+WARNING
+WATAUAVAWH
+WAVAWH
+WaitForSingleObject
+Wednesday
+WideCharToMultiByte
+WriteConsoleW
+WriteFile
+XA_A^A]A\_^][
+[PYI-%d:%s] 
+[PYI-%d:ERROR] 
+[aOni*{
+\$ UAVAWH
+\$ UVAV
+\$ UVWATAUAVAWH
+\$ UVWH
+]Lu*A;|$
+_MEIPASS
+_PYI_APPLICATION_HOME_DIR
+_PYI_APPLICATION_HOME_DIR environment variable is not defined!
+_PYI_ARCHIVE_FILE
+_PYI_PARENT_PROCESS_LEVEL
+_PYI_SPLASH_IPC
+__based(
+__cdecl
+__clrcall
+__eabi
+__fastcall
+__file__
+__main__
+__pascal
+__ptr64
+__restrict
+__stdcall
+__swift_1
+__swift_2
+__swift_3
+__thiscall
+__unaligned
+__vectorcall
+_f9l$pu
+_image_data
+_pyi_main_co
+_pyinstaller_pyz
+_source
+`A_A^A]A\_^]
+`anonymous namespace'
+`copy constructor closure'
+`default constructor closure'
+`dynamic atexit destructor for '
+`dynamic initializer for '
+`eh vector constructor iterator'
+`eh vector copy constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`eh vector vbase copy constructor iterator'
+`local static guard'
+`local static thread guard'
+`local vftable constructor closure'
+`local vftable'
+`managed vector constructor iterator'
+`managed vector copy constructor iterator'
+`managed vector destructor iterator'
+`omni callsig'
+`placement delete closure'
+`placement delete[] closure'
+`scalar deleting destructor'
+`string'
+`typeof'
+`udt returning'
+`vbase destructor'
+`vbtable'
+`vcall'
+`vector constructor iterator'
+`vector copy constructor iterator'
+`vector deleting destructor'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`vector vbase copy constructor iterator'
+`vftable'
+`virtual displacement map'
+address family not supported
+address in use
+address not available
+already connected
+bad exception
+bad message
+base_library.zip
+bp(=>?g
+buffer error
+c [1>H'
+c,D+cHD+
+c9JxM3.
+calloc
+connection aborted
+connection already in progress
+connection refused
+connection reset
+data error
+dddd, MMMM dd, yyyy
+destination address required
+e0A_A^A]A\]
+eHA_A^A]A\_^[]
+f9l$pt<f
+f9|$ tyf
+f;\$4r
+f;\$<r
+f;\$Dr
+fA9,@u
+fA9,vu
+fB9<I}1L
+fC94wu
+fD9$Ju
+fD9$Ou
+fD9$wu
+fD9$~u
+fD9,Gu
+fD94H}aD
+fD94Q}
+fD94xu
+fD9t$b
+fE9,lu
+fF9,su
+ffffff
+fffffff
+file error
+fwrite
+gfffffffH
+hA_A^A]A\_^[]
+hash_seed
+header crc mismatch
+hide-early
+hide-late
+host unreachable
+ht?fB94ht8H
+identifier removed
+import sys; sys.stderr.flush();         (sys.__stderr__.flush if sys.__stderr__         is not sys.stderr else (lambda: None))()
+import sys; sys.stdout.flush();         (sys.__stdout__.flush if sys.__stdout__         is not sys.stdout else (lambda: None))()
+incompatible version
+incorrect data check
+incorrect header check
+incorrect length check
+insufficient memory
+invalid bit length repeat
+invalid block type
+invalid code -- missing end-of-block
+invalid code lengths set
+invalid distance code
+invalid distance too far back
+invalid distances set
+invalid literal/length code
+invalid literal/lengths set
+invalid stored block lengths
+invalid window size
+kE>fvw
+l$ VWATAUAVH
+l$ VWATAVAW
+l$ VWATAVAWH
+l$ VWAVH
+lib-dynload
+malloc
+message size
+minimize-early
+minimize-late
+mj>zjZ
+n03>Pu
+nan(ind)
+nan(snan)
+need dictionary
+network down
+network reset
+network unreachable
+no buffer space
+no link
+no message
+no message available
+no protocol option
+no stream resources
+not a socket
+not a stream
+not connected
+not supported
+operation canceled
+operation in progress
+operation not supported
+operation would block
+operator
+operator "" 
+operator co_await
+operator<=>
+optimize
+owner dead
+p WATAUAVAWH
+pA^_^[]
+pA_A^A]A\_^[
+protocol error
+protocol not supported
+pyi-contents-directory
+pyi-hide-console
+pyi-python-flag
+pyi-runtime-tmpdir
+r7f;\$|
+r:f;\$|
+rKf;\$t
+rNf;\$t
+r_f;\$l
+rbf;\$l
+rename ::source ::_source
+restrict(
+rsf;\$d
+rvf;\$d
+s WAVAWH
+sL@8w(u
+source
+state not recoverable
+status_text
+stream end
+stream error
+stream timeout
+strict
+t$ WATAUAVAWH
+t$HL9{0
+t$xt*3
+t);\$8u#3
+t*D8)t%3
+t*D8)u
+t/v2Z%
+t9D88t4E3
+tDE;u$t>H
+tMD88tHH
+tclInit
+tcl_findLibrary
+tcl_patchLevel
+text file busy
+timed out
+tk.tcl
+tk_library
+tk_patchLevel
+too many length or distance symbols
+too many symbolic link levels
+u$D8r(t
+u,9\$0~NL
+u/HcH<H
+u3HcH<H
+u4I9}(
+uPD8r(t
+u[HcG(
+unbuffered
+unknown compression method
+unknown header flags set
+uzKs@>
+u{fD9F
+u~9t$Xt
+v$F}%g
+v2!L.2
+vKfffff
+vWD8s(t
+value too large
+verbose
+wrong protocol type
+x ATAVAWH
+x UAVAWH
+x<L9{0
+xA_A^A]A\_^[]
+x`I96t[I
+xaI96t\I
+y\PD>!
+{ AUAVAWH
+{,D+{HD+
+|$ AVH
+|$ AWH
+|$":uq
+|b=})>
+}0L9{0
+}HfD9#A
+~ $s%r
+~#D8m0u
+~,*u?I
+~,*uII

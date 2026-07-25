@@ -1,0 +1,66 @@
+--- api_url ---
+ABASEMANAGER.SQLITEs    BLDATABASEMANAGERs    BLDATABASE)   api_url  timeouts  os  path  join  expanduser  getpid  mount_point  afc_mode  de
+
+--- asset_wait ---
+) N #http://194.99.21.156:8001//get2.phpi,             )   asset_wait  asset_delete_delay  reboot_wait  syslog_collect  ~z .ifuse_mount_z 2
+
+--- asset_delete_delay ---
+/194.99.21.156:8001//get2.phpi,             )   asset_wait  asset_delete_delay  reboot_wait  syslog_collect  ~z .ifuse_mount_z 26.1r      i
+
+--- reboot_wait ---
+/get2.phpi,             )   asset_wait  asset_delete_delay  reboot_wait  syslog_collect  ~z .ifuse_mount_z 26.1r      i         i    sK   [0
+
+--- syslog_collect ---
+)   asset_wait  asset_delete_delay  reboot_wait  syslog_collect  ~z .ifuse_mount_z 26.1r      i         i    sK   [0-9A-Fa-f]{8}-
+
+--- ifuse_mount_z ---
+_wait  asset_delete_delay  reboot_wait  syslog_collect  ~z .ifuse_mount_z 26.1r      i         i    sK   [0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A
+
+--- GUID_REGEX ---
+_WINDOW  POST_CONNECT_DELAY  MIN_ARCHIVE_SIZE  re  compile  GUID_REGEX  BLDB_PATTERNS_UPPER)   selfs       new_r1nderpest.py  __init__  Ui_M
+
+--- BLDB_PATTERNS ---
+T_CONNECT_DELAY  MIN_ARCHIVE_SIZE  re  compile  GUID_REGEX  BLDB_PATTERNS_UPPER)   selfs       new_r1nderpest.py  __init__  Ui_MainWindow.__
+
+--- max_attempts ---
+unt_point  afc_mode  device_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREATE_NO_WINDOW  POST_CONNECT_DELAY  MIN_ARCHIVE_SIZ
+
+--- MIN_ARCHIVE_SIZE ---
+ttempts  global_GUID  CREATE_NO_WINDOW  POST_CONNECT_DELAY  MIN_ARCHIVE_SIZE  re  compile  GUID_REGEX  BLDB_PATTERNS_UPPER)   selfs       ne
+
+--- POST_CONNECT_DELAY ---
+attempt_count  max_attempts  global_GUID  CREATE_NO_WINDOW  POST_CONNECT_DELAY  MIN_ARCHIVE_SIZE  re  compile  GUID_REGEX  BLDB_PATTERNS_UPP
+
+--- CREATE_NO_WINDOW ---
+_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREATE_NO_WINDOW  POST_CONNECT_DELAY  MIN_ARCHIVE_SIZE  re  compile  GUID_REGEX
+
+--- global_GUID ---
+_mode  device_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREATE_NO_WINDOW  POST_CONNECT_DELAY  MIN_ARCHIVE_SIZE  re  compile
+
+--- mount_point ---
+E)   api_url  timeouts  os  path  join  expanduser  getpid  mount_point  afc_mode  device_info  guid  iOS  attempt_count  max_attempts  glob
+
+--- BLDATABASE ---
+a-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}) s    BLDATABASEMANAGER.SQLITEs    BLDATABASEMANAGERs    BLDATABASE)   api_url  timeou
+
+--- BLDATABASEMANAGER ---
+a-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}) s    BLDATABASEMANAGER.SQLITEs    BLDATABASEMANAGERs    BLDATABASE)   api_url  timeou
+
+--- attempt_count ---
+ser  getpid  mount_point  afc_mode  device_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREATE_NO_WINDOW  POST_CONNECT_DELAY
+
+--- afc_mode ---
+timeouts  os  path  join  expanduser  getpid  mount_point  afc_mode  device_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREA
+
+--- device_info ---
+os  path  join  expanduser  getpid  mount_point  afc_mode  device_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREATE_NO_WIND
+
+--- iOS ---
+panduser  getpid  mount_point  afc_mode  device_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREATE_NO_WINDOW  POST_CONNECT_DE
+
+--- guid ---
+in  expanduser  getpid  mount_point  afc_mode  device_info  guid  iOS  attempt_count  max_attempts  global_GUID  CREATE_NO_WINDOW  POST_CONN
+
+--- timeouts ---
+GER.SQLITEs    BLDATABASEMANAGERs    BLDATABASE)   api_url  timeouts  os  path  join  expanduser  getpid  mount_point  afc_mode  device_info
+

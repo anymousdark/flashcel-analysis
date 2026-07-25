@@ -1,0 +1,19 @@
+=== File Info ===
+Size: 59796197 bytes (57.0 MB)
+MZ: True
+PE offset: 0x108
+Machine: AMD64
+Sections: 7
+Timestamp: 2026-04-11 10:43:38
+
+=== Sections ===
+  .text: raw=0x400 size=179712 end=0x2c200 vsize=179328
+  .rdata: raw=0x2c200 size=78336 end=0x3f400 vsize=77978
+  .data: raw=0x3f400 size=3584 end=0x40200 vsize=20720
+  .pdata: raw=0x40200 size=9216 end=0x42600 vsize=9036
+  .fptable: raw=0x42600 size=512 end=0x42800 vsize=256
+  .rsrc: raw=0x42800 size=6144 end=0x44000 vsize=5812
+  .reloc: raw=0x44000 size=2048 end=0x44800 vsize=1896
+
+Overlay: 59515621 bytes (56.8 MB)
+Sections: 280576 bytes (274.0 KB)

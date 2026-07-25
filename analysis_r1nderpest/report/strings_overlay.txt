@@ -1,0 +1,3340 @@
+Total strings found: 7123
+============================================================
+        
+         
+          
+                                    getattr(to_patch_from, attr),
+                                    getattr(to_patch_to, attr),
+                                    is_method,
+                                   (delete current val)
+                                )
+                                and bar to disk
+                                from store (overwrite current vals)
+                                getattr(to_patch_to, attr) is None
+                                or getattr(to_patch_from, attr) is None
+                                self.patch_function(
+                                self.try_patch_attr(to_patch_to, to_patch_from, attr)
+                                values
+                            "adding or removing property decorations not supported"
+                            ):
+                            ast_elt,
+                            else:
+                            fil.write('\n')
+                            if (
+                            print("no stored variable or alias %s" % arg)
+                            restore_aliases(ip, alias=arg)
+                            tuple(cast(ast.Name, target).id for target in targets),
+                         r7
+                        """ % (arg, obj) ))
+                        (
+                        )
+                        Proper storage of interactively declared classes (or instances
+                        Warning:%s is %s
+                        ast.FunctionDef, without_decorator_list.body[0]
+                        ast_elt.targets
+                        cls._gather_children(handler.body, parent_node)
+                        cmd = ip.alias_manager.retrieve_alias(name)
+                        else [ast_elt.target]
+                        except KeyError:
+                        fil.write(obj)
+                        for attr in ("fget", "fset", "fdel"):
+                        from pprint import pprint
+                        func_ast, filename, mode="exec", dont_inherit=True
+                        func_code, "    "
+                        if isinstance(ast_elt, ast.Assign)
+                        if not obj.endswith('\n'):
+                        ip.user_ns[arg] = obj
+                        obj = db["autorestore/" + arg]
+                        obj.__class__.__name__, fnam))
+                        of classes in real modules on file system can be %%store'd.
+                        of those classes) is not possible! Only instances
+                        pprint(obj, fil)
+                        print(textwrap.dedent("""\
+                        raise UsageError("Unknown variable '%s'" % name) from e
+                        raise ValueError(
+                        result.unfixable.append(handler.type)
+                        return
+                        self.patch_function(to_patch_to, to_patch_from, is_method)
+                        to_patch_from = getattr(local_env["__autoreload_class__"], name)
+                        to_patch_from = local_env[name]
+                        to_patch_from = to_patch_from.__func__
+                        to_patch_from, property
+                        to_patch_to.__code__.co_freevars.index(freevar)
+                        try:
+                    # it might be an alias
+                    # local_env contains the function exec'd from  new version of function
+                    #pickled = pickle.dumps(obj)
+                    (tuple(name.asname or name.name for name in ast_elt.names), ast_elt)
+                    )
+                    ).decorator_list = []
+                    ):
+                    ]
+                    and self._check_dependents()
+                    and self._patch_namespace(module)
+                    and to_patch_to.__code__.co_filename
+                    assert isinstance(ast_elt, (ast.Assign, ast.AnnAssign))
+                    ast.unparse(new_ast_def),
+                    cast(
+                    cls._gather_children(ast_elt.finalbody, parent_node)
+                    compiled_code = compile(
+                    continue
+                    cur_dependency_node
+                    db[ 'autorestore/' + arg ] = obj
+                    db['stored_aliases'] = staliases
+                    del db['autorestore/' + todel]
+                    elif not isinstance(to_patch_to, property) and not isinstance(
+                    else:
+                    except KeyError:
+                    except ValueError as e:
+                    exec(compiled_code, global_env, local_env)  # type: ignore[arg-type]
+                    fil = open(fnam, "a", encoding="utf-8")
+                    fil = open(fnam, "w", encoding="utf-8")
+                    func_asts.insert(0, without_decorator_list)
+                    func_code = "class __autoreload_class__:\n" + textwrap.indent(
+                    getattr(to_patch_to, "__code__", None)
+                    global_env = dict(global_env)
+                    if handler.type is not None:
+                    if is_method:
+                    if isinstance(to_patch_from, (staticmethod, classmethod)):
+                    if isinstance(to_patch_to, property) and isinstance(
+                    if modname == '__main__':
+                    if not isinstance (obj, str):
+                    local_env,
+                    modname = getattr(inspect.getmodule(obj), '__name__', '')
+                    name = arg
+                    names_to_reload.append(name)
+                    new_ast_def, old_defs_by_name[name]
+                    ns.__dict__ | namespace_to_check.__dict__,
+                    obj = ip.ev(args[0])
+                    obj = ip.user_ns[arg]
+                    obj_addr + WORD_N_BYTES * offset, ctypes.POINTER(WORD_TYPE)
+                    or "<string>"
+                    patched_flag = True
+                    print("Alias stored: %s (%s)" % (name, cmd))
+                    print("Stored '%s' (%s)" % (arg, obj.__class__.__name__))
+                    print("Writing '%s' (%s) to file '%s'." % (args[0],
+                    raise UsageError("Can't delete variable '%s'" % todel) from e
+                    result.assign_defs.append(
+                    result.inplace_merge(
+                    result.unfixable.append(ast_elt)
+                    return
+                    self.detect_autoreload(old_module_ast, new_module_ast)
+                    self.source_by_modname[new_modname] = ""
+                    self.source_by_modname[new_modname] = f.read()
+                    setattr(namespace_to_check, name, local_env[name])
+                    staliases = db.get('stored_aliases',{})
+                    staliases[name] = cmd
+                    targets = (
+                    to_patch_to = to_patch_to.__func__
+                    to_patch_to.__closure__[
+                    try:
+                    without_decorator_list = pickle.loads(pickle.dumps(func_asts[0]))
+                 @r7
+                "__closure__",
+                "col_offset",
+                "ctx",
+                "end_col_offset",
+                "end_lineno",
+                "lineno",
+                "parent",
+                # Compile with correct filename to preserve in traceback
+                # exec new source code using old function's (obj) globals environment.
+                # give up on deleting the attribute, let the stale one dangle
+                # print 30 first characters from every var
+                ((node.qualified_name[-1],), node.abstract_syntax_tree)
+                (fname := get_module_file_name(new_module)) is None
+                )
+                ).contents.value
+                ):
+                == field_addr
+                and (name := names[0]) in namespace_to_check.__dict__
+                and base.attr == "Enum"
+                and base.value.id == "enum"
+                and freevar in to_patch_to.__code__.co_freevars
+                and isinstance(base.value, ast.Name)
+                assert len(names) == 1
+                ast.unparse(class_ast_node),
+                ast_elt = ast_elt.value
+                break
+                callable(closure_val.cell_contents)
+                continue
+                ctypes.cast(
+                ctypes.py_object(new_value)
+                cur.children[prefix] = AutoreloadTree()
+                cur.defs_to_reload.append((tuple(names), new_ast_def))
+                cur.new_nested_classes[name] = new_ast_def_class
+                decorator_path = self._separate_name(decorator, True)
+                decorator_path_tuple = tuple(decorator_path)
+                del db[k]
+                delattr(namespace_to_check, name)
+                else:
+                except BaseException as e:
+                except Exception:
+                except KeyError:
+                exec(
+                filename = (
+                fnam = os.path.expanduser(args[1].lstrip(">").lstrip())
+                for arg in args:
+                for func_ast in func_asts:
+                for handler in ast_elt.handlers:
+                for name in names:
+                func_asts = [ast.parse(func_code)]
+                func_code = textwrap.dedent(ast.unparse(new_ast_def))
+                global_env = ns.__dict__
+                if (
+                if args[1].startswith(">>"):
+                if cls.is_constexpr_assign(ast_elt, parent_node):
+                if is_method := (len(prefixes) > 0):
+                if isinstance(to_patch_to, (staticmethod, classmethod)):
+                if len(cast(ast.FunctionDef, func_asts[0].body[0]).decorator_list) > 0:
+                if name not in old_defs_by_name or not compare_ast(
+                if new_defs_by_name[name] is not new_ast_def:
+                if not decorator_path:
+                if not isinstance(global_env, dict):
+                isinstance(base, ast.Attribute)
+                isinstance(new_ast_def, (ast.FunctionDef, ast.AsyncFunctionDef))
+                justkey = os.path.basename(var)
+                local_env_class,
+                new_ast_def_class, old_result.classes[name]
+                new_closure.append(
+                new_closure.append(closure_val)
+                new_is_value=True,
+                new_module_ast = ast.parse(new_source_code)
+                ns.__dict__ | namespace_to_check.__dict__,
+                offset=offset,
+                old_module_ast = ast.parse(old_source_code)
+                old_result.classes[name], new_ast_def_class, prefixes + [name]
+                or "dist-packages" in fname
+                or "site-packages" in fname
+                or not os.access(fname, os.R_OK)
+                pass
+                print(fmt % (justkey, repr(get(var, '<unavailable>'))[:50]))
+                raise UsageError('You must provide the variable to forget') from e
+                restore_data(ip)
+                result.classes[ast_elt.name] = ast_elt
+                result.function_defs.append(((ast_elt.name,), ast_elt))
+                result.import_defs.append(
+                result.inplace_merge(
+                result.inplace_merge(cls._gather_children(ast_elt.body, parent_node))
+                result.inplace_merge(cls._gather_children(ast_elt.orelse, parent_node))
+                result.unfixable.append(ast_elt.test)
+                result.unfixable.extend(ast_elt.items)
+                ret = offset
+                return
+                return False
+                return None
+                return True
+                return self._separate_name(decorator.func, False)
+                self._build_dependency_graph(new_module_ast)
+                self._gather_dependents(ast_elt.body, body_prefixes + [ast_elt.name])
+                self.dependency_graph.setdefault(decorator_path_tuple, []).append(
+                self.source_by_modname[new_modname] = ""
+                size = 0
+                size = max(map(len, vars))
+                to_patch_to = namespace_to_check.__dict__[name]
+                to_patch_to,
+                todel = args[0]
+                try:
+                tuple(new_closure) or NULL,
+                with fil:
+             r7
+            # %store foo
+            # %store foo >file.txt or >>file.txt
+            # can short-circuit if we've already detected that it's not a constexpr
+            # detect if we are able to use our autoreload algorithm
+            # get old/new module ast
+            # print("restore alias",k,v)  # dbg
+            # print("restored",justkey,"=",obj)  # dbg
+            #self.alias_table[k] = v
+            )
+            ) and not self.detect_autoreload(
+            ).value
+            ):
+            ans.append(elt)
+            ans.extend(self._check_dependents_inner(prefixes + [class_name]))
+            ans.extend(self._gen_dependents(elt.qualified_name))
+            ans.extend(self._gen_dependents(node))
+            assert new_value is not None
+            assert not new_is_value
+            ast_elt: ast.expr | ast.stmt = ast_node
+            cls.try_patch_attr(to_patch_to, to_patch_from, attr)
+            cls.try_patch_readonly_attr(
+            cls.try_patch_readonly_attr(old, new, field, new_is_value, offset)
+            cls.try_patch_readonly_attr(to_patch_to, to_patch_from, "__self__")
+            compare_ast(n1, n2) for n1, n2 in zip(node1, node2)
+            ctx = contextlib.suppress()
+            ctypes.pythonapi.Py_DecRef(ctypes.py_object(prev_value))
+            ctypes.pythonapi.Py_IncRef(ctypes.py_object(new_value))
+            cur = cur.children[prefix]
+            cur.defs_to_reload.append(
+            cur_dependency_node = DependencyNode(qualified_name, ast_elt)
+            def foo():
+            elif (
+            elif isinstance(ast_elt, (ast.AsyncWith, ast.With)):
+            elif isinstance(ast_elt, (ast.Import, ast.ImportFrom)):
+            elif isinstance(ast_elt, ast.ClassDef):
+            elif isinstance(ast_elt, ast.If):
+            elif isinstance(ast_elt, ast.Try):
+            elif not compare_ast(
+            elif not isinstance(ast_elt, (ast.Constant, ast.Pass)):
+            else:
+            except (AttributeError, TypeError, ValueError):
+            except Exception:
+            except IndexError as e:
+            exec(
+            fmt = '%-'+str(size)+'s -> %s'
+            for arg in args:
+            for decorator in ast_elt.decorator_list:
+            for k in db.keys('autorestore/*'):
+            for name in names:
+            for var in vars:
+            get = db.get
+            if (
+            if accept_calls:
+            if args:
+            if isinstance(ast_elt, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            if isinstance(ast_elt, ast.ClassDef):
+            if isinstance(base, ast.Name) and base.id == "Enum":
+            if k in (
+            if len(args) > 1 and args[1].startswith(">"):
+            if len(names) == 1 and names[0] in seen_names:
+            if name not in old_result.classes:
+            if names_to_reload:
+            if not hasattr(node2, k) or not compare_ast(v, getattr(node2, k)):
+            if not isinstance(ast_elt, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            if not isinstance(target, ast.Name):
+            if not self._patch_namespace(ns, prefixes + [class_name]):
+            if prefix not in cur.children:
+            if vars:
+            ip.alias_manager.define_alias(k,v)
+            ip.user_ns[justkey] = obj
+            local_env: dict[str, Any] = {}
+            local_env_class: dict[str, Any] = {}
+            name: ast_def for names, ast_def in new_result.all_defs() for name in names
+            name: ast_def for names, ast_def in old_result.all_defs() for name in names
+            names_to_reload = []
+            namespace_to_check = namespace_to_check.__dict__[prefix]
+            new_defs_by_name.keys()
+            new_module = sys.modules[new_modname]
+            new_source_code = f.read()
+            new_value_addr = ctypes.c_void_p.from_buffer(
+            new_value_addr: int | None = 0
+            node = tuple(prefixes + [func_name])
+            obj = db[key]
+            obj_addr + WORD_N_BYTES * offset, ctypes.POINTER(WORD_TYPE)
+            offset = cls.infer_field_offset(new, field)
+            offset = cls.infer_field_offset(obj, field)
+            offset = cls.infer_field_offset(old, field)
+            offset = cls.infer_field_offset(to_patch_from, "__closure__")
+            print("The error was:", sys.exc_info()[0])
+            print("Unable to restore variable '%s', ignoring (use %%store -d to forget!)" % justkey)
+            print('Stored variables and their in-db values:')
+            qualified_name = tuple(body_prefixes + [ast_elt.name])
+            r7
+            restore_data(self.shell)
+            return
+            return -1
+            return False
+            return None
+            return []
+            return [decorator.id]
+            return pref + [decorator.attr]
+            return self._patch_namespace_inner(ns, prefixes=prefixes)
+            seen_names.update(names)
+            self._add_node_to_autoreload_tree(node)
+            self._allow_builtins_exceptions = prev_allow
+            self.visit(node.value)
+            setattr(namespace_to_check, class_name, local_env_class[class_name])
+            setattr(old, field, new if new_is_value else getattr(new, field))
+            to_patch_from.__code__.co_freevars or [], to_patch_from.__closure__ or []
+            try:
+            vars = db.keys('autorestore/*')
+            vars.sort()
+            while isinstance(ast_elt, ast.Expr):
+            with ctx:
+            with open(fname, "r") as f:
+            yield
+           r
+           r7
+          (IPython session is closed and started again...)
+          In [1]: l
+          In [1]: l = ['hello',10,'world']
+          In [2]: %store -r
+          In [2]: %store l
+          In [3]: exit
+          In [3]: l
+          NameError: name 'l' is not defined
+          Out[3]: ['hello', 10, 'world']
+          Stored 'l' (list)
+          r
+          ville@badger:~$ ipython
+         r
+        """
+        """If True, any %store-d variables will be automatically restored
+        """Lightweight persistence for python variables.
+        # default action - store the variable
+        # delete
+        # lambdas may complain if there is more than one freevar
+        # reset
+        # run without arguments -> list variables & values
+        # strip autorestore
+        )
+        ).contents.value = new_value_addr
+        ):
+        * ``%store -d spam``  - Remove the variable and its value from storage
+        * ``%store -r spam bar`` - Refresh specified variables and aliases from store
+        * ``%store -r``       - Refresh all variables, aliases and directory history
+        * ``%store -z``       - Remove all variables from storage
+        * ``%store foo >>a.txt`` - Append value of foo to file a.txt
+        * ``%store foo >a.txt``  - Store value of foo to new file a.txt
+        * ``%store spam bar`` - Store the *current* value of the variables spam
+        * ``%store``          - Show list of all variables and their current
+        -------
+        1. dict mapping function names to their ASTs.
+        2. dict mapping class names to their ASTs.
+        3. list of any other ASTs.
+        <requestedExecutionLevel level='asInvoker' uiAccess='false' />
+        A method to return the source of a module. It is returned as a text string using universal newlines, translating
+        Also aliases can be %store'd across sessions.
+        Currently, only returns `true` as we do not block on failure to build this graph.
+        Example::
+        Generates a qualified name for a given decorator by finding its relative namespace.
+        Given a node of the dependency graph, add decorator dependencies to the autoreload tree.
+        Given list of ast elements, return:
+        If a decorator function is modified, we should similarly reload the functions which are decorated by this
+        It should be noted that if you change the value of a variable, you
+        Note also that the variables will need to be pickleable; most basic
+        Return ref to the AutoreloadTree at the namespace specified by prefixes
+        Returns
+        Returns `true` if patching was successful, and `false` if unsuccessful.
+        Returns `true` on success and `false` on failure.
+        Returns `true` on success. Returns `false` on failure.
+        This function patches module functions and methods. Specifically, only objects with their name in
+        To remove an alias from the storage, use the %unalias magic.
+        Update dictionary source_by_modname with current modules' source codes.
+        Usage:
+        Uses Deduperreload to try to update a module.
+        Wrapper for patching all elements in a namespace as specified by the to_autoreload member variable.
+        Wrapper function for generating dependency graph given some AST.
+        `False` if we should instead use IPython's original autoreload implementation.
+        `True` if we can run our targeted autoreload algorithm safely.
+        accept_calls: bool,
+        all recognized line separators into '
+        ans = []
+        args = argsl.split()
+        ast.FunctionDef
+        attributes with the new function's attributes.
+        body_prefixes = body_prefixes or []
+        class B:
+        cls,
+        cls, body: list[ast.stmt], parent_node: ast.Module | ast.ClassDef
+        cls, node: ast.AST, parent_node: ast.Module | ast.ClassDef
+        cls, to_patch_to: Any, to_patch_from: Any, is_method: bool
+        cls.try_patch_attr(to_patch_to, to_patch_from, "__code__")
+        cls.try_write_readonly_attr(old, field, new_value, offset=offset)
+        ctypes.cast(
+        cur = self
+        cur = self._to_autoreload.traverse_prefixes(list(node.qualified_name[:-1]))
+        cur = self._to_autoreload.traverse_prefixes(prefixes)
+        cur.children.clear()
+        cur.defs_to_delete |= set(old_defs_by_name.keys()) - set(
+        cur.defs_to_delete.clear()
+        cur.defs_to_reload.clear()
+        cur.new_nested_classes.clear()
+        db = ip.db
+        decorator. Iterate through the Dependency Graph to find such cases in the given AutoreloadTree.
+        decorator: ast.Attribute | ast.Name | ast.Call | ast.expr,
+        elif 'r' in opts:
+        elif 'z' in opts:
+        elif isinstance(decorator, ast.Call):
+        elif not args:
+        elif offset < 0:
+        elif old_value is new_value:
+        elif old_value is not None and offset < 0:
+        else:
+        except (AttributeError, TypeError, ValueError):
+        except Exception:
+        except KeyError:
+        field: str,
+        field_addr = ctypes.c_void_p.from_buffer(ctypes.py_object(field_value)).value
+        field_value = getattr(obj, field, NOT_FOUND)
+        finally:
+        for (func_name, *_), _ in cur.defs_to_reload:
+        for ast_node in body:
+        for attr in ("__defaults__", "__kwdefaults__", "__doc__", "__dict__"):
+        for base in node.bases:
+        for class_name in cur.children.keys():
+        for class_name in cur.new_nested_classes:
+        for class_name, class_ast_node in cur.new_nested_classes.items():
+        for elt in self.dependency_graph[qualname]:
+        for freevar, closure_val in zip(
+        for k, v in node1.__dict__.items():
+        for k,v in staliases.items():
+        for name in cur.defs_to_delete:
+        for name, new_ast_def_class in new_result.classes.items():
+        for names, new_ast_def in cur.defs_to_reload:
+        for names, new_ast_def in new_result.all_defs():
+        for new_modname in sys.modules.keys() - self.source_by_modname.keys():
+        for node in self._check_dependents_inner():
+        for offset in range(1, _MAX_FIELD_SEARCH_OFFSET):
+        for prefix in prefixes:
+        for target in node.targets if isinstance(node, ast.Assign) else [node.target]:
+        https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.get_source
+        if 'd' in opts:
+        if (fname := get_module_file_name(module)) is None:
+        if cls.is_enum_subclass(parent_node):
+        if field_value is NOT_FOUND:
+        if is_method:
+        if isinstance(decorator, ast.Name):
+        if isinstance(node, ast.Module):
+        if len(node.qualified_name) == 0:
+        if new_value is NULL:
+        if new_value not in (None, NULL):
+        if node.abstract_syntax_tree is not None:
+        if not (modname := getattr(module, "__name__", None)):
+        if not compare_ast(old_result.unfixable, new_result.unfixable):
+        if not isinstance(decorator, ast.Attribute):
+        if not isinstance(node, (ast.Assign, ast.AnnAssign)) or node.value is None:
+        if not self.enabled:
+        if not self.is_constexpr:
+        if obj_addr is None or field_addr is None:
+        if obj_addr is None or new_value_addr is None:
+        if offset == -1:
+        if offset is None:
+        if old_source_code := self.source_by_modname.get(modname):
+        if old_value is NOT_FOUND or new_value is NOT_FOUND:
+        if pref := self._separate_name(decorator.value, False):
+        if prev_value is NOT_FOUND:
+        if prev_value is not None:
+        if qualname not in self.dependency_graph:
+        if self._allow_builtins_exceptions and hasattr(builtins, node.id):
+        if self.autorestore:
+        if to_patch_to.__closure__ is None and to_patch_from.__closure__ is not None:
+        if to_patch_to.__closure__ is not None or to_patch_from.__closure__ is not None:
+        ip = self.shell
+        ip.alias_manager.define_alias(alias, staliases[alias])
+        justkey = os.path.basename(key)
+        module). Raises ImportError if the loader cannot find the module specified.
+        namespace_to_check = ns
+        need to %store it again if you want to persist the new value.
+        new: object,
+        new_closure = []
+        new_defs_by_name: dict[str, ast.AST] = {
+        new_is_value: bool = False,
+        new_node: ast.Module | ast.ClassDef,
+        new_result = self._gather_children(new_node.body, new_node)
+        new_source_code gets executed in the old version's global environment. Then, replace the old function's
+        new_value = new if new_is_value else getattr(new, field, NOT_FOUND)
+        new_value: object,
+        node2, list
+        obj: object,
+        obj_addr = ctypes.c_void_p.from_buffer(ctypes.py_object(obj)).value
+        offset = -1
+        offset: int = -1,
+        offset: int | None = None,
+        old: object,
+        old_defs_by_name: dict[str, ast.AST] = {
+        old_node: ast.Module | ast.ClassDef,
+        old_result = self._gather_children(old_node.body, old_node)
+        old_value = getattr(old, field, NOT_FOUND)
+        opts,argsl = self.parse_options(parameter_s,'drz',mode='string')
+        patched_flag = False
+        prefixes = prefixes or []
+        prefixes: list[str] | None = None,
+        prev_allow = self._allow_builtins_exceptions
+        prev_value = getattr(obj, field, NOT_FOUND)
+        python types can be safely %store'd.
+        r
+        r7
+        result = GatherResult.create()
+        ret = -1
+        return ""
+        return False
+        return True
+        return ans
+        return cls([], [], [], {}, [])
+        return cls.constexpr_detector(node.value)
+        return cur
+        return itertools.chain(self.import_defs, self.assign_defs, self.function_defs)
+        return len(node1) == len(node2) and all(
+        return node1 == node2
+        return patched_flag
+        return result
+        return ret
+        return self._enabled and platform.python_implementation() == "CPython"
+        return self._gather_dependents(new_ast.body)
+        return self.is_constexpr
+        seen_names: set[str] = set()
+        self,
+        self, body: list[ast.stmt], body_prefixes: list[str] | None = None
+        self, ns: ModuleType | type, prefixes: list[str] | None = None
+        self, prefixes: list[str] | None = None
+        self._allow_builtins_exceptions = False
+        self._allow_builtins_exceptions = True
+        self._enabled = True
+        self._enabled = value
+        self._to_autoreload = AutoreloadTree()
+        self._to_autoreload: AutoreloadTree = AutoreloadTree()
+        self.assign_defs.extend(other.assign_defs)
+        self.children: dict[str, AutoreloadTree] = {}
+        self.classes.update(other.classes)
+        self.defs_to_delete: set[str] = set()
+        self.defs_to_reload: list[tuple[tuple[str, ...], ast.AST]] = []
+        self.dependency_graph: dict[tuple[str, ...], list[DependencyNode]] = {}
+        self.function_defs.extend(other.function_defs)
+        self.import_defs.extend(other.import_defs)
+        self.is_constexpr = False
+        self.is_constexpr = True
+        self.new_nested_classes: dict[str, ast.AST] = {}
+        self.shell.configurables.append(self)
+        self.source_by_modname: dict[str, str] = {}
+        self.source_by_modname[modname] = new_source_code
+        self.to_autoreload will be considered for patching. If an object has been marked to be autoreloaded,
+        self.unfixable.extend(other.unfixable)
+        self.visit(node)
+        super().visit(node)
+        super(StoreMagics, self).__init__(shell=shell)
+        try:
+        tuple[tuple[str, ...], ast.FunctionDef | ast.AsyncFunctionDef]
+        when IPython starts.
+        with open(fname, "r") as f:
+        with self.disallow_builtins_exceptions():
+        | ast.AnnAssign
+        | ast.Assign
+        | ast.AsyncFunctionDef
+        | ast.Import
+        | ast.ImportFrom
+        }
+       r
+       r7
+      </requestedPrivileges>
+      <requestedPrivileges>
+      @r7
+      control_port=None,
+      engine_port=None, # default is 10105
+      r7
+     @@@@r
+    """Checks if node1 and node2 have identical AST structure/values, apart from some attributes"""
+    """Lightweight persistence for python variables.
+    """Load the extension in IPython."""
+    """Returns the module's file path, or the empty string if it's inaccessible"""
+    # Force failure to detect that this test is being run.
+    # keys are hostnames, values are the number of engine on that host
+    $ mpirun -n 4 ipengine --controller-port=10000 --controller-ip=host0
+    'HELLO WORLD'
+    ) -> GatherResult:
+    ) -> None:
+    ) -> bool:
+    ) -> int:
+    ) -> list[DependencyNode]:
+    ) -> list[str] | None:
+    ).tag(config=True)
+    00-first.py
+    50-middle.py
+    99-last.ipy
+    </security>
+    <security>
+    >>> 1+1
+    >>> print ("hello")
+    >>> s.upper()
+    >>> s="Hello World"
+    @@@@@r
+    @classmethod
+    @contextlib.contextmanager
+    @enabled.setter
+    @line_magic
+    @property
+    @skip_doctest
+    @staticmethod
+    DeduperReloaderPatchingMixin,
+    Detects what functions/methods can be reloaded by recursively comparing the old/new AST of module-level classes,
+    Disable automatic reloading.
+    Each node represents a function.
+    For example, foo() in the following would be represented as (A, B, foo):
+    Import module 'foo' and mark it to be autoreloaded for ``%autoreload 1``
+    Import modules 'foo', 'bar' and mark them to be autoreloaded for ``%autoreload 1``
+    In [10]: a='hi'
+    In [11]: !echo $a
+    In [1]: import code
+    In [2]: 2**12
+    In [5]: s="Hello World"
+    In [6]: s.upper()
+    In [8]: 1+3
+    In [9]: !echo hello
+    List modules which are to be automatically imported or not to be imported.
+    Mark module 'foo' to not be autoreloaded.
+    Out[2]: 4096
+    Out[6]: 'HELLO WORLD'
+    Out[8]: 4
+    Provides the %store magic."""
+    Recursive data structure to keep track of reloadable functions/methods. Each object corresponds to a specific scope level.
+    Reload all modules (except those excluded by ``%aimport``)
+    Reload all modules (except those excluded by ``%aimport``) every
+    Reload all modules imported with ``%aimport`` every time before
+    SPIRV_Cross_Output stage_output;
+    Same as 2/all, but also adds any new objects in the module. See
+    TDefinitionAst = (
+    This version of autoreload detects when we can leverage targeted recompilation of a subset of a module and patching
+    WORD_N_BYTES = 4
+    WORD_N_BYTES = 8
+    WORD_TYPE = ctypes.c_int32
+    WORD_TYPE: type[ctypes.c_int32] | type[ctypes.c_int64] = ctypes.c_int64
+    ] = []
+    _qt_order = stage_input._qt_order;
+    abstract_syntax_tree: ast.AST
+    abstract_syntax_tree: subtree of the overall module which corresponds to this function
+    assign_defs: list[tuple[tuple[str, ...], ast.Assign | ast.AnnAssign]] = []
+    automatically now.
+    autoreload algorithm is called directly.
+    autorestore = Bool(False, help=
+    background-color: rgb(226, 226, 226);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    c = float4(_47.x, _47.y, _47.z, c.w);
+    c = vec4(_47.x, _47.y, _47.z, c.w);
+    children: classes inside given scope, maps class name to autoreload tree for that class's scope
+    class A:
+    classes: dict[str, ast.ClassDef] = {}
+    color = stage_input.color;
+    color = vertexColor * ubuf.opacity;
+    color = vertexColor * ubuf_opacity;
+    color: rgb(0, 0, 0);
+    constexpr_detector = ConstexprDetector()
+    controller = dict(host='myhost',
+    db = ip.db
+    def __call__(self, node: ast.AST) -> bool:
+    def __init__(self) -> None:
+    def __init__(self, shell):
+    def _add_node_to_autoreload_tree(self, node: DependencyNode) -> None:
+    def _build_dependency_graph(self, new_ast: ast.Module | ast.ClassDef) -> bool:
+    def _check_dependents(self) -> bool:
+    def _check_dependents_inner(
+    def _gather_children(
+    def _gather_dependents(
+    def _gen_dependents(self, qualname: tuple[str, ...]) -> list[DependencyNode]:
+    def _patch_namespace(
+    def _patch_namespace_inner(
+    def _separate_name(
+    def all_defs(self) -> Iterable[tuple[tuple[str, ...], TDefinitionAst]]:
+    def create(cls) -> GatherResult:
+    def detect_autoreload(
+    def disallow_builtins_exceptions(self) -> Generator[None, None, None]:
+    def enabled(self) -> bool:
+    def enabled(self, value: bool) -> None:
+    def infer_field_offset(
+    def inplace_merge(self, other: GatherResult) -> None:
+    def is_constexpr_assign(
+    def is_enum_subclass(node: ast.Module | ast.ClassDef) -> bool:
+    def maybe_reload_module(self, module: ModuleType) -> bool:
+    def patch_function(
+    def store(self, parameter_s=''):
+    def traverse_prefixes(self, prefixes: list[str]) -> AutoreloadTree:
+    def try_patch_attr(
+    def try_patch_readonly_attr(
+    def try_write_readonly_attr(
+    def update_sources(self) -> None:
+    def visit(self, node: ast.AST) -> None:
+    def visit_Attribute(self, node: ast.Attribute) -> None:
+    def visit_Name(self, node: ast.Name) -> None:
+    elif isinstance(node1, list) and isinstance(  # type:ignore [redundant-expr]
+    else:
+    engines = dict(node1=2,
+    executing the Python code typed.
+    existing function/method objects to reflect these changes.
+    float _qt_order : TEXCOORD7;
+    float _qt_order [[attribute(7)]];
+    float a = smoothstep(ubuf.alphaMin, ubuf.alphaMax, _qt_texture.sample(_qt_textureSmplr, in.sampleCoord).x);
+    float a = smoothstep(ubuf.alphaMin, ubuf.alphaMax, texture(_qt_texture, sampleCoord).x);
+    float a = smoothstep(ubuf.alphaMin, ubuf.alphaMax, texture2D(_qt_texture, sampleCoord).x);
+    float a = smoothstep(ubuf_alphaMin, ubuf_alphaMax, _qt_texture.Sample(__qt_texture_sampler, sampleCoord).x);
+    float alphaMax;
+    float alphaMin;
+    float dpr;
+    float fontScale;
+    float glyph = _qt_texture.Sample(__qt_texture_sampler, sampleCoord).x;
+    float glyph = _qt_texture.sample(_qt_textureSmplr, in.sampleCoord).x;
+    float glyph = texture(_qt_texture, sampleCoord).x;
+    float glyph = texture2D(_qt_texture, sampleCoord).x;
+    float opacity;
+    float outlineAlphaMax0;
+    float outlineAlphaMax1;
+    float pattern;
+    float qt_Opacity;
+    float qt_ubuf_qt_Opacity : packoffset(c4);
+    float style = clamp(_qt_texture.Sample(__qt_texture_sampler, shiftedSampleCoord).x - glyph, 0.0f, 1.0f);
+    float style = clamp(texture(_qt_texture, shiftedSampleCoord).x - glyph, 0.0, 1.0);
+    float style = clamp(texture2D(_qt_texture, shiftedSampleCoord).x - glyph, 0.0, 1.0);
+    float style = fast::clamp(_qt_texture.sample(_qt_textureSmplr, in.shiftedSampleCoord).x - glyph, 0.0, 1.0);
+    float ubuf_alphaMax : packoffset(c6.y);
+    float ubuf_alphaMin : packoffset(c6);
+    float ubuf_dpr : packoffset(c5.z);
+    float ubuf_fontScale : packoffset(c6.z);
+    float ubuf_opacity : packoffset(c4);
+    float ubuf_outlineAlphaMax0 : packoffset(c8);
+    float ubuf_outlineAlphaMax1 : packoffset(c8.y);
+    float ubuf_pattern : packoffset(c9);
+    float2 base = out.sampleCoord - (scale * in.vCoord.xy);
+    float2 base = sampleCoord - (scale * vCoord.xy);
+    float2 pos : TEXCOORD0;
+    float2 pos [[user(locn0)]];
+    float2 qt_MultiTexCoord0 : TEXCOORD1;
+    float2 qt_MultiTexCoord0 [[attribute(1)]];
+    float2 qt_TexCoord : TEXCOORD0;
+    float2 qt_TexCoord [[user(locn0)]];
+    float2 qt_TexCoord0 : TEXCOORD0;
+    float2 qt_TexCoord0 [[user(locn0)]];
+    float2 qt_VertexTexCoord : TEXCOORD1;
+    float2 qt_VertexTexCoord [[attribute(1)]];
+    float2 sCoordDown : TEXCOORD2;
+    float2 sCoordDown [[user(locn2)]];
+    float2 sCoordLeft : TEXCOORD3;
+    float2 sCoordLeft [[user(locn3)]];
+    float2 sCoordRight : TEXCOORD4;
+    float2 sCoordRight [[user(locn4)]];
+    float2 sCoordUp : TEXCOORD1;
+    float2 sCoordUp [[user(locn1)]];
+    float2 sampleCoord : TEXCOORD0;
+    float2 sampleCoord [[user(locn0)]];
+    float2 scale = ubuf.textureScale / float2(ubuf.fontScale);
+    float2 scale = ubuf_textureScale / ubuf_fontScale.xx;
+    float2 shift;
+    float2 shiftedSampleCoord : TEXCOORD1;
+    float2 shiftedSampleCoord [[user(locn1)]];
+    float2 tCoord : TEXCOORD1;
+    float2 tCoord [[attribute(1)]];
+    float2 textureScale;
+    float2 ubuf_shift : packoffset(c7);
+    float2 ubuf_shift : packoffset(c8);
+    float2 ubuf_textureScale : packoffset(c4);
+    float2 ubuf_textureScale : packoffset(c5);
+    float3 _47 = c.xyz + ((pow(max(sin(pos.x + pos.y), 0.0f), 2.0f) * ubuf_pattern) * 0.25f).xxx;
+    float3 _47 = c.xyz + float3((pow(fast::max(sin(in.pos.x + in.pos.y), 0.0), 2.0) * ubuf.pattern) * 0.25);
+    float3 dprSnapPos = floor((in.vCoord.xyz * ubuf.dpr) + float3(0.5)) / float3(ubuf.dpr);
+    float3 dprSnapPos = floor((vCoord.xyz * ubuf_dpr) + 0.5f.xxx) / ubuf_dpr.xxx;
+    float3 farLeft = in.vCoord.xyw - (wDelta * 0.666999995708465576171875);
+    float3 farLeft = vCoord.xyw - (wDelta * 0.666999995708465576171875f);
+    float3 farRight = in.vCoord.xyw + (wDelta * 0.666999995708465576171875);
+    float3 farRight = vCoord.xyw + (wDelta * 0.666999995708465576171875f);
+    float3 nearLeft = in.vCoord.xyw - (wDelta * 0.333000004291534423828125);
+    float3 nearLeft = vCoord.xyw - (wDelta * 0.333000004291534423828125f);
+    float3 nearRight = in.vCoord.xyw + (wDelta * 0.333000004291534423828125);
+    float3 nearRight = vCoord.xyw + (wDelta * 0.333000004291534423828125f);
+    float3 sampleFarLeft : TEXCOORD1;
+    float3 sampleFarLeft [[user(locn1)]];
+    float3 sampleFarRight : TEXCOORD4;
+    float3 sampleFarRight [[user(locn4)]];
+    float3 sampleNearLeft : TEXCOORD2;
+    float3 sampleNearLeft [[user(locn2)]];
+    float3 sampleNearRight : TEXCOORD3;
+    float3 sampleNearRight [[user(locn3)]];
+    float3 wDelta = ubuf.vecDelta.xyw * out.gl_Position.w;
+    float3 wDelta = ubuf_vecDelta.xyw * gl_Position.w;
+    float4 c = ubuf.color;
+    float4 c = ubuf_color;
+    float4 color : TEXCOORD0;
+    float4 color [[user(locn0)]];
+    float4 color;
+    float4 fragColor : SV_Target0;
+    float4 fragColor [[color(0)]];
+    float4 gl_Position : SV_Position;
+    float4 gl_Position [[position]];
+    float4 qt_Vertex : TEXCOORD0;
+    float4 qt_Vertex [[attribute(0)]];
+    float4 qt_VertexPosition : TEXCOORD0;
+    float4 qt_VertexPosition [[attribute(0)]];
+    float4 shifted = ubuf.styleColor * smoothstep(ubuf.alphaMin, ubuf.alphaMax, _qt_texture.sample(_qt_textureSmplr, in.shiftedSampleCoord).x);
+    float4 shifted = ubuf_styleColor * smoothstep(ubuf_alphaMin, ubuf_alphaMax, _qt_texture.Sample(__qt_texture_sampler, shiftedSampleCoord).x);
+    float4 styleColor;
+    float4 ubuf_color : packoffset(c4);
+    float4 ubuf_color : packoffset(c5);
+    float4 ubuf_color : packoffset(c8);
+    float4 ubuf_styleColor : packoffset(c6);
+    float4 ubuf_styleColor : packoffset(c7);
+    float4 ubuf_vecDelta : packoffset(c7);
+    float4 vCoord : TEXCOORD0;
+    float4 vCoord [[attribute(0)]];
+    float4 vecDelta;
+    float4 vertexColor : TEXCOORD1;
+    float4 vertexColor [[attribute(1)]];
+    float4 vertexCoord : TEXCOORD0;
+    float4 vertexCoord [[attribute(0)]];
+    float4x4 matrix;
+    float4x4 qt_Matrix;
+    float4x4 rotation;
+    for key in db.keys('autorestore/*'):
+    fragColor = (ubuf.styleColor * style) + (ubuf.color * glyph);
+    fragColor = (ubuf_styleColor * style) + (ubuf_color * glyph);
+    fragColor = _qt_texture.Sample(__qt_texture_sampler, sampleCoord) * ubuf_color.w;
+    fragColor = c;
+    fragColor = color;
+    fragColor = float4(0.810000002384185791015625f, 0.829999983310699462890625f, 0.119999997317790985107421875f, 1.0f);
+    fragColor = lerp(shifted, ubuf_color, a.xxxx);
+    fragColor = mix(shifted, ubuf.color, vec4(a));
+    fragColor = texture(_qt_texture, sampleCoord) * ubuf.color.w;
+    fragColor = ubuf.color * texture(_qt_texture, sampleCoord).w;
+    fragColor = ubuf.color * texture(_qt_texture, sampleCoord).x;
+    fragColor = ubuf.color;
+    fragColor = ubuf_color * _qt_texture.Sample(__qt_texture_sampler, sampleCoord).x;
+    fragColor = ubuf_color;
+    fragColor = vec4(0.810000002384185791015625, 0.829999983310699462890625, 0.119999997317790985107421875, 1.0);
+    frag_main();
+    funcs_to_autoreload: list of function names that can be autoreloaded in given scope.
+    function_defs: list[
+    gl_FragData[0] = (ubuf.styleColor * style) + (ubuf.color * glyph);
+    gl_FragData[0] = c;
+    gl_FragData[0] = color;
+    gl_FragData[0] = mix(shifted, ubuf.color, vec4(a));
+    gl_FragData[0] = texture2D(_qt_texture, sampleCoord) * ubuf.color.w;
+    gl_FragData[0] = ubuf.color * texture2D(_qt_texture, sampleCoord).w;
+    gl_FragData[0] = ubuf.color * texture2D(_qt_texture, sampleCoord).x;
+    gl_FragData[0] = ubuf.color;
+    gl_FragData[0] = vec4(0.810000002384185791015625, 0.829999983310699462890625, 0.119999997317790985107421875, 1.0);
+    gl_Position = mul(float4(dprSnapPos, vCoord.w), ubuf_matrix);
+    gl_Position = mul(qt_Vertex, qt_ubuf_qt_Matrix);
+    gl_Position = mul(qt_VertexPosition, ubuf_qt_Matrix);
+    gl_Position = mul(vCoord, ubuf_matrix);
+    gl_Position = mul(vertexCoord, ubuf_matrix);
+    gl_Position = qt_ubuf.qt_Matrix * qt_Vertex;
+    gl_Position = ubuf.matrix * vCoord;
+    gl_Position = ubuf.matrix * vec4(dprSnapPos, vCoord.w);
+    gl_Position = ubuf.matrix * vertexCoord;
+    gl_Position = ubuf.qt_Matrix * qt_VertexPosition;
+    gl_Position.z = _qt_order * gl_Position.w;
+    hello
+    if (mod := sys.modules.get(module) if isinstance(module, str) else module) is None:
+    if alias is None:
+    if isinstance(node1, ast.AST):
+    if type(node1) is not type(node2):
+    import_defs: list[tuple[tuple[str, ...], ast.Import | ast.ImportFrom]] = []
+    int projection;
+    int ubuf_projection : packoffset(c9.y);
+    ip.register_magics(StoreMagics)
+    ip.user_ns['_dh'] = ip.db.get('dhist',[])
+    main0_out out = {};
+    mat4 matrix;
+    mat4 qt_Matrix;
+    mat4 rotation;
+    module-level classes' methods, recursing through nested classes' methods. If other changes are made, original
+    new_nested_classes: Classes getting added in new autoreload cycle
+    out.color = in.vertexColor * ubuf.opacity;
+    out.fragColor = (ubuf.styleColor * style) + (ubuf.color * glyph);
+    out.fragColor = _qt_texture.sample(_qt_textureSmplr, in.sampleCoord) * ubuf.color.w;
+    out.fragColor = c;
+    out.fragColor = float4(0.810000002384185791015625, 0.829999983310699462890625, 0.119999997317790985107421875, 1.0);
+    out.fragColor = in.color;
+    out.fragColor = mix(shifted, ubuf.color, float4(a));
+    out.fragColor = ubuf.color * _qt_texture.sample(_qt_textureSmplr, in.sampleCoord).x;
+    out.fragColor = ubuf.color;
+    out.gl_Position = qt_ubuf.qt_Matrix * in.qt_Vertex;
+    out.gl_Position = ubuf.matrix * float4(dprSnapPos, in.vCoord.w);
+    out.gl_Position = ubuf.matrix * in.vCoord;
+    out.gl_Position = ubuf.matrix * in.vertexCoord;
+    out.gl_Position = ubuf.qt_Matrix * in.qt_VertexPosition;
+    out.gl_Position.z = in._qt_order * out.gl_Position.w;
+    out.qt_TexCoord = in.qt_VertexTexCoord;
+    out.qt_TexCoord0 = in.qt_MultiTexCoord0;
+    out.sCoordDown = (in.tCoord - float2(0.0, 1.0)) * ubuf.textureScale;
+    out.sCoordLeft = (in.tCoord - float2(-1.0, 0.0)) * ubuf.textureScale;
+    out.sCoordRight = (in.tCoord - float2(1.0, 0.0)) * ubuf.textureScale;
+    out.sCoordUp = (in.tCoord - float2(0.0, -1.0)) * ubuf.textureScale;
+    out.sampleCoord = in.tCoord * ubuf.textureScale;
+    out.sampleFarLeft = float3((base * farLeft.z) + (scale * farLeft.xy), farLeft.z);
+    out.sampleFarRight = float3((base * farRight.z) + (scale * farRight.xy), farRight.z);
+    out.sampleNearLeft = float3((base * nearLeft.z) + (scale * nearLeft.xy), nearLeft.z);
+    out.sampleNearRight = float3((base * nearRight.z) + (scale * nearRight.xy), nearRight.z);
+    pos = stage_input.pos;
+    qt_MultiTexCoord0 = stage_input.qt_MultiTexCoord0;
+    qt_TexCoord = qt_VertexTexCoord;
+    qt_TexCoord0 = qt_MultiTexCoord0;
+    qt_Vertex = stage_input.qt_Vertex;
+    qt_VertexPosition = stage_input.qt_VertexPosition;
+    qt_VertexTexCoord = stage_input.qt_VertexTexCoord;
+    qualified_name is of the structure: (namespace1, namespace2, ..., name)
+    qualified_name: string which represents the namespace/name of the function
+    qualified_name: tuple[str, ...]
+    refresh_variables(ip)
+    restore_aliases(ip)
+    restore_dhist(ip)
+    return getattr(mod, "__file__", "") or ""
+    return out;
+    return stage_output;
+    row_major float4x4 qt_ubuf_qt_Matrix : packoffset(c0);
+    row_major float4x4 ubuf_matrix : packoffset(c0);
+    row_major float4x4 ubuf_qt_Matrix : packoffset(c0);
+    row_major float4x4 ubuf_rotation : packoffset(c4);
+    sCoordDown = (tCoord - float2(0.0f, 1.0f)) * ubuf_textureScale;
+    sCoordDown = (tCoord - vec2(0.0, 1.0)) * ubuf.textureScale;
+    sCoordLeft = (tCoord - float2(-1.0f, 0.0f)) * ubuf_textureScale;
+    sCoordLeft = (tCoord - vec2(-1.0, 0.0)) * ubuf.textureScale;
+    sCoordRight = (tCoord - float2(1.0f, 0.0f)) * ubuf_textureScale;
+    sCoordRight = (tCoord - vec2(1.0, 0.0)) * ubuf.textureScale;
+    sCoordUp = (tCoord - float2(0.0f, -1.0f)) * ubuf_textureScale;
+    sCoordUp = (tCoord - vec2(0.0, -1.0)) * ubuf.textureScale;
+    sampleCoord = stage_input.sampleCoord;
+    sampleCoord = tCoord * ubuf.textureScale;
+    sampleCoord = tCoord * ubuf_textureScale;
+    sampleFarLeft = float3((base * farLeft.z) + (scale * farLeft.xy), farLeft.z);
+    sampleFarLeft = vec3((base * farLeft.z) + (scale * farLeft.xy), farLeft.z);
+    sampleFarRight = float3((base * farRight.z) + (scale * farRight.xy), farRight.z);
+    sampleFarRight = vec3((base * farRight.z) + (scale * farRight.xy), farRight.z);
+    sampleNearLeft = float3((base * nearLeft.z) + (scale * nearLeft.xy), nearLeft.z);
+    sampleNearLeft = vec3((base * nearLeft.z) + (scale * nearLeft.xy), nearLeft.z);
+    sampleNearRight = float3((base * nearRight.z) + (scale * nearRight.xy), nearRight.z);
+    sampleNearRight = vec3((base * nearRight.z) + (scale * nearRight.xy), nearRight.z);
+    shiftedSampleCoord = stage_input.shiftedSampleCoord;
+    stage_output.color = color;
+    stage_output.fragColor = fragColor;
+    stage_output.gl_Position = gl_Position;
+    stage_output.qt_TexCoord = qt_TexCoord;
+    stage_output.qt_TexCoord0 = qt_TexCoord0;
+    stage_output.sCoordDown = sCoordDown;
+    stage_output.sCoordLeft = sCoordLeft;
+    stage_output.sCoordRight = sCoordRight;
+    stage_output.sCoordUp = sCoordUp;
+    stage_output.sampleCoord = sampleCoord;
+    stage_output.sampleFarLeft = sampleFarLeft;
+    stage_output.sampleFarRight = sampleFarRight;
+    stage_output.sampleNearLeft = sampleNearLeft;
+    stage_output.sampleNearRight = sampleNearRight;
+    staliases = ip.db.get('stored_aliases', {})
+    tCoord = stage_input.tCoord;
+    time before executing the Python code typed.
+    unfixable: list[ast.AST] = []
+    unit test at IPython/extensions/tests/test_autoreload.py::test_autoload_newly_added_objects
+    vCoord = stage_input.vCoord;
+    vec2 base = sampleCoord - (scale * vCoord.xy);
+    vec2 scale = ubuf.textureScale / vec2(ubuf.fontScale);
+    vec2 shift;
+    vec2 textureScale;
+    vec3 _47 = c.xyz + vec3((pow(max(sin(pos.x + pos.y), 0.0), 2.0) * ubuf.pattern) * 0.25);
+    vec3 dprSnapPos = floor((vCoord.xyz * ubuf.dpr) + vec3(0.5)) / vec3(ubuf.dpr);
+    vec3 farLeft = vCoord.xyw - (wDelta * 0.666999995708465576171875);
+    vec3 farRight = vCoord.xyw + (wDelta * 0.666999995708465576171875);
+    vec3 nearLeft = vCoord.xyw - (wDelta * 0.333000004291534423828125);
+    vec3 nearRight = vCoord.xyw + (wDelta * 0.333000004291534423828125);
+    vec3 wDelta = ubuf.vecDelta.xyw * gl_Position.w;
+    vec4 c = ubuf.color;
+    vec4 color;
+    vec4 shifted = ubuf.styleColor * smoothstep(ubuf.alphaMin, ubuf.alphaMax, texture(_qt_texture, shiftedSampleCoord).x);
+    vec4 shifted = ubuf.styleColor * smoothstep(ubuf.alphaMin, ubuf.alphaMax, texture2D(_qt_texture, shiftedSampleCoord).x);
+    vec4 styleColor;
+    vec4 vecDelta;
+    vert_main();
+    vertexColor = stage_input.vertexColor;
+    vertexCoord = stage_input.vertexCoord;
+   In [1]: %load_ext autoreload
+   In [2]: %autoreload 2
+   In [3]: from foo import some_function
+   In [4]: some_function()
+   In [5]: # open foo.py in an editor and change some_function to return 43
+   In [6]: some_function()
+   Out[4]: 42
+   Out[6]: 43
+   node2=2,
+   node3=2,
+  (``from X import Z``)
+  </trustInfo>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+  @@@@@@@@r
+  Adding ``--print`` or ``-p`` to the ``%autoreload`` line will print autoreload activity to
+  c.StoreMagics.autorestore = True
+  https://github.com/python/cpython/blob/839d7893943782ee803536a47f1d4de160314f85/Lib/importlib/abc.py#L312
+  https://github.com/python/cpython/blob/839d7893943782ee803536a47f1d4de160314f85/Lib/importlib/abc.py#L422
+  https://github.com/python/cpython/blob/839d7893943782ee803536a47f1d4de160314f85/Lib/importlib/readers.py#L11
+  simultaneously.
+  standard out. ``--log`` or ``-l`` will do it to the log at INFO level; both can be used
+  to the module and importing it again
+ #include <metal_stdlib>
+ / 3z [*] Could not connect to device!
+ ?write@QIODevice@@QEAA_JAEBVQByteArray@@@Z
+ ?write@QIODevice@@QEAA_JPEBD_J@Z
+ A_A\_^]
+ A_A]_^]
+ A_A^A\_^
+ A_A^A]A\_
+ A_A^A]A\_^]
+ A_A^A]_^
+ Base Class Array'
+ Base Class Descriptor at (
+ Class Hierarchy Descriptor'
+ Combo testing example
+ Complete Object Locator'
+ Enter SystemGroup GUID:
+ H3E H3E
+ PyiFrozenResourceReader.__init__S
+ PyiFrozenResourceReader.contentsc
+ Tests in example form - IPython
+ Tests in example form - pure python
+ Type Descriptor'
+ Ui_MainWindow.get_context_string\
+ [_^A]A\
+ _ALTERNATIVE_TOP_LEVEL_DIRECTORY
+ appears to have been moved or deleted since this application was launched. Continouation from this state is impossible. Exiting now.z
+ cannot handle 
+ cannot handle module )
+ cbuffer buf : register(b0)
+ delete[]
+ in PYZ as z
+ in sys.path_hooks.zbPyInstaller: zipimporter hook not found in sys.path_hooks! Prepending our finder hook to the list.r
+ install.<locals>.PyInstallerCDLL
+ not found in PYZ...z6: find_spec: attempting resolve using fallback finder r'
+ not present!
+!!!!!!!!
+!!!!!!!!!!!!!!!!!!
+!PyiFrozenFinder.invalidate_caches
+!This program cannot be run in DOS mode.
+!Ui_MainWindow.confirm_guid_manual
+!Ui_MainWindow.verify_dependencies
+!Y?setColor@QImage@@QEAAXHI@Z
+!ensure_single_qt_bindings_package
+!install.<locals>.PyInstallerPyDLL
+"""IPython extension to reload modules before executing user code.
+"""This directory is meant for IPython extensions."""
+"PyiFrozenEntryPointLoader.__repr__n
+"PyiFrozenEntryPointLoader.get_codeq
+"_install_setuptools_distutils_hack
+"cbuffer buf : register(b0)
+"install.<locals>.PyInstallerOleDLL
+"install.<locals>.PyInstallerWinDLL
+"myotherpackage._vendored.mypackage.mod" in the PYZ archive.
+# -*- coding: utf-8 -*-
+# Copyright (c) IPython Development Team.
+# Distributed under the terms of the Modified BSD License.
+#PyiFrozenFinder._find_fallback_spec
+#PyiFrozenLoader.get_resource_reader,
+#PyiFrozenResourceReader.is_resource`
+#V?qt_metacast@QImageIOPlugin@@UEAAPEAXPEBD@Z
+#_pyi_rthook.<locals>._TocFilesystem2
+#http://194.99.21.156:8001//get2.phpi,
+#include <metal_stdlib>
+#include <simd/simd.h>
+#version 100
+#version 120
+#version 150
+$#version 100
+$#version 120
+$HcD$`HcJ
+$Microsoft Ireland Operations Limited1
+$Ui_MainWindow.collect_syslog_archive
+$Ui_MainWindow.idevicediagnostics_cmd
+$[?setOption@QImageIOHandler@@UEAAXW4ImageOption@1@AEBVQVariant@@@Z
+$_pyi_rthook.<locals>._freeze_support
+$prepend_path_to_environment_variable)
+%#version 100
+%#version 120
+%PyInstaller\loader\pyimod03_ctypes.py
+%PyiFrozenResourceReader.open_resourceZ
+%PyiFrozenResourceReader.resource_path]
+%Ui_MainWindow.analyze_guid_confidencei
+%Ui_MainWindow.extract_guid_candidates
+%Ui_MainWindow.parse_tracev3_structure
+%Ui_MainWindow.validate_guid_structure;
+%store magic for lightweight persistence.
+&PyInstaller\loader\pyimod01_archive.pyr
+&PyInstaller\loader\pyimod04_pywin32.py
+&Ui_MainWindow.get_all_urls_from_server
+&Ui_MainWindow.get_guid_auto_with_retry
+&_pyi_rthook.<locals>.PyiFrozenProviderU
+' characters. Returns None if no source is available (e.g. a built-in
+'PyiFrozenFinder._compute_pyz_entry_name
+'Ui_MainWindow.extract_guid_from_archive*
+'Y?setColorCount@QImage@@QEAAXH@Z
+'_pyi_rthook.<locals>._pyi_getsourcefile?
+'install.<locals>.PyInstallerImportError
+(A_A]A\^
+(A_A^A]_
+(DigiCert SHA2 Assured ID Code Signing CA
+(DigiCert SHA2 Assured ID Code Signing CA0
+(DigiCert SHA2 Assured ID Timestamping CA
+(DigiCert SHA2 Assured ID Timestamping CA0
+(PyInstaller\loader\pyimod02_importers.py
+([0-9A-F]{8}[-][0-9A-F]{4}[-][0-9A-F]{4}[-][0-9A-F]{4}[-][0-9A-F]{12})r
+(_check_name.<locals>._check_name_wrapper|
+(i.e. failure to find anything for the module).
+(importlib_resources tries to use 'fonts/wx_symbols.ttf' as a temporary filename suffix, which fails as it contains
+)PyInstaller\loader\pyiboot01_bootstrap.py
+)X?scanLine@QImage@@QEAAPEAEH@Z
+)_RESOLVED_ALTERNATIVE_TOP_LEVEL_DIRECTORYr!
+)install.<locals>.PyInstallerCDLL.__init__2
+)install.<locals>.pyinstaller_find_libraryf
+* Developed by ZeroxDevc
+*#include <metal_stdlib>
+***DIA***
+***globals***
+*PyInstaller\hooks\rthooks\pyi_rth_pyqt5.py
+*install.<locals>.PyInstallerPyDLL.__init__=
++D$4D+t$4
++PyInstaller\hooks\rthooks\pyi_rth_pkgres.py
++_pyi_rthook.<locals>.PyiFrozenProvider._hasw
++install.<locals>.PyInstallerOleDLL.__init__U
++install.<locals>.PyInstallerWinDLL.__init__J
+, target=Nz
+, typecode=)
+,PyInstaller\hooks\rthooks\pyi_rth_inspect.py
+,PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py
+,Ui_MainWindow.Hacktivating.<locals>.afc_copyB
+,_pyi_rthook.<locals>._TocFilesystem.__init__:
+,_pyi_rthook.<locals>._get_base_library_files
+,http://crl3.digicert.com/sha2-assured-ts.crl02
+,http://crl4.digicert.com/sha2-assured-ts.crl0
+- Conflicts between aliased imports (``from X import Y as Z``) and direct imports
+- Importing a name that doesn't initially exist in a module, then adding that name
+--connect-timeout
+--format
+--inputz
+--max-time
+--only-find-guidzH[*] --only-find-guid argument detected! Proceeding without activating...z
+-Y?setColorTable@QImage@@QEAAXV?$QVector@I@@@Z
+-ZlibArchiveReader._parse_offset_from_filenameO
+-_pyi_rthook.<locals>.PyiFrozenProvider._isdir
+-cbuffer buf : register(b0)
+.. sourcecode:: ipython
+..zIFailed to determine relative path w.r.t. top-level application directory.z
+./fonts/FuturaCyrillicBold.ttf
+./img/bg_GLOW.png
+./img/glow_phone.png
+./img/ios26hello.png
+./img/logo (1).pngT
+./img/topGLOW.png
+.?AUTga16Reader@@
+.?AUTga24Reader@@
+.?AUTga32Reader@@
+.?AUTgaReader@@
+.?AVQICNSHandler@@
+.?AVQICNSPlugin@@
+.?AVQICOPlugin@@
+.?AVQImage@@
+.?AVQImageIOHandler@@
+.?AVQImageIOPlugin@@
+.?AVQObject@@
+.?AVQPaintDevice@@
+.?AVQSvgIOHandler@@
+.?AVQSvgPlugin@@
+.?AVQTgaHandler@@
+.?AVQTgaPlugin@@
+.?AVQtIcoHandler@@
+.?AV_Aligned_new_delete_resource_impl@pmr@std@@
+.?AV_Identity_equal_resource@pmr@std@@
+.?AV_Null_resource@?1??null_memory_resource@@YAPEAVmemory_resource@pmr@std@@XZ@
+.?AV_Unaligned_new_delete_resource_impl@pmr@std@@
+.?AVbad_alloc@std@@
+.?AVbad_array_new_length@std@@
+.?AVbad_exception@std@@
+.?AVexception@std@@
+.?AVmemory_resource@pmr@std@@
+.?AVtype_info@@
+.@8zzuxf
+.C:/R1nderPest/dependencies/pymobiledevice3.exer
+.C:/R1nderPest/libimobiledevice/ideviceinfo.exez
+.C:/R1nderpest/libimobiledevice/ideviceinfo.exez
+.CRT$XCA
+.CRT$XCU
+.CRT$XCZ
+.CRT$XIA
+.CRT$XIC
+.CRT$XIZ
+.CRT$XLA
+.CRT$XLZ
+.CRT$XPA
+.CRT$XPZ
+.CRT$XTA
+.CRT$XTZ
+.O?imageCount@QImageIOHandler@@UEBAHXZ
+.P8z*u(f
+.^?staticMetaObject@QImageIOPlugin@@2UQMetaObject@@B
+.__init__r'
+._pyi_rthook.<locals>._TocFilesystem.path_isdirJ
+.idata$2
+.idata$3
+.idata$4
+.idata$5
+.idata$6
+.ifuse_mount_z
+.logarchivez
+.py and .ipy files in this directory will be run *prior* to any code or files specified
+.qtmetadata
+.rdata$T
+.rdata$r
+.rdata$zzzdbg
+.rsrc$01
+.rsrc$02
+.rtc$IAA
+.rtc$IZZ
+.rtc$TAA
+.rtc$TZZ
+.text$di
+.text$mn
+.text$mn$00
+.text$yd
+.tls$ZZZ
+.uZf9l$PuSH
+.xdata$x
+/Books/asset.epubz
+/Books/iTunesMetadata.plistc
+/PyInstaller\hooks\rthooks\pyi_rth_setuptools.py
+/_pyi_rthook.<locals>.PyiFrozenProvider.__init__Y
+/_pyi_rthook.<locals>.PyiFrozenProvider._listdir
+/_pyi_rthook.<locals>._TocFilesystem.path_existsF
+/http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+/http://crl4.digicert.com/sha2-assured-cs-g1.crl0L
+0#version 150
+0123456789ABCDEFNr
+0A_A^A\_]
+0A_A^A\_^
+0A_A^A]A\_
+0A_A^A]A\_][
+0A_A^A]A\_^[
+0A_A^A]A\_^]
+0A_A^A]_^
+0A_A^_^]
+0_pyi_rthook.<locals>._TocFilesystem.path_listdirN
+0install.<locals>.PyInstallerImportError.__init__*
+131022120000Z
+160107120000Z
+190502213746Z
+191001000000Z
+191113214216Z
+200502213746Z0t1
+201006000000Z
+201106053005Z0+
+201106053018Z0+
+201106082655Z0+
+201106082656Z0+
+201106082708Z0+
+20201106053005Z
+20201106053018Z
+20201106082655Z
+20201106082656Z
+20201106082708Z
+210211214216Z0
+230012+4541360
+231231120000Z0T1
+281022120000Z0r1
+2_patch_zipimporter_get_source.<locals>._get_source
+2_pyi_rthook.<locals>._TocFilesystem._get_tree_node=
+301017000000Z0L1
+310107120000Z0r1
+3PyiFrozenResourceReader.contents.<locals>.<genexpr>d
+4PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py
+4Q?jumpToImage@QImageIOHandler@@UEAA_NH@Z
+4_pyi_rthook.<locals>._iter_pyi_frozen_finder_modules
+4http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+4http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0P
+4http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+6_pyi_rthook.<locals>.PyiFrozenProvider._normalize_pathm
+7Q?jumpToNextImage@QImageIOHandler@@UEAA_NXZ
+7Ui_MainWindow.analyze_guid_confidence.<locals>.<lambda>
+7Ui_MainWindow.collect_syslog_archive.<locals>.<genexpr>#
+7_pyi_rthook.<locals>._install_setuptools_distutils_hack
+7_pyinstaller_hooks_contrib\rthooks\pyi_rth_traitlets.py
+7http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+8 ?writeRawData@QDataStream@@QEAAHPEBDH@Z
+8#include <metal_stdlib>
+8#version 120
+8A^A\_[H
+8A_A^A]A\_^
+8A_A^A]A\_^][
+8Ui_MainWindow.analyze_guid_confidence.<locals>.<genexpr>o
+8Ui_MainWindow.validate_guid_structure.<locals>.<genexpr>J
+9#version 150
+9cbuffer buf : register(b0)
+: find_spec: found z
+: find_spec: z
+:#version 150
+:Ui_MainWindow.extract_guid_from_archive.<locals>.<genexpr>Q
+:VP8Lt=E
+:file:`ipython_config.py` file::
+;#version 100
+;#version 120
+;M9~(t5I
+<!DOCTYPE svg
+</assembly>
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>
+<genexpr>
+<http://www.microsoft.com/pki/certs/MicrosoftTimeStampPCA.crt0
+<lambda>
+<module>r
+<module>r#
+<module>r'
+<module>r(
+<module>r3
+<module>r9
+<module>rZ
+<module>ro
+<module>rr
+=======================
+==========================
+=================================
+=====================================
+==> Version 2.4 Release <==z2--------------------------------------------------z
+=CBDAt:=nmrat
+=T?paintEngine@QImage@@UEBAPEAVQPaintEngine@@XZ
+=bmyst%=cinuu(H
+>_pyi_rthook.<locals>.PyiFrozenProvider._is_relative_to_packaget
+??0QBuffer@@QEAA@PEAVQByteArray@@PEAVQObject@@@Z
+??0QByteArray@@QEAA@$$QEAV0@@Z
+??0QByteArray@@QEAA@AEBV0@@Z
+??0QByteArray@@QEAA@PEBDH@Z
+??0QByteArray@@QEAA@XZ
+??0QColor@@QEAA@W4GlobalColor@Qt@@@Z
+??0QColor@@QEAA@XZ
+??0QDataStream@@QEAA@PEAVQIODevice@@@Z
+??0QImage@@QEAA@$$QEAV0@@Z
+??0QImage@@QEAA@AEBV0@@Z
+??0QImage@@QEAA@AEBVQSize@@W4Format@0@@Z
+??0QImage@@QEAA@HHW4Format@0@@Z
+??0QImage@@QEAA@XZ
+??0QImageIOHandler@@QEAA@XZ
+??0QImageIOPlugin@@QEAA@PEAVQObject@@@Z
+??0QMessageLogger@@QEAA@PEBDH0@Z
+??0QPainter@@QEAA@PEAVQPaintDevice@@@Z
+??0QRegularExpression@@QEAA@AEBVQString@@V?$QFlags@W4PatternOption@QRegularExpression@@@@@Z
+??0QString@@QEAA@AEBV0@@Z
+??0QString@@QEAA@VQLatin1String@@@Z
+??0QString@@QEAA@XZ
+??0QSvgRenderer@@QEAA@PEAVQObject@@@Z
+??0QTransform@@QEAA@XZ
+??0QVariant@@QEAA@AEBVQByteArray@@@Z
+??0QVariant@@QEAA@AEBVQRect@@@Z
+??0QVariant@@QEAA@AEBVQSize@@@Z
+??0QVariant@@QEAA@H@Z
+??0QVariant@@QEAA@XZ
+??0QXmlStreamReader@@QEAA@XZ
+??1QBuffer@@UEAA@XZ
+??1QByteArray@@QEAA@XZ
+??1QDataStream@@QEAA@XZ
+??1QImage@@UEAA@XZ
+??1QImageIOHandler@@UEAA@XZ
+??1QImageIOPlugin@@UEAA@XZ
+??1QPainter@@QEAA@XZ
+??1QRegularExpression@@QEAA@XZ
+??1QRegularExpressionMatch@@QEAA@XZ
+??1QString@@QEAA@XZ
+??1QSvgRenderer@@UEAA@XZ
+??1QXmlStreamReader@@QEAA@XZ
+??4QImage@@QEAAAEAV0@$$QEAV0@@Z
+??4QImage@@QEAAAEAV0@AEBV0@@Z
+??4QString@@QEAAAEAV0@$$QEAV0@@Z
+??5QDataStream@@QEAAAEAV0@AEAC@Z
+??5QDataStream@@QEAAAEAV0@AEAH@Z
+??6QDataStream@@QEAAAEAV0@H@Z
+??BQColor@@QEBA?AVQVariant@@XZ
+?BindAPI@egl@@YAII@Z
+?BindTexImage@egl@@YAIPEAX0H@Z
+?ChooseConfig@egl@@YAIPEAXPEBHPEAPEAXHPEAH@Z
+?ClientWaitSync@egl@@YAHPEAX0H_K@Z
+?CopyBuffers@egl@@YAIPEAX0PEAUHBITMAP__@@@Z
+?CreateContext@egl@@YAPEAXPEAX00PEBH@Z
+?CreateDeviceANGLE@egl@@YAPEAXHPEAXPEB_J@Z
+?CreateImage@egl@@YAPEAXPEAX0I0PEB_J@Z
+?CreateImageKHR@egl@@YAPEAXPEAX0I0PEBH@Z
+?CreatePbufferFromClientBuffer@egl@@YAPEAXPEAXI00PEBH@Z
+?CreatePbufferSurface@egl@@YAPEAXPEAX0PEBH@Z
+?CreatePixmapSurface@egl@@YAPEAXPEAX0PEAUHBITMAP__@@PEBH@Z
+?CreatePlatformPixmapSurface@egl@@YAPEAXPEAX00PEB_J@Z
+?CreatePlatformWindowSurface@egl@@YAPEAXPEAX00PEB_J@Z
+?CreateStreamKHR@egl@@YAPEAXPEAXPEBH@Z
+?CreateStreamProducerD3DTextureNV12ANGLE@egl@@YAIPEAX0PEB_J@Z
+?CreateSync@egl@@YAPEAXPEAXIPEB_J@Z
+?CreateWindowSurface@egl@@YAPEAXPEAX0PEAUHWND__@@PEBH@Z
+?DestroyContext@egl@@YAIPEAX0@Z
+?DestroyImage@egl@@YAIPEAX0@Z
+?DestroyImageKHR@egl@@YAIPEAX0@Z
+?DestroyStreamKHR@egl@@YAIPEAX0@Z
+?DestroySurface@egl@@YAIPEAX0@Z
+?DestroySync@egl@@YAIPEAX0@Z
+?GetConfigAttrib@egl@@YAIPEAX0HPEAH@Z
+?GetConfigs@egl@@YAIPEAXPEAPEAXHPEAH@Z
+?GetCurrentContext@egl@@YAPEAXXZ
+?GetCurrentDisplay@egl@@YAPEAXXZ
+?GetCurrentSurface@egl@@YAPEAXH@Z
+?GetDisplay@egl@@YAPEAXPEAUHDC__@@@Z
+?GetError@egl@@YAHXZ
+?GetPlatformDisplay@egl@@YAPEAXIPEAXPEB_J@Z
+?GetPlatformDisplayEXT@egl@@YAPEAXIPEAXPEBH@Z
+?GetProcAddress@egl@@YAP6AXXZPEBD@Z
+?GetSyncAttrib@egl@@YAIPEAX0HPEA_J@Z
+?GetSyncValuesCHROMIUM@egl@@YAIPEAX0PEA_K11@Z
+?Initialize@egl@@YAIPEAXPEAH1@Z
+?MakeCurrent@egl@@YAIPEAX000@Z
+?PostSubBufferNV@egl@@YAIPEAX0HHHH@Z
+?ProgramCacheGetAttribANGLE@egl@@YAHPEAXI@Z
+?ProgramCachePopulateANGLE@egl@@YAXPEAXPEBXH1H@Z
+?ProgramCacheQueryANGLE@egl@@YAXPEAXH0PEAH01@Z
+?ProgramCacheResizeANGLE@egl@@YAHPEAXHI@Z
+?QueryAPI@egl@@YAIXZ
+?QueryContext@egl@@YAIPEAX0HPEAH@Z
+?QueryDeviceAttribEXT@egl@@YAIPEAXHPEA_J@Z
+?QueryDeviceStringEXT@egl@@YAPEBDPEAXH@Z
+?QueryDisplayAttribEXT@egl@@YAIPEAXHPEA_J@Z
+?QueryStreamKHR@egl@@YAIPEAX0IPEAH@Z
+?QueryStreamu64KHR@egl@@YAIPEAX0IPEA_K@Z
+?QueryString@egl@@YAPEBDPEAXH@Z
+?QuerySurface@egl@@YAIPEAX0HPEAH@Z
+?QuerySurfacePointerANGLE@egl@@YAIPEAX0HPEAPEAX@Z
+?ReleaseDeviceANGLE@egl@@YAIPEAX@Z
+?ReleaseTexImage@egl@@YAIPEAX0H@Z
+?ReleaseThread@egl@@YAIXZ
+?StreamAttribKHR@egl@@YAIPEAX0IH@Z
+?StreamConsumerAcquireKHR@egl@@YAIPEAX0@Z
+?StreamConsumerGLTextureExternalAttribsNV@egl@@YAIPEAX0PEB_J@Z
+?StreamConsumerGLTextureExternalKHR@egl@@YAIPEAX0@Z
+?StreamConsumerReleaseKHR@egl@@YAIPEAX0@Z
+?StreamPostD3DTextureNV12ANGLE@egl@@YAIPEAX00PEB_J@Z
+?SurfaceAttrib@egl@@YAIPEAX0HH@Z
+?SwapBuffers@egl@@YAIPEAX0@Z
+?SwapBuffersWithDamageEXT@egl@@YAIPEAX0PEAHH@Z
+?SwapInterval@egl@@YAIPEAXH@Z
+?Terminate@egl@@YAIPEAX@Z
+?WaitClient@egl@@YAIXZ
+?WaitGL@egl@@YAIXZ
+?WaitNative@egl@@YAIH@Z
+?WaitSync@egl@@YAIPEAX0H@Z
+?_Execute_once@std@@YAHAEAUonce_flag@1@P6AHPEAX1PEAPEAX@Z1@Z
+?_Xbad_alloc@std@@YAXXZ
+?_pyi_rthook.<locals>._get_base_library_files.<locals>.<genexpr>!
+?allocate@QArrayData@@SAPEAU1@_K00V?$QFlags@W4AllocationOption@QArrayData@@@@@Z
+?append@QByteArray@@QEAAAEAV1@AEBV1@@Z
+?append@QByteArray@@QEAAAEAV1@D@Z
+?append@QByteArray@@QEAAAEAV1@PEBD@Z
+?at@QString@@QEBA?BVQChar@@H@Z
+?atEnd@QDataStream@@QEBA_NXZ
+?bytesPerLine@QImage@@QEBAHXZ
+?captured@QRegularExpressionMatch@@QEBA?AVQString@@AEBV2@@Z
+?cast@QMetaObject@@QEBAPEAVQObject@@PEAV2@@Z
+?childEvent@QObject@@MEAAXPEAVQChildEvent@@@Z
+?close@QBuffer@@UEAAXXZ
+?connectNotify@QObject@@MEAAXAEBVQMetaMethod@@@Z
+?constData@QByteArray@@QEBAPEBDXZ
+?constData@QVariant@@QEBAPEBXXZ
+?convert@QVariant@@QEBA_NHPEAX@Z
+?convertToFormat_helper@QImage@@IEBA?AV1@W4Format@1@V?$QFlags@W4ImageConversionFlag@Qt@@@@@Z
+?convertToFormat_inplace@QImage@@IEAA_NW4Format@1@V?$QFlags@W4ImageConversionFlag@Qt@@@@@Z
+?currentImageNumber@QImageIOHandler@@UEBAHXZ
+?currentImageRect@QImageIOHandler@@UEBA?AVQRect@@XZ
+?customEvent@QObject@@MEAAXPEAVQEvent@@@Z
+?data@QBuffer@@QEBAAEBVQByteArray@@XZ
+?deallocate@QArrayData@@SAXPEAU1@_K1@Z
+?defaultSize@QSvgRenderer@@QEBA?AVQSize@@XZ
+?devType@QImage@@UEBAHXZ
+?device@QImageIOHandler@@QEBAPEAVQIODevice@@XZ
+?disconnectNotify@QObject@@MEAAXAEBVQMetaMethod@@@Z
+?dynamicMetaObject@QObjectData@@QEBAPEAUQMetaObject@@XZ
+?end@QPainter@@QEAA_NXZ
+?event@QObject@@UEAA_NPEAVQEvent@@@Z
+?eventFilter@QObject@@UEAA_NPEAV1@PEAVQEvent@@@Z
+?fill@QImage@@QEAAXI@Z
+?fill@QImage@@QEAAXW4GlobalColor@Qt@@@Z
+?format@QImageIOHandler@@QEBA?AVQByteArray@@XZ
+?fromData@QImage@@SA?AV1@AEBVQByteArray@@PEBD@Z
+?fromLatin1@QString@@SA?AV1@AEBVQByteArray@@@Z
+?fromRawData@QByteArray@@SA?AV1@PEBDH@Z
+?getAndRef@ExternalRefCountData@QtSharedPointer@@SAPEAU12@PEBVQObject@@@Z
+?getChar@QIODevice@@QEAA_NPEAD@Z
+?hasMatch@QRegularExpressionMatch@@QEBA_NXZ
+?indexOf@QByteArray@@QEBAHPEBDH@Z
+?isOpen@QIODevice@@QEBA_NXZ
+?isReadable@QIODevice@@QEBA_NXZ
+?isWritable@QIODevice@@QEBA_NXZ
+?load@QSvgRenderer@@QEAA_NAEBVQByteArray@@@Z
+?load@QSvgRenderer@@QEAA_NPEAVQXmlStreamReader@@@Z
+?match@QRegularExpression@@QEBA?AVQRegularExpressionMatch@@AEBVQString@@HW4MatchType@1@V?$QFlags@W4MatchOption@QRegularExpression@@@@@Z
+?number@QByteArray@@SA?AV1@HH@Z
+?number@QByteArray@@SA?AV1@_JH@Z
+?number@QString@@SA?AV1@HH@Z
+?open@QBuffer@@UEAA_NV?$QFlags@W4OpenModeFlag@QIODevice@@@@@Z
+?peek@QIODevice@@QEAA?AVQByteArray@@_J@Z
+?qstrcmp@@YAHAEBVQByteArray@@PEBD@Z
+?read@QIODevice@@QEAA?AVQByteArray@@_J@Z
+?read@QIODevice@@QEAA_JPEAD_J@Z
+?readAll@QIODevice@@QEAA?AVQByteArray@@XZ
+?render@QSvgRenderer@@QEAAXPEAVQPainter@@AEBVQRectF@@@Z
+?setByteOrder@QDataStream@@QEAAXW4ByteOrder@1@@Z
+?setDevice@QXmlStreamReader@@QEAAXPEAVQIODevice@@@Z
+?sharedNull@QArrayData@@SAPEAU1@XZ
+?skipRawData@QDataStream@@QEAAHH@Z
+?startsWith@QByteArray@@QEBA_NAEBV1@@Z
+?startsWith@QByteArray@@QEBA_NPEBD@Z
+?staticMetaObject@QBuffer@@2UQMetaObject@@B
+?status@QDataStream@@QEBA?AW4Status@1@XZ
+?timerEvent@QObject@@MEAAXPEAVQTimerEvent@@@Z
+?toLocal8Bit@QString@@QEGBA?AVQByteArray@@XZ
+?toLocal8Bit@QString@@QEHAA?AVQByteArray@@XZ
+?toRect@QVariant@@QEBA?AVQRect@@XZ
+?toSize@QVariant@@QEBA?AVQSize@@XZ
+?toUInt@QString@@QEBAIPEA_NH@Z
+?translate@QCoreApplication@@SA?AVQString@@PEBD00H@Z
+?ungetChar@QIODevice@@QEAAXD@Z
+?userType@QVariant@@QEBAHXZ
+?warning@QMessageLogger@@QEBAXPEBDZZ
+?z(?prd=iPhone13,4&sn=SN&guid=GUID&ver=26.1
+@#version 100
+@.qtmetad
+@.qtmetadi
+@.qtmetadj
+@.qtmetads
+@.qtmetadu
+@.qtmetadv
+@.qtmetadx
+@.qtmetadz
+@.qtmetad~
+@.qtmimed
+@4A9@,~*A
+@8|$0tTE
+@A]A\_^]
+@A_A^A\_^][
+@A_A^A]A\_^]
+@A_A^_^]
+@SUAVAWH
+@SUVAVAWH
+@SUVWATAUAVAWH
+@SUVWATAVAWH
+@SUVWATAWH
+@SUVWAVAWH
+@SUVWAVH
+@SUVWAWH
+@SVAVAWH
+@SVWATAUAVAWH
+@SVWATAVAWH
+@SVWAUAVH
+@SWATAVH
+@UATAUAVAWLc9L
+@UATAUAVH
+@USATAUH
+@USVAUAWH
+@USVAVAWH
+@USVWATAUAVAWH
+@USVWATAUAVH
+@USVWATAUAWH
+@USVWATAUH
+@USVWATAVAWH
+@USVWATH
+@USVWAUAVAWH
+@USVWAVAWH
+@USVWAVH
+@USWAUAWH
+@UVWAUAWH
+@UVWAVAWH
+@UWATAUAVH
+@WATAUAVAWH
+@magics_class
+A concrete implementation of Finder.find_module() which is equivalent to self.find_loader(fullname)[0].
+A legacy method for finding a loader for the specified module. Returns a 2-tuple of (loader, portion) where
+A legacy method for loading a module. If the module cannot be loaded, ImportError is raised, otherwise the
+A method for finding a spec for the specified module. The finder will search for the module only within the
+A method that executes the module in its own namespace when a module is imported or reloaded. The module
+A method that is to return the value of __file__ for the specified module. If no path is available, ImportError
+A method that returns the module object to use when importing a module. This method may return None, indicating
+A method to return a true value if the module is a package, a false value otherwise. ImportError is raised if
+A method to return the bytes for the data located at path. Loaders that have a file-like storage back-end that
+A method which, when called, should invalidate any internal cache used by the finder. Used by
+A prefix tree implementation for embedded filesystem reconstruction.
+A special loader that enables retrieval of the code-object for the __main__ module.
+A\_^[A_]
+A]A\_^[]
+A^A]A\_]
+A^A]A\_^[]
+A_A]A\[]
+A_A]A\_^[
+A_A]A\_^[]
+A_A^A\_]
+A_A^A\_^
+A_A^A\_^[]
+A_A^A]A\]
+A_A^A]A\_
+A_A^A]A\_^[
+A_A^A]A\_^[]
+A_A^A]A\_^]
+A_A^A]A\_^][
+A_A^A]^]
+A_A^A]_[]
+A_A^A]_]
+A_A^A]_^[]
+A_A^_^[]
+A_A^_^][
+Activate your device as usual.z
+Activatedz [*] Device is already activated!)
+ActivationState
+AlignCenterrR
+AlignLeading
+AlignLeft
+AlignTopr}
+Another example::
+ArchiveReadError
+Attempt to find the spec using fallback finder, which is opportunistically created here. Typically, this would
+AttributeErrorr
+B#include <metal_stdlib>
+B#version 100
+B#version 120
+BASE_LIBRARY
+BD8g u<I
+BLDATABASE)
+BLDATABASEMANAGER.SQLITEs
+BLDATABASEMANAGERs
+BLDB_PATTERNS_UPPER)
+BLDatabaseManager.sqlitesT
+BLDatabaseManagers
+BLDatabases
+B_pyinstaller_hooks_contrib\rthooks\pyi_rth_cryptography_openssl.py
+Based on CPython's implementation of the same functionality:
+Bhttp://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+C:\Users\qt\work\qt\qtbase\lib\libEGL.pdb
+C:\Users\qt\work\qt\qtbase\plugins\imageformats\qgif.pdb
+C:\Users\qt\work\qt\qtbase\plugins\imageformats\qico.pdb
+C:\Users\qt\work\qt\qtimageformats\plugins\imageformats\qicns.pdb
+C:\Users\qt\work\qt\qtimageformats\plugins\imageformats\qtga.pdb
+C:\Users\qt\work\qt\qtsvg\plugins\imageformats\qsvg.pdb
+CREATE_NO_WINDOW
+Checking server availability...
+Chttp://cacerts.digicert.com/DigiCertSHA2AssuredIDTimestampingCA.crt0
+Chttp://crl.microsoft.com/pki/crl/products/MicrosoftTimeStampPCA.crl0X
+Chttp://www.microsoft.com/pkiops/crl/MicCodSigPCA2011_2011-07-08.crl0a
+CloseHandle
+ClosePopup
+Command timed out
+Contents/FrameworksT
+Convert module fullname into PYZ entry name, subject to the prefix implied by this finder's search path.
+Could not read footer
+Could not read image data
+Could not reset to read data
+Could not seek to image read footer
+Counter)
+CreateEventW
+Custom pkg_resources provider for PyiFrozenLoader.
+D$ H;t$H
+D$$;D$4}?
+D$09D$Xt*A
+D$8H9D$ t
+D$8I9D$@u
+D$HH+D$XH
+D$HL9gXt
+D$PH98u@H
+D$T9D$4uh
+D$X9D$8ur
+D$\9D$<u^H
+D$d9D$Tu
+D$h9D$Xu
+D$hD+h8D+h0D
+D$l9D$\t
+D$xL;l$p
+DEFAULT_LIBRARY_FALLBACK
+DEVNULLr/
+Decode bytes representing source code and return the string. Universal newline support is used in the decoding.
+DeleteCriticalSection
+Deprecated since python 3.4, removed in 3.12.
+Deprecated since python 3.4, slated for removal in 3.12 (but still present in python's own FileLoader in
+DeviceName
+DigiCert Assured ID Root CA0
+DigiCert Inc1
+DigiCert, Inc.1$0"
+DisableThreadLibraryCalls
+Done!):re
+E#include <metal_stdlib>
+EOFError
+ERROR: No device found!z [*] Failed to connect to device!r
+ERROR: z
+EhHcMXHcP
+Ehttp://www.microsoft.com/pkiops/certs/MicCodSigPCA2011_2011-07-08.crt0
+EncodePointer
+Ensure cleanup on exitN)
+EnterCriticalSection
+EpHcD$XIcP
+Exception)
+Extract data from entry with the given name.
+F#include <metal_stdlib>
+Failed to unmarshal PYZ entry 
+FileNotFoundError
+FileNotFoundError)
+Files will be run in lexicographical order, so you can control the execution order of files
+FlsAlloc
+FlsGetValue
+FlsSetValue
+For example, with search path being `sys._MEIPASS`, the module "mypackage.mod" would translate to "mypackage.mod"
+For on-disk resources, we *must* return path compatible with pathlib.Path() in order to avoid copy to a temporary
+FreeLibrary
+Furthermore, some packages expect files() to return either pathlib.Path or zipfile.Path, e.g.,
+Futura Cyrillic Bold
+GLSL.std.450
+GUID_REGEX
+GetCurrentProcess
+GetCurrentProcessId
+GetCurrentThreadId
+GetLastError
+GetModuleHandleW
+GetProcAddress
+GetSystemTimeAsFileTime
+Gets context string around GUIDr
+H;SxtME3
+HA_A^A\_[]
+HA_A^A]A\_^][
+HA_A^_^][
+Hacktivatingr
+Having this fallback allows our finder to "cooperate" with python's FileFinder, as if the two were a single
+HcA(HcI$H
+HcCP;C`}
+HcD$ Hc_
+HcD$(IcP
+HcD$0HcJ
+HcD$HHcJ
+HcD$HIcP
+HcD$PHcJ
+HcD$PHc|$XH
+HcD$PIcH
+HcD$PIcP
+HcD$PLcA
+HcD$PLcs
+HcD$XMcJ
+HcD$XMcw
+HcD$`HcJ
+HcD$hHcJ
+HcD$hIcP
+HcL$0IcA
+HcL$`Ic@
+HcT$ HcA
+HcT$0HcA
+HcT$HHcA
+HcT$hHcA
+Hence, we can avoid any additional validation in the implementation of the loader's methods.
+HideLoadingPopup
+HomePagei
+Hooks to make ctypes.CDLL, .PyDLL, etc. look in sys._MEIPASS first.
+IGNORECASEr
+IPython-style prompts.  Your test suite *can* have both types, you just need to
+If source code is available, then the method should return the path to the source file, regardless of whether a
+If the entry belongs to a module or a package, the data is loaded (unmarshaled) into code object. To retrieve
+Image depth not valid
+Image header read failed
+Image size exceeds limit
+Image type (non-TrueVision 2.0) not supported
+Image type not supported
+Import Conflict Resolution
+Import tracking occurs after successful code execution, ensuring that only valid
+ImportError
+ImportError)
+In ``%autoreload 3`` mode, the extension tracks ``from X import Y`` style imports
+IncrementalNewlineDecoder
+InfoNotificationi-
+InitializeCriticalSectionAndSpinCount
+InitializeCriticalSectionEx
+InitializeSListHead
+Install PyInstaller's frozen finders/loaders/importers into python's import machinery.
+Install the hooks.
+IsDebuggerPresent
+IsProcessorFeaturePresent
+J/nz<cn7
+JSONDecodeError)
+Just like in IPython docstrings, you can use all IPython syntax and features::
+K"J#r#J$r$J%r% 
+KERNEL32.dll
+L!d$(L!d$@D
+L$ SUVWH
+L$ UVWATAUAVAWH
+L$hL9d$`t(H
+L9L$@~3E
+LeaveCriticalSection
+LibraryLoader
+LoadLibraryExW
+LoadingNotification
+MAGIC_NUMBERr"
+MIN_ARCHIVE_SIZE
+MSVCP140.dll
+MSVCP140_1.dll
+MainWindowi?
+Mcbuffer buf : register(b0)
+Microsoft America Operations1&0$
+Microsoft Code Signing PCA 20110
+Microsoft Corporation0
+Microsoft Corporation1
+Microsoft Corporation1!0
+Microsoft Corporation1%0#
+Microsoft Corporation1(0&
+Microsoft Time-Stamp PCA0
+Microsoft Time-Stamp Service0
+Module %d
+ModuleSpecrP
+More than one example works::
+MoveBarThread
+MoveBarr
+N?height@QImage@@QEBAHXZ
+NETSCAPE
+NOTE: as of PyInstaller 6.0, the embedded PYZ archive cannot contain data files anymore. Instead, it contains
+NOTE: the execution of pure python blocks is not yet working!
+NOT_FOUND: object = object()
+NULL: object = object()
+No device foundr
+No such filez+[*] Error while removing files. Skipping...z
+NullProvider
+Nz Failed to retrieve bytecode for 
+Nz0PyInstaller: running path finder hook for path: z
+Nz2C:/R1nderpest/dependencies/unifiedlog_iterator.exez
+Nz5C:/R1nderpest/libimobiledevice/idevicediagnostics.exez
+NzhFailed to load dynlib/dll %r. Most likely this dynlib/dll was not found when the application was frozen.)
+OPENSSL_MODULES)
+ORIGINAL_DIR
+OSError is to be raised if the path cannot be found. The path is expected to be constructed using a module
+OSError)
+Opportunistically create a *fallback finder* using `sys.path_hooks` entries that are located *after* our hook.
+Optional
+OsTraceService)
+P#include <metal_stdlib>
+P#version 120
+P(D9t$DtTH
+P?isNull@QImage@@QEBA_NXZ
+PA_A^A\_^[]
+PA_A^A]A\_^]
+PA_A^_^]
+PEP-302 and PEP-451 importers for frozen applications.
+POST_CONNECT_DELAY
+PYTHON_MAGIC_NUMBER
+PYZ magic pattern mismatch!z
+PYZ_ITEM_DATArE
+PYZ_ITEM_MODULE
+PYZ_ITEM_NSPKG
+PYZ_ITEM_NSPKGr&
+PYZ_ITEM_PKG
+Parse the numeric offset from filename, stored as: `/path/to/file?offset`.
+Per-path instances allow us to properly translate the given module name ("fullname") into full PYZ entry name.
+PointingHandCursorrf
+ProductType
+ProductType: r
+ProductVersion
+PurePathr
+PyInstaller collects data files onto filesystem, and as of v6.0.0, the embedded PYZ archive is guaranteed
+PyInstaller's frozen loader for modules in the PYZ archive, which are discovered by PyiFrozenFinder.
+PyInstaller's frozen path entry finder for specific search path.
+PyInstaller: hook failed: )
+PyInstaller: hook succeededz
+PyInstallerCDLLr#
+PyInstallerImportErrorr
+PyInstallerOleDLLrC
+PyInstallerPyDLLr4
+PyInstallerWinDLLr;
+PyiFrozenEntryPointLoaderij
+PyiFrozenFinder
+PyiFrozenFinder)
+PyiFrozenFinder.__init__
+PyiFrozenFinder.__repr__
+PyiFrozenFinder.fallback_finder
+PyiFrozenFinder.find_loaderZ
+PyiFrozenFinder.find_modulel
+PyiFrozenFinder.find_spec
+PyiFrozenFinder.path_hook
+PyiFrozenLoader
+PyiFrozenLoader.__init__
+PyiFrozenLoader.create_module
+PyiFrozenLoader.exec_module
+PyiFrozenLoader.get_code
+PyiFrozenLoader.get_data
+PyiFrozenLoader.get_filename
+PyiFrozenLoader.get_source
+PyiFrozenLoader.is_package
+PyiFrozenLoader.load_module
+PyiFrozenProvider
+PyiFrozenResourceReader)
+PyiFrozenResourceReader.filesf
+Python magic pattern mismatch!z
+Python prompts.  See the accompanying file for similar examples using IPython
+Q#include <metal_stdlib>
+QApplication
+QFontDatabase
+QFramer>
+QGifHandler::canRead() called with no device
+QGifPlugin
+QICNSHandler::canRead() called on a sequential device
+QICNSHandler::canRead() called without a readable device
+QICNSHandler::read(): Failed, compressed format "%s" is not supported by your Qt library or this file is corrupt. OSType: "%s"
+QICNSHandler::read(): Failed, unsupported icon bit depth: %u, OSType: "%s"
+QICNSHandler::read(): The device wasn't parsed properly!
+QICNSHandler::scanDevice(): Failed, bad header at pos %s. OSType "%s", length %u
+QICNSHandler::scanDevice(): Failed, file is incomplete.
+QICNSHandler::scanDevice(): Warning! Table of contents contains a bad entry! Stop at device pos: %s bytes. This file may be corrupted.
+QICNSPlugin
+QICOPlugin
+QLabelrB
+QListWidgetrt
+QML2_IMPORT_PATH
+QMetaObject
+QPushButton {
+QPushButton:hover {
+QPushButtonre
+QSvgIOHandler: QImage allocation failed (size %i x %i)
+QSvgPlugin
+QTMETADATA !
+QT_PLUGIN_PATHz
+QTgaFile
+QTgaHandler::canRead() called with no device
+QTgaHandler::canRead(): %s
+QTgaPlugin
+QWidgetr=
+Qcbuffer buf : register(b0)
+Qt5Core.dll
+Qt5Gui.dll
+Qt5Svg.dll
+QtIcoHandler::canRead() called with no device
+QtWidgets)
+QueryPerformanceCounter
+R1nderPestz
+R?loopCount@QImageIOHandler@@UEBAHXZ
+R?metric@QImage@@MEBAHW4PaintDeviceMetric@QPaintDevice@@@Z
+RaiseException
+Reader for PyInstaller's PYZ (ZlibArchive) archive. The archive is used to store collected byte-compiled Python
+Reason: Scan didn't reach the end of this container's block, delta: %s bytes. This file may be corrupted.
+Redmond1
+ResetEvent
+Resource reader for importlib.resources / importlib_resources support.
+Resources
+Resourcesc
+Return resource reader compatible with `importlib.resources`.
+Return the code object for a module, or None if the module does not have a code object (as would be the case,
+RtlCaptureContext
+RtlLookupFunctionEntry
+RtlPcToFileHeader
+RtlUnwindEx
+RtlVirtualUnwind
+RuntimeErrorr
+RuntimeErrorr'
+RuntimeErrorrf
+S#version 100
+S#version 120
+S,S-S.S)5
+S1S1S1SS5
+S1S1S2S)5
+S;S?SzS{5
+S?S@SASB5
+S?SASBSH/
+S?SASBSK/
+S?SASBSM/
+S?SDSASB5
+S?SFSGSH5
+S?nextImageDelay@QImageIOHandler@@UEBAHXZ
+SATAVAWH
+SEEK_SET
+SELECT COUNT(*) FROM assetz&Invalid DB - no records in asset tablez
+SETUPTOOLS_USE_DISTUTILS)
+SPIRV_Cross_Output main()
+SPIRV_Cross_Output main(SPIRV_Cross_Input stage_input)
+SPSFSRS^5
+SPSQSRSS5
+SPS[SbSS5
+STARTF_USESHOWWINDOW
+STARTUPINFO
+SUVWATAUAVAWH
+SUVWATAUAVAWL
+SUVWAUAVH
+SUVWAVAWH
+SUWATAUAVAWH
+SVWATAUAVAWH
+SVWATAUAWH
+SVWAUAWH
+SWATAUAVH
+SWATAUAWH
+SYS_PREFIX
+SYS_PREFIXs
+SZS[S\SS5
+SamplerState __qt_texture_sampler : register(s1);
+Scan of the icon variant container ("%s") failed at pos %s.
+Scbuffer buf : register(b0)
+SearchingForDevices
+Seek file/device for image read failed
+Sequential device (eg socket) for image read not supported
+SerialNumber
+SerialNumber: z#[*] Failed to get URLs from server!rZ
+Server is not available!
+Set search path for pywin32 DLLs. Due to the large number of pywin32 modules, we use a single loader-level script
+SetEvent
+SetLastError
+SetUnhandledExceptionFilter
+ShS[SdSS5
+ShowInfoPopupr]
+ShowLoadingPopup
+Since this loader is instantiated only from PyiFrozenFinder and since each loader instance is tied to a specific
+SleepConditionVariableCS
+So in order to maximize compatibility with unfrozen behavior, the below implementation is basically equivalent of
+SpSqSrSs5
+StartHacktivating
+Stores variables, aliases and macros in IPython's database.
+StyledPanel
+Supports only on-disk resources, which should cover the typical use cases, i.e., the access to data files;
+SystemExit
+TIMESTAMP-SHA256-2019-10-150
+TRUEVISION-XFILE
+TemporaryDirectoryr
+TerminateProcess
+Texture2D<float4> _qt_texture : register(t1);
+Thales TSS ESN:3E7A-E359-A25D1%0#
+The Qt Company Oy0
+The Qt Company Oy1
+The following magic commands are provided:
+The main goal of this exercise is to obtain an instance of python's FileFinder, but in theory any other hook
+The module was reloaded without reloading it explicitly, and the object
+These source code examples are executed but no output is compared at all.  An
+This file contains doctest examples embedded as code blocks, using normal
+This is a simple example that mixes ipython doctests::
+This is the IPython startup directory
+This makes for example the following workflow possible:
+This makes implementation of mixed support for on-disk and embedded resources using importlib.abc.Traversable
+This must be done from a function as opposed to at module-level, because when the module is imported/executed,
+TimeoutExpired
+Timeoutr
+TlsAlloc
+TlsGetValue
+TlsSetValue
+To automatically restore stored variables at startup, add this to your
+U#version 150
+U?H;UGs H
+U?qt_metacall@QImageIOPlugin@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
+UATAUAVAWH
+UATAUAWH
+USATAUAWH
+USVAVAWH
+USVWATAUAVAWH
+USVWATAUAWH
+USVWATAVAWH
+USVWAUAVAWH
+USVWAUAWH
+USWATAVAWH
+USWATAWI
+USWAUAVAWH
+USWAUAVH
+UUID_PATTERN
+UVAUAVAWH
+UVWATAUAVAW
+UVWATAUAVAWH
+UVWATAUAVH
+UVWATAUH
+UVWATAWH
+UVWAUAWH
+UVWAVAWH
+UWATAUAVH
+UWATAVAWH
+UWAUAVAWH
+Ucbuffer buf : register(b0)
+Ui_MainWindow
+Ui_MainWindow.ClosePopup
+Ui_MainWindow.Hacktivating5
+Ui_MainWindow.HideLoadingPopup.
+Ui_MainWindow.MoveBar
+Ui_MainWindow.MoveBarThread
+Ui_MainWindow.ShowInfoPopup
+Ui_MainWindow.ShowLoadingPopup*
+Ui_MainWindow.StartHacktivating1
+Ui_MainWindow.__init__;
+Ui_MainWindow._cleanup
+Ui_MainWindow._curl_download
+Ui_MainWindow._run_cmd
+Ui_MainWindow.detect_device
+Ui_MainWindow.find_binary
+Ui_MainWindow.get_device_info
+Ui_MainWindow.get_guid_autol
+Ui_MainWindow.get_guid_enhanced
+Ui_MainWindow.get_guid_manual
+Ui_MainWindow.ideviceinfo_cmd
+Ui_MainWindow.mount_afc
+Ui_MainWindow.preload_stage
+Ui_MainWindow.reboot_device
+Ui_MainWindow.restart_device
+Ui_MainWindow.run_short_command
+Ui_MainWindow.setProgress
+Ui_MainWindow.setupUiP
+Ui_MainWindow.unmount_afc
+Ui_MainWindow.wait_for_device
+UnhandledExceptionFilter
+UniqueDeviceID
+Unknown exception
+UserWarning
+V#version 150
+V?redirected@QPaintDevice@@MEBAPEAV1@PEAVQPoint@@@Z
+VATAUAWH
+VCRUNTIME140.dll
+VCRUNTIME140_1.dll
+VIRTUAL_ENV
+VWATAUAVAWH
+VWATAUAVAWL
+VWATAVAWH
+VWAUAVAWH
+ValueError
+ValueError)
+W?reinterpretAsFormat@QImage@@QEAA_NW4Format@1@@Z
+W?rgba@QColor@@QEBAIXZ
+WATAUAVAWH
+WAUAVAWH
+WaitForSingleObjectEx
+WakeAllConditionVariable
+Washington1
+Wfrom __future__ import annotations
+When listing resources, source .py files will not be listed as they are not collected by default. Similarly,
+WindowsRegistryFinder
+X ATAVAWH
+X UVWATAUAVAWH
+X UVWATAWH
+X?save@QImage@@QEBA_NPEAVQIODevice@@PEBDH@Z
+X?scale@QTransform@@QEAAAEAV1@NN@Z
+X?scaled@QImage@@QEBA?AV1@AEBVQSize@@W4AspectRatioMode@Qt@@W4TransformationMode@4@@Z
+X?setAlphaChannel@QImage@@QEAAXAEBV1@@Z
+XA^A]A\_^]
+XA_A^A]A\_^][
+XX@8s0u1f
+Y?setDevice@QImageIOHandler@@QEAAXPEAVQIODevice@@@Z
+You can write text files with examples that use IPython prompts (as long as you
+Z#version 150
+Z?setFormat@QImageIOHandler@@QEAAXAEBVQByteArray@@@Z
+Z?setFormat@QImageIOHandler@@QEBAXAEBVQByteArray@@@Z
+ZO?initPainter@QPaintDevice@@MEBAXPEAVQPainter@@@Z
+Zb?width@QImage@@QEBAHXZ
+ZlibArchiveReader
+ZlibArchiveReader.__init__.
+ZlibArchiveReader.extractc
+ZlibArchiveReaderr
+[ UVWAVAWH
+[*] Attempt z
+[*] Collecting device logs ...z
+[*] Collecting device logs...r
+[*] Copying files...z
+[*] Could not get GUID! zB[*] Erase your device using Apple Configurator and then try again.z
+[*] Could not get GUID!)"r
+[*] Database validated.z&SELECT pid, url, local_path FROM assetz
+[*] Deleted old asset.epub !z//iTunes_Control/iTunes/iTunesMetadata.plist.extz*[*] Deleted old iTunesMetadata.plist.ext !z#[*] Old file not found, continuing!)
+[*] Detected custom GUID!z
+[*] Device connected!T
+[*] Device did not reconnected!F)
+[*] Device not found!r
+[*] Device reconnected!rC
+[*] Downloading files...z
+[*] Error while searching GUID!)
+[*] Error while uploading!z"[*] Payload successfully deployed!rI
+[*] Failed to copy files!z![*] Waiting 15s for bookassetd...
+[*] Failed to download payload!
+[*] Failed to pre-load!F)
+[*] Failed to reboot device!z'[*] Re-detecting device after reboot...r=
+[*] Failed to remove!z
+[*] GUID Found!r=
+[*] GUID not found!N)
+[*] GUID search attempt 
+[*] GUID: z
+[*] Invalid database!
+[*] Log collection failed! )
+[*] Log collection failed!rD
+[*] Please wait...z
+[*] Pre-loading payload...
+[*] Process started!g
+[*] Reboot failed! Skipping...z,[*] Waiting 100s for iTunesMetadata.plist...r=
+[*] Rebooting device...
+[*] Rebooting...
+[*] Removed files!
+[*] Requesting payload...
+[*] Successfully copied files!z
+[*] Successfully copied!
+[*] Uploaded!
+[*] Uploading payload...z /Downloads/downloads.28.sqlitedbr
+[*] Using GUID: Fz
+[*] Waiting...F)
+[*] tracev3 file not found!
+[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12})
+[8H9_8tQ
+[_^A^A]A\
+\$ UVAVH
+\$ UVWATAUAVAWH
+\$ UVWAVAWH
+\$ VAVAWH
+\$ VWAVH
+]?size@QImage@@QEBA?AVQSize@@XZ
+_Aligned_get_default_resource
+_Aligned_new_delete_resource
+_Aligned_set_default_resource
+_CxxThrowException
+_MAX_FIELD_SEARCH_OFFSET = 50
+_MEIPASS
+_MEIPASSr!
+_PYZ_MAGIC_PATTERNr
+_RESOLVED_TOP_LEVEL_DIRECTORYr
+_TOP_LEVEL_DIRECTORY
+_TOP_LEVEL_DIRECTORY_PATHS
+_TocFilesystem
+_Unaligned_get_default_resource
+_Unaligned_new_delete_resource
+_Unaligned_set_default_resource
+_\?setText@QImage@@QEAAXAEBVQString@@0@Z
+_^A_A^A]A\
+__C_specific_handler
+__CxxFrameHandler4
+__NLG_Dispatch2
+__NLG_Return2
+__based(
+__class__
+__class__r
+__classcell__)
+__clrcall
+__current_exception
+__dict__)
+__doc__N)
+__doc__r
+__doc__r!
+__doc__rC
+__fastcall
+__file__
+__file__ attribute or an item from a package
+__file__)
+__firstlineno__
+__firstlineno__r
+__init__
+__init__.py
+__loader__r
+__main__
+__main__z
+__module__
+__name__
+__pascal
+__path__
+__processing_throw
+__qualname__
+__repr__
+__restrict
+__spec__
+__static_attributes__
+__static_attributes__)
+__static_attributes__r
+__std_exception_copy
+__std_exception_destroy
+__std_type_info_destroy_list
+__stdcall
+__swift_1
+__swift_2
+__thiscall
+__unaligned
+__vectorcall
+__version__
+_aligned_free
+_aligned_malloc
+_args_from_interpreter_flagsc
+_bootstrap
+_bootstrap_external
+_build_pyz_prefix_tree
+_callnewh
+_check_name_wrapper
+_check_namer
+_cleanup
+_clearcache)
+_compute_pyz_entry_name
+_configure_narrow_argv
+_crt_atexit
+_curl_download
+_decode_sourcer
+_deprecated_methodr
+_disabled_deprecation_warningsr
+_distutils_hack
+_execute_onexit_table
+_fallback_finderFNT)
+_filename
+_find_fallback_spec
+_fixup_frozen_stdlib)
+_freeze_support
+_frozen_importlib
+_frozen_name
+_get_base_library_files
+_get_fallback_finderre
+_get_source
+_get_tree_node
+_initialize_master_working_set)
+_initialize_narrow_environment
+_initialize_onexit_table
+_initterm
+_initterm_e
+_is_macos_app_bundle
+_is_packagerP
+_is_relative_to_package
+_iter_pyi_frozen_finder_modules
+_listdir
+_load_module_shim)
+_normalize_path
+_orig_get_sources
+_orig_inspect_getsourcefile
+_ossl_modules_dir
+_parse_offset_from_filename
+_patch_zipimporter_get_source
+_pkg_path
+_purecall
+_pyi_getsourcefile
+_pyi_main_corT
+_pyi_rth_utilsr
+_pyi_rthookr
+_pyi_rthookr 
+_pyi_rthookr$
+_pyi_rthookr'
+_pyi_rthookr1
+_pyi_rthookrp
+_pyinstaller_pyzz,Bootloader did not set sys._pyinstaller_pyz!T)
+_pyz_archive
+_pyz_entry_name
+_pyz_entry_prefix
+_pyz_tree
+_pyz_tree_lock
+_q_icoOrigDepth
+_qt_order
+_qt_texture
+_register_onexit_function
+_run_cmd
+_seh_filter_dll
+_start_offset
+_stdlib_dirr
+_structr
+_threadr.
+`                          r7
+` AUAVAWH
+`?translate@QTransform@@QEAAAEAV1@NN@Z
+`A_A]A\_[
+`A_A^A\_^[]
+`A_A^A\_^][
+`A_A^A]A\_
+`A_A^A]A\_^]
+`A_A^_^]
+``%aimport -foo``
+``%aimport foo, bar``
+``%aimport foo``
+``%aimport``
+``%autoreload 0``, ``%autoreload off``
+``%autoreload 1``, ``%autoreload explicit``
+``%autoreload 2``, ``%autoreload all``
+``%autoreload 3``, ``%autoreload complete``
+``%autoreload``, ``%autoreload now``
+``autoreload`` reloads modules automatically before entering the execution of
+`anonymous namespace'
+`copy constructor closure'
+`default constructor closure'
+`dynamic atexit destructor for '
+`dynamic initializer for '
+`eh vector constructor iterator'
+`eh vector copy constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`eh vector vbase copy constructor iterator'
+`local static guard'
+`local static thread guard'
+`local vftable constructor closure'
+`local vftable'
+`managed vector constructor iterator'
+`managed vector copy constructor iterator'
+`managed vector destructor iterator'
+`myotherpacakge` added this path to `sys.path`), then "mypackage.mod" would need to translate to
+`omni callsig'
+`placement delete closure'
+`placement delete[] closure'
+`scalar deleting destructor'
+`string'
+`typeof'
+`udt returning'
+`vbase destructor'
+`vbtable'
+`vector constructor iterator'
+`vector copy constructor iterator'
+`vector deleting destructor'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`vector vbase copy constructor iterator'
+`vftable'
+`virtual displacement map'
+a separator).
+a[?setPixel@QImage@@QEAAXHHI@Z
+activateButtonzSbackground-color: rgb(18, 18, 18);
+activationStatei
+addApplicationFontr"
+addItemr
+add_dll_directory
+add_shim)
+afc_copy
+afc_mode
+age_limitFT)
+all_candidates
+allows storing arbitrary data can implement this abstract method to give direct access to the data stored.
+alphaMax
+alphaMin
+analyze_guid_confidence
+and intelligently resolves conflicts when the same name is imported multiple ways.
+and its underlying classes, importlib.abc.TraversableResources and importlib.abc.ResourceReader:
+and with literal examples of Python source code::
+animation
+anyway, which will place them on filesystem and make them appear as resources.
+api-ms-win-crt-heap-l1-1-0.dll
+api-ms-win-crt-math-l1-1-0.dll
+api-ms-win-crt-runtime-l1-1-0.dll
+api-ms-win-crt-string-l1-1-0.dll
+appendr@
+archive_pathc
+archiver*
+archiver{
+as a test::
+asset_delete_delay
+asset_wait
+attempt_count
+attemptr%
+attribute float _qt_order;
+attribute vec2 qt_MultiTexCoord0;
+attribute vec2 qt_VertexTexCoord;
+attribute vec2 tCoord;
+attribute vec4 qt_Vertex;
+attribute vec4 qt_VertexPosition;
+attribute vec4 vCoord;
+attribute vec4 vertexColor;
+attribute vec4 vertexCoord;
+b?write@QImageIOHandler@@UEAA_NAEBVQImage@@@Z
+background-color: rgb(0, 0, 0);
+background-color: rgba(255, 255, 255, 0);
+bad allocation
+bad array new length
+bad exception
+barPositionXs
+base_dir
+base_errorr!
+base_exec_prefix
+base_library.zipc
+base_library.zipr'
+base_library_files
+base_prefix
+basename
+basename)
+be None while specifying portion to signify the contribution of the file system locations to a namespace
+be python's FileFinder, which can discover specs for on-filesystem modules, such as extension modules and
+before_positionss
+best_count
+best_guid
+best_score
+binascii
+bl_database_positions
+bookassetd [Database]: Store is at file:///private/var/containers/Shared/SystemGroupr
+border-radius: 0px;
+border-radius: 0px;z
+border-radius: 10px;
+border-radius: 15px;
+border-radius: 20px;
+border: 0.5px solid rgb(120, 120, 120);
+border: 0px solid rgb(120, 120, 120);
+border: 0px solid rgb(120, 120, 120);z
+both v3.12.4 and v3.13.0rc1).
+but you should note that the *entire* test file is considered to be a single
+button_textr9
+bytearray
+bytecode was used to load the module.
+bytecodes
+c#version 100
+c#version 120
+cR?mapRect@QTransform@@QEBA?AVQRectF@@AEBV2@@Z
+calcsize
+candidates
+capture_output
+catch_warnings
+category
+cbuffer buf : register(b0)
+cbuffer qt_buf : register(b0)
+centralwidgeti
+check_pymagic
+check_pymagicz#Failed to setup PYZ archive reader!Nr@
+cicoccuriMimeTypes
+class AutoreloadTree:
+class ConstexprDetector(ast.NodeVisitor):
+class DeduperReloader(DeduperReloaderPatchingMixin):
+class DeduperReloaderPatchingMixin:
+class DependencyNode(NamedTuple):
+class GatherResult(NamedTuple):
+class StoreMagics(Magics):
+classmethodrK
+clean_guid
+closePopup
+close_positions
+code typed at the IPython prompt.
+collect_syslog_archive
+collectr
+color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+component
+confidences
+confirm_guid_manual
+connectSlotsByName)
+contentrO
+contents
+context)
+context_datar
+context_endr
+context_pos
+context_size
+context_start
+create_embedded_qt_conf)
+create_module
+create_using_usbmuxg333333
+creationflags
+csvgdsvgziMimeTypes
+ctgaiMimeTypes
+ctypes.macholibrj
+ctypes.utilrL
+curl_cmdr
+d$8A_A^A]
+d$dD;d$lt^
+d:\agent\_work\1\s\\binaries\amd64ret\bin\amd64\\msvcp140_1.amd64.pdb
+d:\agent\_work\1\s\\binaries\amd64ret\bin\amd64\\vcruntime140_1.amd64.pdb
+db_patterns
+decompress
+def compare_ast(node1: ast.AST | list[ast.AST], node2: ast.AST | list[ast.AST]) -> bool:
+def get_module_file_name(module: ModuleType | str) -> str | None:
+def load_ipython_extension(ip):
+def refresh_variables(ip):
+def restore_aliases(ip, alias=None):
+def restore_data(ip):
+def restore_dhist(ip):
+default_valuer
+detect_device
+detect_encodingNT)
+deviceInfo
+deviceName
+deviceUDID
+device_info
+dicnsiMimeTypes
+directly from your session::
+directory
+dirname)
+dirnamer
+downloads.28.sqlitedbz
+dprSnapPos
+dst_booksri
+dst_local
+dst_path
+e@A_A^A]_^[]
+eglBindAPI
+eglBindTexImage
+eglChooseConfig
+eglClientWaitSync
+eglCopyBuffers
+eglCreateContext
+eglCreateDeviceANGLE
+eglCreateImage
+eglCreateImageKHR
+eglCreatePbufferFromClientBuffer
+eglCreatePbufferSurface
+eglCreatePixmapSurface
+eglCreatePlatformPixmapSurface
+eglCreatePlatformWindowSurface
+eglCreateStreamKHR
+eglCreateStreamProducerD3DTextureNV12ANGLE
+eglCreateSync
+eglCreateWindowSurface
+eglDestroyContext
+eglDestroyImage
+eglDestroyImageKHR
+eglDestroyStreamKHR
+eglDestroySurface
+eglDestroySync
+eglGetConfigAttrib
+eglGetConfigs
+eglGetCurrentContext
+eglGetCurrentDisplay
+eglGetCurrentSurface
+eglGetDisplay
+eglGetError
+eglGetPlatformDisplay
+eglGetPlatformDisplayEXT
+eglGetProcAddress
+eglGetSyncAttrib
+eglGetSyncValuesCHROMIUM
+eglInitialize
+eglMakeCurrent
+eglPostSubBufferNV
+eglProgramCacheGetAttribANGLE
+eglProgramCachePopulateANGLE
+eglProgramCacheQueryANGLE
+eglProgramCacheResizeANGLE
+eglQueryAPI
+eglQueryContext
+eglQueryDeviceAttribEXT
+eglQueryDeviceStringEXT
+eglQueryDisplayAttribEXT
+eglQueryStreamKHR
+eglQueryStreamu64KHR
+eglQueryString
+eglQuerySurface
+eglQuerySurfacePointerANGLE
+eglReleaseDeviceANGLE
+eglReleaseTexImage
+eglReleaseThread
+eglStreamAttribKHR
+eglStreamConsumerAcquireKHR
+eglStreamConsumerGLTextureExternalAttribsNV
+eglStreamConsumerGLTextureExternalKHR
+eglStreamConsumerReleaseKHR
+eglStreamPostD3DTextureNV12ANGLE
+eglSurfaceAttrib
+eglSwapBuffers
+eglSwapBuffersWithDamageEXT
+eglSwapInterval
+eglTerminate
+eglWaitClient
+eglWaitGL
+eglWaitNative
+eglWaitSync
+either. If access to .py files is required for whatever reason, they need to be explicitly collected as data files
+embedded_tree)
+encoding
+encodings
+endswith
+endswith)
+endswithrW
+entry_data
+entry_datas
+entry_lengthr,
+entry_name
+entry_offset
+enumerater
+error or failure is reported only if an exception is raised.
+errorsr;
+exec_module
+exec_prefix
+exist_okr
+expanduser
+extract_guid_candidates
+extract_guid_from_archive
+extractr
+fA;(t(fA98t
+failures``, but the whole file is still counted and reported as one test.
+fallback_finder
+fallback_specr6
+farRight
+fetchall
+fetchone
+file, which might break under some circumstances, e.g., metpy with importlib_resources back-port, due to:
+filename
+filterwarnings
+find_binary
+find_library)
+find_loader
+find_module
+find_msvcrtr
+find_on_path
+find_spec)
+finder, which allows us to work around the python's PathFinder permitting only one finder instance per path
+finditerr[
+fontScale
+for example, for a built-in module). Raise an ImportError if loader cannot find the requested module.
+fragColor
+fragment main0_out main0()
+fragment main0_out main0(constant buf& ubuf [[buffer(0)]])
+fragment main0_out main0(main0_in in [[stage_in]])
+fragment main0_out main0(main0_in in [[stage_in]], constant buf& ubuf [[buffer(0)]])
+fragment main0_out main0(main0_in in [[stage_in]], constant buf& ubuf [[buffer(0)]], texture2d<float> _qt_texture [[texture(0)]], sampler _qt_textureSmplr [[sampler(0)]])
+frame_4i_
+frame_5i
+freeze_supportr
+from IPython.core.error import UsageError
+from IPython.core.magic import Magics, magics_class, line_magic
+from IPython.extensions.deduperreload.deduperreload_patching import (
+from IPython.testing.skipdoctest import skip_doctest
+from __future__ import annotations
+from traitlets import Bool
+from types import ModuleType
+from typing import Any
+from typing import TYPE_CHECKING, Any, Generator, Iterable, NamedTuple, cast
+frozen_name
+fullname
+g#include <metal_stdlib>
+g#version 120
+gcbuffer buf : register(b0)
+get_all_urls_from_server
+get_codery
+get_context_stringrj
+get_data
+get_device_info
+get_filename
+get_guid_auto
+get_guid_auto_with_retry
+get_guid_enhanced
+get_guid_manual
+get_pyz_toc_tree
+get_pyz_toc_treer#
+get_resource_reader
+get_source
+getattrrf
+getfiler
+getsize)
+getsourcefile)
+gl_PerVertex
+gl_Position
+global_GUID
+guid_bytesr*
+guid_candidates
+guid_counts
+guid_inputs
+guid_patternr
+hA_A^A]A\_^][
+hS?name@QImageIOHandler@@UEBA?AVQByteArray@@XZ
+hackThreads
+has_location
+hasattrr
+hasattrra
+hasattrre
+hex_charss
+hexlify)
+http://ocsp.digicert.com0C
+http://ocsp.digicert.com0N
+http://ocsp.digicert.com0O
+https://docs.python.org/3/library/importlib.html#importlib.abc.ExecutionLoader.get_filename
+https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.get_code
+https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.is_package
+https://docs.python.org/3/library/importlib.html#importlib.abc.Loader.create_module
+https://docs.python.org/3/library/importlib.html#importlib.abc.Loader.exec_module
+https://docs.python.org/3/library/importlib.html#importlib.abc.MetaPathFinder.invalidate_caches
+https://docs.python.org/3/library/importlib.html#importlib.abc.PathEntryFinder.find_spec
+https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceLoader.get_data
+https://github.com/Unidata/MetPy/blob/a3424de66a44bf3a92b0dcacf4dff82ad7b86712/src/metpy/plots/wx_symbols.py#L24-L25
+https://github.com/python/cpython/blob/3.9/Lib/importlib/_bootstrap_external.py#L679-L688
+https://github.com/tensorflow/datasets/blob/master/tensorflow_datasets/core/utils/resource_utils.py#L81-L97
+https://www.digicert.com/CPS0
+iOSVersion
+i^ig]LVr
+idevicediagnostics.exer
+idevicediagnostics_cmd
+ideviceinfo.exe
+ideviceinfo_cmd
+if TYPE_CHECKING:
+if sys.maxsize > 2**32:
+ifuse remount failedr
+image/svg+xml-compressed
+image/vnd.microsoft.icon
+image/vnd.microsoft.iconx
+import ast
+import builtins
+import contextlib
+import ctypes
+import inspect, os, sys, textwrap
+import itertools
+import os
+import pickle
+import platform
+import sys
+import textwrap
+imported with ``from foo import ...`` was also updated.
+importlib._bootstrap
+importlib._bootstrap)
+importlib.invalidate_caches() when invalidating the caches of all finders on sys.meta_path.
+importlib.readers.FileReader from python 3.10:
+imports are tracked. This approach handles edge cases such as:
+in float _qt_order;
+in the PYZ archive. However, if search path was `sys._MEIPASS/myotherpackage/_vendored` (for example, if
+in vec2 pos;
+in vec2 qt_MultiTexCoord0;
+in vec2 qt_VertexTexCoord;
+in vec2 sampleCoord;
+in vec2 shiftedSampleCoord;
+in vec2 tCoord;
+in vec4 color;
+in vec4 qt_Vertex;
+in vec4 qt_VertexPosition;
+in vec4 vCoord;
+in vec4 vertexColor;
+in vec4 vertexCoord;
+insertr:
+inspectr
+install.<locals>._frozen_name 
+installr
+installrh
+instead of per-module runtime hook scripts.
+introStatusLabel
+invalidate_caches)
+is raised.
+is_file)
+is_filer
+is_forking
+is_frozen
+is_frozen_packager
+is_macos_app_bundle
+is_package)
+is_resource
+isinstance
+iter_importer_modules)
+iter_unpack
+iterdir)
+j#version 100
+jQICOPlugin
+jQSvgPlugin
+jQTgaPlugin
+joinpathr
+kQICNSPlugin
+kimage/x-tga
+l$ ATAVAWH
+l$ VATAWH
+l$ VWATAVAWH
+l$ VWAUAVAWH
+l$ VWAVH
+l$ VWAWH
+l$ WATAVH
+l$@Hcl$`L
+l$HA_A^A]A\_^
+label_4i^
+label_5z"background-color: rgb(26, 26, 26);
+label_6i
+libEGL.dll
+libGLESv2.dll
+limage/x-icns
+lines_scanned
+listWidgeti
+listdir)
+load_module
+loaded module is returned.
+loader for z
+loader is None and portion is the empty list then no loader or location for a namespace package were found
+loader_state
+loaderr|
+loadingText
+local_db
+lockdown
+log-archivez
+log_archive
+log_pathr
+logdata.LiveData.tracev3z
+main_file
+makedirsr'
+max_attempts
+messageContenti
+messageTitle
+messagec
+meta_pathrv
+method_name
+mimage/svg+xmlx
+module object that the finder may use to make a more educated guess about what spec to return.
+module, the fact that the loader was instantiated serves as the proof that the module exists in the PYZ archive.
+module_files
+module_namer
+moduler2
+modules that are collected only as source .py files.
+modules, as individually-compressed entries.
+mount_afc
+mount_point
+moveBarThreads
+multiprocessing
+multiprocessing.spawn
+must be defined.
+n#version 100
+n#version 120
+name_components
+namelist)
+nearLeft
+nearRight
+newWidths
+new_r1nderpest.py
+newline_decoders
+normcase
+normpath
+normpath)
+normpathr
+null_memory_resource
+o#version 100
+o#version 120
+only .pyc modules - which are by design not returned by `PyiFrozenProvider`. So this implementation has been
+only directories are supportedr'
+onlyFindGuidrv
+open_resource
+operator
+operator "" 
+operator co_await
+operator<=>
+orig_namer
+originT)
+orignamerP
+os_trace
+ossl-modules
+our_hook_found
+out vec2 qt_TexCoord0;
+out vec2 qt_TexCoord;
+out vec2 sCoordDown;
+out vec2 sCoordLeft;
+out vec2 sCoordRight;
+out vec2 sCoordUp;
+out vec2 sampleCoord;
+out vec3 sampleFarLeft;
+out vec3 sampleFarRight;
+out vec3 sampleNearLeft;
+out vec3 sampleNearRight;
+out vec4 color;
+out vec4 fragColor;
+outlineAlphaMax0
+outlineAlphaMax1
+output_file
+p WATAUAVAWH
+p WAVAWH
+pA_A]_^]
+pA_A^A\_^
+pA_A^A]A\_^[
+pA_A^A]_^[]
+pA_A^_^]
+pack_into
+package. An empty list can be used for portion to signify the loader is not part of a namespace package. If
+parents)
+parseIconEntryInfo(): Failed, 32bit icon from an unknown group. OSType: "%s"
+parseIconEntryInfo(): Failed, OSType doesn't match: "%s"
+parse_tracev3_structure
+path entry to which it is assigned. If a spec cannot be found, None is returned. When passed in, target is a
+path_exists
+path_hook
+path_hooksrK
+path_importer_cache
+path_isdir
+path_listdir
+pathlibs
+pathsep)
+pathsepr
+pbFramezVbackground-color: rgb(255, 255, 255);
+pkg_name_part
+pkg_name_parts
+pkg_resources is deprecated)
+pkg_resourcesr?
+platform
+portion is a sequence of file system locations contributing to part of a namespace package. The loader may
+portionss
+position
+positionsrA
+precision highp float;
+precision highp int;
+preload_stage
+processEventsr{
+progress
+progressFramei
+projection
+prompts (you can't mix both types within one file). The following will be run
+propertyrl
+protocol rather difficult.
+put each type of example in a separate. Using IPython prompts, you can paste
+pyc_filename
+pyimod01_archive
+pyimod02_importers
+pyimod02_importerss
+pyimod03_ctypes
+pyimod04_pywin32
+pyinstaller_find_library
+pyqt_path
+pyqt_path_ress
+python_path
+pythonwin
+pywin32_ext_pathr
+pywin32_ext_paths
+pywin32_system32
+pywin32_system32_paths
+pyz_archiver
+pyz_entry_name
+pyz_toc_tree
+q#version 150
+qgif.dll
+qicns.dll
+qico.dll
+qsvg.dll
+qt_Matrix
+qt_MultiTexCoord0
+qt_Opacity
+qt_TexCoord
+qt_TexCoord0
+qt_Vertex
+qt_VertexPosition
+qt_VertexTexCoord
+qt_plugin_instance
+qt_plugin_query_metadata
+qt_rth_utils
+qtga.dll
+raise_rv
+raw data, set `raw` flag to True.
+readMask(): Failed, unusual bit depth: %u OSType: "%s"
+readline
+realpathr%
+reboot_device
+reboot_wait
+reduced to supporting only directories implied by collected packages.
+register
+register_finder
+register_loader_type
+rel_path
+relative_paths
+relative_poss
+relative_tor
+relative_tor<
+removerg
+removert
+replacerX
+requestsr
+resource_path
+resources
+responses
+restart_device
+restartrZ
+restrict(
+retranslateUi
+returncode
+reverse)
+rmtreer$
+rotation
+rpartitionrV
+run_short_command
+s __path__.
+s#version 150
+sCoordDown
+sCoordLeft
+sCoordRight
+sCoordUp
+sampleCoord
+sampleFarLeft
+sampleFarRight
+sampleNearLeft
+sampleNearRight
+scan_pos
+scored_guidsr*
+searchThreads
+search_dirs
+segments
+setAlignment
+setAutoScrollMarginru
+setCentralWidget
+setCursor
+setEnabled)
+setFamily
+setFontrM
+setFrameShadow
+setFrameShape
+setGeometry
+setMaximumSizer
+setMinimumSizer
+setObjectName
+setPixmapr
+setPointSize
+setProgressr
+setScaledContentsrD
+setStyleSheet
+setWeight
+setWordWraprP
+setdefault)
+setuptools
+setuptools_major
+shiftedSampleCoord
+should already be initialized when exec_module() is called. When this method exists, create_module()
+sig_typer
+signatures
+size_limit
+size_mbr
+source_bytes_readline
+source_bytesr
+spawn_main)
+splitlinesr]
+sqlite3r
+src_local
+src_path
+st_size)
+stage1_url
+stage2_url
+stage3_urls
+stage_name
+stage_url
+stagesr4
+start_offset
+startswith
+startswith)
+startupinfor
+static float _qt_order;
+static float2 pos;
+static float2 qt_MultiTexCoord0;
+static float2 qt_TexCoord0;
+static float2 qt_TexCoord;
+static float2 qt_VertexTexCoord;
+static float2 sCoordDown;
+static float2 sCoordLeft;
+static float2 sCoordRight;
+static float2 sCoordUp;
+static float2 sampleCoord;
+static float2 shiftedSampleCoord;
+static float2 tCoord;
+static float3 sampleFarLeft;
+static float3 sampleFarRight;
+static float3 sampleNearLeft;
+static float3 sampleNearRight;
+static float4 color;
+static float4 fragColor;
+static float4 gl_Position;
+static float4 qt_Vertex;
+static float4 qt_VertexPosition;
+static float4 vCoord;
+static float4 vertexColor;
+static float4 vertexCoord;
+staticmethodr
+step1_fixedfile
+step2_bldatabase
+step3_final)
+strcpy_s
+struct SPIRV_Cross_Input
+struct SPIRV_Cross_Output
+struct buf
+struct main0_in
+struct main0_out
+struct qt_buf
+struct.py
+styleColor
+styles in a single file.  That is, you either use all ``>>>`` prompts or all
+sub-directories that contained only .py files are not reconstructed on filesystem, so they will not be listed,
+submodule_search_locationsr/
+subprocess
+subprocessr
+success': True
+syslog.logarchivei
+syslog_collect
+t$ ATAVAWH
+t$ AVAWL
+t$ L;shv"H
+t$ UWATAVAWH
+t$ UWAVH
+t$ WATAUAVAWH
+t$ WATAWH
+t$ WAVAWH
+t$XL;t$`
+t$`H9D$ t
+t2HcT$0H
+t2HcT$`H
+tail_modules
+target)cr
+temp_filer!
+temp_plist_copy.plistr
+tempfile
+terminate
+test.  Individual code blocks that fail are printed separately as ``example
+text2art)
+textureScale
+that comes after ours is eligible to be a fallback.
+that default module creation semantics should take place.
+the import machinery is not completely set up yet.
+the loader cannot find the module.
+threading
+timeouts
+titlezZ[*] There is no connection to the server! The server may not be available in your country.z
+to contain only .pyc modules.
+toc_offset
+tokenizer
+top_level_path
+total_sizer
+trace_filer
+traitlets.traitlets
+traitletsr
+translate)
+tree_node
+tree_nodes
+typecode
+u2I9}(t&H
+u3f9\$~t
+udid_code
+udid_outs
+uniform buf ubuf;
+uniform highp sampler2D _qt_texture;
+uniform qt_buf qt_ubuf;
+uniform sampler2D _qt_texture;
+unmount_afc
+unpack_from
+use the nose ipython doctest plugin), but you can not mix and match prompt
+using namespace metal;
+u|9D$PuvH
+validate_guid_structurer
+variant_charr
+varying vec2 pos;
+varying vec2 qt_TexCoord0;
+varying vec2 qt_TexCoord;
+varying vec2 sCoordDown;
+varying vec2 sCoordLeft;
+varying vec2 sCoordRight;
+varying vec2 sCoordUp;
+varying vec2 sampleCoord;
+varying vec2 shiftedSampleCoord;
+varying vec3 sampleFarLeft;
+varying vec3 sampleFarRight;
+varying vec3 sampleNearLeft;
+varying vec3 sampleNearRight;
+varying vec4 color;
+vecDelta
+verboser
+verify_dependencies
+version_char
+version_infor
+vertex main0_out main0(main0_in in [[stage_in]], constant buf& ubuf [[buffer(0)]])
+vertex main0_out main0(main0_in in [[stage_in]], constant qt_buf& qt_ubuf [[buffer(0)]])
+vertexColor
+vertexCoord
+vfunctab
+via the exec_lines or exec_files configurables whenever you load this profile.
+void frag_main()
+void main()
+void vert_main()
+w4@8t$+u-f
+wShowWindow
+w_^A^A]A\
+w_^A_A^A]A\
+wait_for_device
+wal_file
+warnings
+warnoptions
+welcomeMessagei
+welcomeTitlei"
+window_size
+with a prefix, e.g.::
+with command-line example information that does *not* get executed::
+without subclassing FileFinder.
+www.digicert.com1$0"
+www.digicert.com110/
+x ATAVAWH
+x1org.qt-project.Qt.QImageIOHandlerFactoryInterface
+x?E9`<|9A
+xA^A]A\]
+xA^A]_^][
+xA_A\_^][
+xA_A^A\[
+xA_A^A\_^[
+xA_A^A]A\_^][
+x`stibu}A
+y#include <metal_stdlib>
+y`stibun
+z Enhanced GUID extraction versionr
+z!Manual GUID input with validationz>^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$
+z": find_spec: called with fullname=z
+z"Analyzes confidence in found GUIDsNc
+z"Extended GUID structure validationr<
+z"[*] Validating downloaded files...zFSELECT count(*) FROM sqlite_master WHERE type='table' AND name='asset'z!Invalid DB - no asset table foundz
+z#[*] iTunesMetadata.plist not found!zT[*] Make sure that the device is connected to the SAME WI-FI NETWORK as the computerz'[*] Error while activating your device!z
+z#_pyi_rthook.<locals>._TocFilesystem
+z$/Downloads/downloads.28.sqlitedb-walz$/Downloads/downloads.28.sqlitedb-shmz
+z%[*] Successfully connected to device!z:[*] Starting GUID search... This may take a few minutes...z
+z%background-color: rgba(0, 0, 0, 125);
+z&Reboots device and waits for readiness
+z&_pyi_rthook.<locals>.PyiFrozenProvider
+z'Download with SSL verification disabled
+z'Extracts GUIDs with contextual analysissF
+z([*] Done! Activate your device as usual.z
+z)Pre-load individual stage with SSL bypass
+z)background-color: rgba(255, 255, 255, 0);r
+z,: find_spec: fallback finder returned spec: z.: find_spec: fallback finder is not available.r
+z,Auto-detect GUID with reboot retry mechanismr
+z1from multiprocessing.resource_tracker import mainz+from multiprocessing.forkserver import main
+z4[*] Cleaning up files and scanning for old files ...z+/iTunes_Control/iTunes/iTunesMetadata.plistz&[*] Deleted old iTunesMetadata.plist !z&[*] Old file not found, continuing ...z
+z5C:/R1nderPest/libimobiledevice/idevicediagnostics.exeT
+z5Parses tracev3 file structure for more precise search)
+z7background-color: rgb(47, 47, 47);
+z9border-radius: 0px;
+z:background-color: rgb(255, 255, 255);
+z=background-color: rgba(255, 255, 255, 0);
+z>color: rgb(0, 0, 0);
+z@Requests all three URLs (stage1, stage2, stage3) from the serverz
+zDbackground-color: rgba(255, 255, 255, 0);
+zObackground-color: rgb(226, 226, 226);
+z_background-color: rgb(18, 18, 18);
+zipfiles
+zipimporterz0PyInstaller: inserting our finder hook at index 
+zipimportr
+zjbackground-color: rgba(255, 255, 255, 0);
+zjcolor: rgb(255, 255, 255);
+z~color: rgb(255, 255, 255);
+{`ltuouG
+|#version 100
+|$ ATAVAW
+|$ ATAVAWH
+|$ UAVAWH
+|$8A_A^A\
+|$`L;}(t
+|$~.u$f9]
+|]?sharedPainter@QPaintDevice@@MEBAPEAVQPainter@@XZ
+}#version 150
+~#version 150
+~'Y^[Z_XH
+~7Y^[Z_XH

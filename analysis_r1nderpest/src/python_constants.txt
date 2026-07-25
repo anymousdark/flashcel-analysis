@@ -1,0 +1,28 @@
+=== String Constants ===
+
+Hooks to make ctypes.CDLL, .PyDLL, etc. look in sys._MEIPASS first.
+
+
+PEP-302 and PEP-451 importers for frozen applications.
+
+
+Set search path for pywin32 DLLs. Due to the large number of pywin32 modules, we use a single loader-level script
+instead of per-module runtime hook scripts.
+
+.egg
+ArchiveReadError
+Contents/Frameworks
+OPENSSL_MODULES
+PyiFrozenEntryPointLoader
+PyiFrozenFinder
+PyiFrozenLoader
+PyiFrozenResourceReader
+Resources
+VIRTUAL_ENV
+ZlibArchiveReader
+darwin
+frozen
+ossl-modules
+win
+
+Total strings: 19
